@@ -1,0 +1,15 @@
+﻿/* swagger ui customization */
+
+.topbar-wrapper a:first-child img {
+    max-height: 25px;
+    content: url('/images/FenixAlliance/Branding/logo-silver-220x40.png');
+}
+
+.topbar-wrapper span {
+    color: white;
+}
+
+.swagger-ui .topbar {
+    padding: 8px 0;
+    background-color: #002050;
+}

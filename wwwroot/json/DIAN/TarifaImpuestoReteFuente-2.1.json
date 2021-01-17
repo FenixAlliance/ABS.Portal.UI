@@ -1,0 +1,706 @@
+{
+  "gc:CodeList": {
+    "-xmlns:gc": "http://docs.oasis-open.org/codelist/ns/genericode/1.0/",
+    "Identification": {
+      "ShortName": "TarifaImpuestoReteFuente",
+      "LongName": {
+        "-xml:lang": "es",
+        "#text": "Tarifas por Impuesto"
+      },
+      "Version": "1",
+      "CanonicalUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:TarifaImpuestos",
+      "CanonicalVersionUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:TarifaImpuestos-2.1",
+      "LocationUri": "http://dian.gov.co/ubl/os-ubl-2.0/cl/gc/default/TarifaImpuestos-2.1.gc",
+      "Agency": {
+        "LongName": {
+          "-xml:lang": "es",
+          "#text": "DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+        },
+        "Identifier": "195"
+      }
+    },
+    "ColumnSet": {
+      "Column": [
+        {
+          "-Id": "code",
+          "-Use": "required",
+          "ShortName": "Code",
+          "LongName": {
+            "-xml:lang": "es",
+            "#text": "Codigo Comun"
+          },
+          "Data": { "-Type": "normalizedString" }
+        },
+        {
+          "-Id": "name",
+          "-Use": "required",
+          "ShortName": "Name",
+          "LongName": {
+            "-xml:lang": "es",
+            "#text": "Nombre"
+          },
+          "Data": { "-Type": "string" }
+        },
+        {
+          "-Id": "description",
+          "-Use": "required",
+          "ShortName": "Description",
+          "LongName": {
+            "-xml:lang": "es",
+            "#text": "Descripcion"
+          },
+          "Data": { "-Type": "string" }
+        }
+      ],
+      "Key": {
+        "-Id": "codeKey",
+        "ShortName": "CodeKey",
+        "ColumnRef": { "-Ref": "code" }
+      }
+    },
+    "SimpleCodeList": {
+      "Row": [
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "2.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Compras generales (declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "3.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Compras generales (no declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "1.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Compras con tarjeta débito o crédito"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "1.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Compras de bienes o productos agrícolas o pecuarios sin procesamiento industrial"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "2.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Compras de bienes o productos agrícolas o pecuarios con procesamiento industrial (declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "3.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Compras de bienes o productos agrícolas o pecuarios con procesamiento industrial declarantes (no declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "0.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Compras de café pergamino o cereza"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "0.10"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Compras de combustibles derivados del petróleo"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "1.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Enajenación de activos fijos de personas naturales (notarías y tránsito son agentes retenedores)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "1.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Compras de vehículos"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "1.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Compras de bienes raíces cuya destinación y uso sea vivienda de habitación (por las primeras 20.000 UVT, es decir hasta $637.780.000)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "2.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Compras  de bienes raíces cuya destinación y uso sea vivienda de habitación (exceso de las primeras 20.000 UVT, es decir superior a $637.780.000)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "2.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Compras  de bienes raíces cuya destinación y uso sea distinto a vivienda de habitación"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "4.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Servicios generales (declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "6.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Servicios generales (no declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "4.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Por emolumentos eclesiásticos (declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "3.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Por emolumentos eclesiásticos (no declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "1.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Servicios de transporte de carga"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "3.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Servicios de  transporte nacional de pasajeros por vía terrestre (declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "3.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Servicios de  transporte nacional de pasajeros por vía terrestre (no declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "1.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Servicios de  transporte nacional de pasajeros por vía aérea o marítima"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "1.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Servicios prestados por empresas de servicios temporales (sobre AIU)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "2.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Servicios prestados por empresas de vigilancia y aseo (sobre AIU)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "2.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Servicios integrales de salud prestados por IPS"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "3.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Servicios de hoteles y restaurantes (declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "3.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Servicios de hoteles y restaurantes (no declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "4.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Arrendamiento de bienes muebles"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "3.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Arrendamiento de bienes inmuebles (declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "3.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Arrendamiento de bienes inmuebles (no declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "2.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Otros ingresos tributarios (declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "3.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Otros ingresos tributarios (no declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "11.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Honorarios y comisiones (personas jurídicas)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "11.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Honorarios y comisiones personas naturales que suscriban contrato o cuya sumatoria de los pagos o abonos en cuenta superen las 3.300 UVT ($105.135.000)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "10.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Honorarios y comisiones (no declarantes)"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "3.50"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Servicios de licenciamiento o derecho de uso de software"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "7.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Intereses o rendimientos financieros"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "4.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Rendimientos financieros provenientes de títulos de renta fija"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "20.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Loterías, rifas, apuestas y similares"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "3.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Retención en colocación independiente de juegos de suerte y azar"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "2.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "ReteFuente"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Contratos de construcción  y urbanización"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

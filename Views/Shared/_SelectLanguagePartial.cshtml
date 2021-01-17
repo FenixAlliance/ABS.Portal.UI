@@ -1,0 +1,62 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Http.Features
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> SharedLocalizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
+        .ToList();
+    var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+}
+
+
+<li class="nav-item dropdown">
+    <a class="nav-link   dropdown-toggle" href="#" id="SelectLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        @SharedLocalizer["English"]
+    </a>
+    <div class="dropdown-menu" aria-labelledby="SelectLang">
+
+        <h6 class="dropdown-header">
+            <b>  <i class="fas fa-globe-americas"></i>&nbsp;  @SharedLocalizer["Current currency"]: </b><b id="CurrencyTip">
+                <script>document.write(CartCurrencyCode);</script>
+            </b>
+        </h6>
+
+        <div class="dropdown-divider"></div>
+        <a asp-area="" asp-controller="Currencies" asp-action="Index" class="dropdown-item">
+            <i class="fas fa-usd-circle"></i>&nbsp;   @SharedLocalizer["Change currency"]
+        </a>
+        <div class="dropdown-divider"></div>
+        <h6 class="dropdown-header">
+            <b id="LanguageTip">
+              <i class="fas fa-globe-americas"></i>&nbsp;   @SharedLocalizer["Current language"]: @SharedLocalizer["English"]
+            </b>
+        </h6>
+        <div class="dropdown-divider"></div>
+
+        @foreach (var item in cultureItems)
+        {
+            <a href="#" onclick="SelectLang('@item.Value')" class="dropdown-item">
+                <i class="far fa-language"></i>&nbsp; @item.Text
+            </a>
+        }
+
+    </div>
+</li>
+<script>
+    //Select Language
+    function SelectLang(value) {
+        value = "c=" + value + "|uic=" + value;
+        Cookies.set('.AspNetCore.Culture', value);
+        window.location.reload();
+    }
+</script>

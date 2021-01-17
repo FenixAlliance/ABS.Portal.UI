@@ -1,0 +1,4495 @@
+{
+	"gc:CodeList": {
+		"-xmlns:gc": "http://docs.oasis-open.org/codelist/ns/genericode/1.0/",
+		"Identification": {
+			"ShortName": "LanguageCode",
+			"LongName": {
+				"-xml:lang": "en",
+				"#text": "Language Code"
+			},
+			"Version": "20061027",
+			"CanonicalUri": "urn:un:unece:uncefact:identifierlist:standard:ISO:ISOAlpha2LanguageCode",
+			"CanonicalVersionUri": "urn:un:unece:uncefact:identifierlist:standard:ISO:ISOAlpha2LanguageCode:20061027",
+			"LocationUri": "http://docs.oasis-open.org/ubl/os-UBL-2.1/cl/gc/special-purpose/LanguageCode-2.1.gc",
+			"AlternateFormatLocationUri": {
+				"-MimeType": "text/xml",
+				"#text": "http://www.unece.org/fileadmin/DAM/uncefact/identifierlist/standard/ISO_ISOAlpha2LanguageCode_20061027.xsd"
+			},
+			"Agency": {
+				"LongName": {
+					"-xml:lang": "en",
+					"#text": "International Organization for Standardization"
+				},
+				"Identifier": {
+					"-Identifier": "http://www.unece.org/trade/untdid/d11a/tred/tred3055.htm",
+					"#text": "5"
+				}
+			}
+		},
+		"ColumnSet": {
+			"Column": [
+				{
+					"-Id": "code",
+					"-Use": "required",
+					"ShortName": "Code",
+					"Data": { "-Type": "normalizedString" }
+				},
+				{
+					"-Id": "name",
+					"-Use": "required",
+					"ShortName": "Name",
+					"Data": { "-Type": "string" }
+				}
+			],
+			"Key": {
+				"-Id": "codeKey",
+				"ShortName": "CodeKey",
+				"ColumnRef": { "-Ref": "code" }
+			}
+		},
+		"SimpleCodeList": {
+			"Row": [
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "aa"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Afar"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Afar"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ab"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Abkhazian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AB"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Abkhazian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ae"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Avestan"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Avestan"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "af"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Afrikaans"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Afrikaans"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ak"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Akan"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Akan"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "am"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Amharic"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Amharic"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "an"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Aragonese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Aragonese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ar"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Arabic"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Arabic"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "as"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Assamese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Assamese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "av"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Avaric"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Avaric"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ay"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Aymara"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Aymara"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "az"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Azerbaijani"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AZ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Azerbaijani"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ba"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bashkir"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bashkir"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "be"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Belarusian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Belarusian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "bg"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bulgarian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bulgarian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "bh"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bihari languages"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BH"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bihari languages"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "bi"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bislama"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bislama"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "bm"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bambara"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bambara"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "bn"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bengali"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bengali"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "bo"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tibetan"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tibetan"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "br"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Breton"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Breton"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "bs"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bosnian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bosnian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ca"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Catalan; Valencian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Catalan; Valencian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ce"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chechen"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chechen"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ch"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chamorro"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CH"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chamorro"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "co"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Corsican"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Corsican"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "cr"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cree"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cree"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "cs"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Czech"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Czech"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "cu"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "cv"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chuvash"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chuvash"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "cy"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Welsh"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Welsh"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "da"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Danish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Danish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "de"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "German"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "German"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "dv"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Divehi; Dhivehi; Maldivian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Divehi; Dhivehi; Maldivian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "dz"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dzongkha"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DZ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dzongkha"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ee"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ewe"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "EE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ewe"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "el"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Greek; Modern (1453-)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "EL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Greek; Modern (1453-)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "en"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "English"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "EN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "English"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "eo"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Esperanto"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "EO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Esperanto"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "es"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Spanish; Castilian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ES"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Spanish; Castilian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "et"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Estonian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ET"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Estonian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "eu"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Basque"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "EU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Basque"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "fa"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Persian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Persian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ff"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Fulah"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Fulah"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "fi"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Finnish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Finnish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "fj"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Fijian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FJ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Fijian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "fo"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Faroese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Faroese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "fr"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "French"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "French"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "fy"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Western Frisian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Western Frisian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ga"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Irish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Irish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "gd"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Gaelic; Scottish Gaelic"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Gaelic; Scottish Gaelic"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "gl"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Galician"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Galician"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "gn"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Guarani"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Guarani"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "gu"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Gujarati"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Gujarati"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "gv"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Manx"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Manx"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ha"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Hausa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Hausa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "he"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Hebrew"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Hebrew"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "hi"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Hindi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Hindi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ho"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Hiri Motu"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Hiri Motu"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "hr"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Croatian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Croatian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ht"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Haitian; Haitian Creole"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Haitian; Haitian Creole"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "hu"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Hungarian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Hungarian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "hy"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Armenian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Armenian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "hz"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Herero"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HZ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Herero"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ia"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Interlingua (International Auxiliary Language Association)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Interlingua (International Auxiliary Language Association)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "id"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Indonesian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ID"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Indonesian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ie"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Interlingue; Occidental"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Interlingue; Occidental"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ig"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Igbo"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Igbo"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ii"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sichuan Yi; Nuosu"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "II"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sichuan Yi; Nuosu"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ik"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Inupiaq"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Inupiaq"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "io"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ido"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ido"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "is"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Icelandic"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Icelandic"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "it"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Italian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Italian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "iu"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Inuktiut"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Inuktiut"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ja"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Japanese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "JA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Japanese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "jv"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Javanese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "JV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Javanese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ka"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Georgian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Georgian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "kg"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kongo"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kongo"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ki"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kikuyu; Gikuyu"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kikuyu; Gikuyu"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "kj"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kuanyama; Kwanyama"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KJ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kuanyama; Kwanyama"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "kk"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kazakh"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kazakh"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "kl"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kalaallisut; Greenlandic"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kalaallisut; Greenlandic"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "km"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Central Khmer"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Central Khmer"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "kn"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kannada"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kannada"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ko"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Korean"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Korean"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "kr"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kanuri"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kanuri"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ks"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kashmiri"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kashmiri"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ku"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kurdish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kurdish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "kv"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Komi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Komi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "kw"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cornish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cornish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ky"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kirghiz; Kyrgyz"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kirghiz; Kyrgyz"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "la"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Latin"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Latin"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "lb"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Luxembourgish; Letzeburgesch"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LB"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Luxembourgish; Letzeburgesch"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "lg"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ganda"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ganda"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "li"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Limburgan; Limburger; Limburgish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Limburgan; Limburger; Limburgish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ln"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Lingala"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Lingala"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "lo"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Lao"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Lao"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "lt"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Lithuanian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Lithuanian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "lu"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Luba-Katanga"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Luba-Katanga"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "lv"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Latvian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Latvian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "mg"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Malagasy"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Malagasy"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "mh"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Marshallese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MH"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Marshallese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "mi"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Maori"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Maori"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "mk"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Macedonian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Macedonian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ml"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Malayalam"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ML"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Malayalam"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "mn"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Mongolian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Mongolian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "mo"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Moldavian; Moldovan"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Moldavian; Moldovan"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "mr"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Marathi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Marathi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ms"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Malay"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Malay"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "mt"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Maltese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Maltese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "my"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Burmese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Burmese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "na"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nauru"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nauru"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "nb"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bokmal Norwegian; Norwegian Bokmal"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NB"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bokmal Norwegian; Norwegian Bokmal"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "nd"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ndebele; North; North Ndebele"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ND"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ndebele; North; North Ndebele"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ne"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nepali"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nepali"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ng"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ndonga"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ndonga"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "nl"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dutch; Flemish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dutch; Flemish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "nn"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Norwegian Nynorsk; Nynorsk, Norwegian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Norwegian Nynorsk; Nynorsk, Norwegian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "no"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Norwegian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Norwegian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "nr"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ndebele; South; South Ndebele"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ndebele; South; South Ndebele"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "nv"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Navajo; Navaho"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Navajo; Navaho"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ny"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chichewa; Chewa; Nyanja"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chichewa; Chewa; Nyanja"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "oc"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Occitan (post 1500)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "OC"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Occitan (post 1500)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "oj"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ojibwa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "OJ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ojibwa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "om"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Oromo"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "OM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Oromo"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "or"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Oriya"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "OR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Oriya"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "os"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ossetian; Ossetic"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "OS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ossetian; Ossetic"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "pa"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Panjabi; Punjabi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Panjabi; Punjabi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "pi"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Pali"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Pali"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "pl"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Polish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Polish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ps"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Pushto; Pashto"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Pushto; Pashto"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "pt"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Portuguese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Portuguese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "qu"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Quechua"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "QU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Quechua"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "rm"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Romansh"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "RM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Romansh"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "rn"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rundi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "RN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rundi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ro"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Romanian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "RO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Romanian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ru"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Russian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "RU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Russian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "rw"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kinyarwanda"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "RW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kinyarwanda"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "sa"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sanskrit"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sanskrit"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "sc"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sardinian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SC"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sardinian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "sd"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sindhi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sindhi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "se"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Northern Sami"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Northern Sami"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "sg"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sango"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sango"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "si"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sinhala; Sinhalese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sinhala; Sinhalese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "sk"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Slovak"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Slovak"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "sl"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Slovenian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Slovenian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "sm"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Samoan"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Samoan"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "sn"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Shona"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Shona"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "so"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Somali"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Somali"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "sq"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Albanian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SQ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Albanian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "sr"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Serbian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Serbian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ss"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Swati"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Swati"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "st"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sotho, Southern"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ST"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sotho, Southern"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "su"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sundanese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sundanese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "sv"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Swedish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Swedish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "sw"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Swahili"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Swahili"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ta"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tamil"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tamil"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "te"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Telugu"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Telugu"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "tg"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tajik"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tajik"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "th"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Thai"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TH"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Thai"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ti"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tigrinya"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tigrinya"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "tk"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Turkmen"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Turkmen"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "tl"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tagalog"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tagalog"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "tn"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tswana"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tswana"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "to"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tonga (Tonga Islands)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tonga (Tonga Islands)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "tr"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Turkish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Turkish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ts"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tsonga"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tsonga"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "tt"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tatar"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tatar"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "tw"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Twi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Twi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ty"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tahitian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tahitian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ug"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Uighur; Uyghur"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "UG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Uighur; Uyghur"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "uk"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ukrainian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "UK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ukrainian"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ur"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Urdu"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "UR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Urdu"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "uz"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Uzbek"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "UZ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Uzbek"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ve"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Venda"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "VE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Venda"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "vi"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Vietnamese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "VI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Vietnamese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "vo"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Volapük"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "VO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Volapük"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "wa"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Walloon"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "WA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Walloon"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "wo"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Wolof"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "WO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Wolof"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "xh"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Xhosa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XH"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Xhosa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "yi"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Yiddish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "YI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Yiddish"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "yo"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Yoruba"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "YO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Yoruba"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "za"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Zhuang; Chuang"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ZA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Zhuang; Chuang"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "zh"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chinese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ZH"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chinese"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "zu"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Zulu"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ZU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Zulu"
+						}
+					]
+				}
+			]
+		}
+	}
+}

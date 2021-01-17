@@ -1,0 +1,58 @@
+﻿@model FenixAlliance.ABM.Models.Holders.AllianceIDHolder
+
+@using System.Security.Principal
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+
+@{
+    var time = DateTime.Now.Hour;
+    var completion = 0;
+
+    if (Model.Name != null)
+    {
+        completion += 5;
+    }
+    if (Model.LastName != null)
+    {
+        completion += 5;
+    }
+    if (Model.GithubURL != null)
+    {
+        completion += 5;
+    }
+    if (Model.LinkedInURL != null)
+    {
+        completion += 5;
+    }
+    if (Model.TwitterHandler != null)
+    {
+        completion += 5;
+    }
+    if (Model.WebURL != null)
+    {
+        completion += 5;
+    }
+    if (Model.About != null)
+    {
+        completion += 5;
+    }
+
+}
+
+<div class="profile-completion">
+    <div class="skills-item">
+        <div class="skills-item-info">
+            <span class="skills-item-title">Profile Completion</span>
+            <span class="skills-item-count"><span class="count-animate" data-speed="500" data-refresh-interval="50" data-to="@completion" data-from="0"></span><span class="units">@completion%</span></span>
+        </div>
+        <div class="skills-item-meter">
+            <span class="skills-item-meter-active bg-primary skills-animate" style="width: @completion%; opacity: 1;"></span>
+        </div>
+    </div>
+    <span><a asp-area="ID" asp-controller="Account" asp-action="Index">@_["Complete your profile"] </a> @_["so that people in our communities can better understand how to help you!"]</span>
+</div>

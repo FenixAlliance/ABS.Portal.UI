@@ -1,0 +1,44 @@
+﻿@using Microsoft.AspNetCore.Authentication
+@using Microsoft.Extensions.Options
+@using System.Security.Principal
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+@model FenixAlliance.ABM.Models.Marketing.Newsletters.NewsletterSubscription
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+
+
+@{
+
+}
+
+<h5>@_["Subscribe to our Newsletter"] </h5>
+<p>
+    @_["Join our newsletter and get news in your inbox every week! We hate spam too, so no worries about this."]
+</p>
+<form class="form form-newsletter" asp-area="Marketing" asp-controller="NewsletterSubscriptions" asp-action="Create" method="POST">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group bmd-form-group">
+        <label asp-for="@Model.Email" class="control-label"></label>
+        <input asp-for="@Model.Email" class="form-control" />
+        <span asp-validation-for="@Model.Email" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-just-icon" name="button">
+        <i class="fas fa-envelope"></i>
+    </button>
+    
+</form>
+
+
+
+
+
+
+
+
+
+

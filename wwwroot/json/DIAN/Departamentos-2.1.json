@@ -1,0 +1,452 @@
+{
+	"gc:CodeList": {
+		"-xmlns:gc": "http://docs.oasis-open.org/codelist/ns/genericode/1.0/",
+		"Identification": {
+			"ShortName": "Departamentos",
+			"LongName": {
+				"-xml:lang": "es",
+				"#text": "Departamentos"
+			},
+			"Version": "1",
+			"CanonicalUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:Departamentos",
+			"CanonicalVersionUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:Departamentos-2.1",
+			"LocationUri": "http://dian.gov.co/ubl/os-ubl-2.0/cl/gc/default/Departamentos-2.1.gc",
+			"Agency": {
+				"LongName": {
+					"-xml:lang": "es",
+					"#text": "DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+				},
+				"Identifier": "195"
+			}
+		},
+		"ColumnSet": {
+			"Column": [
+				{
+					"-Id": "code",
+					"-Use": "required",
+					"ShortName": "Code",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Codigo Comun"
+					},
+					"Data": { "-Type": "normalizedString" }
+				},
+				{
+					"-Id": "name",
+					"-Use": "required",
+					"ShortName": "Name",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Nombre"
+					},
+					"Data": { "-Type": "string" }
+				}
+			],
+			"Key": {
+				"-Id": "codeKey",
+				"ShortName": "CodeKey",
+				"ColumnRef": { "-Ref": "code" }
+			}
+		},
+		"SimpleCodeList": {
+			"Row": [
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "91"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Amazonas"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "05"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Antioquia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "81"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Arauca"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "08"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Atlántico"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "11"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bogotá"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "13"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bolívar"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "15"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Boyacá"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "17"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Caldas"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "18"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Caquetá"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "85"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Casanare"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "19"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cauca"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "20"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cesar"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "27"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chocó"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "23"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Córdoba"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "25"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cundinamarca"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "94"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Guainía"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "95"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Guaviare"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "41"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Huila"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "44"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "La Guajira"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "47"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Magdalena"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "50"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Meta"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "52"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nariño"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "54"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Norte de Santander"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "86"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Putumayo"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "63"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Quindío"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "66"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Risaralda"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "88"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "San Andrés y Providencia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "68"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Santander"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "70"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sucre"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "73"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tolima"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "76"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Valle del Cauca"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "97"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Vaupés"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "99"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Vichada"
+						}
+					]
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> SharedLocalizer
+
+<section>
+    <div class="container information-blocks">
+        <div class="row">
+            <div class="col-12 text-center information-entry">
+                <h2 class="title">Under Construction</h2>
+                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_12k7oQ.json" class="m-auto" background="transparent" speed="1" style="width: 60%;" loop autoplay>
+                </lottie-player>
+            </div>
+            <div class="col-12 text-center information-entry">
+                <h4 class="description">This part of our application is currently under development.</h4>
+                <h3><i class="fal fa-map">&nbsp;</i><a asp-area="Corporate" asp-controller="About" asp-action="RoadMap" style="text-decoration:underline">@SharedLocalizer["Check our Roadmap for more information."]</a></h3>
+            </div>
+        </div>
+    </div>
+</section>
+

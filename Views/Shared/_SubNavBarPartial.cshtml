@@ -1,0 +1,59 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> SharedLocalizer
+@{
+    ViewBag.Bar = (ViewBag.DisplayGlobalSlider != false) ? "<div class=\"section\" style=\"padding:0px;margin-bottom:0px; background-color:#002050;\">" : "<div class=\"section\" style=\"padding:5px; background-color:#002050;\">";
+    ViewBag.EndBar = "</div>";
+}
+
+@Html.Raw(@ViewBag.Bar)
+
+<div class="social-line social-line-big-icons" style="margin-top:0px; background-color:#002050">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-4">
+                <a asp-area="Technologies" asp-controller="Practices" asp-action="DataPlatforms" data-placement="bottom" class="btn btn-link btn-just-icon btn-white" rel="tooltip" title="" data-original-title="@SharedLocalizer["Analytics and BI"]">
+                    <i class="material-icons fas fa-chart-bar"></i>
+                    <div class="ripple-container"></div>
+                </a>
+            </div>
+            <div class="col-md-2 col-4">
+                <a asp-area="Technologies" asp-controller="Practices" asp-action="AI" class="btn btn-link btn-just-icon btn-white" rel="tooltip" title="" data-placement="bottom" data-original-title="@SharedLocalizer["Artificial Intelligence"]">
+                    <i class="material-icons fas fa-brain"></i>
+                    <div class="ripple-container"></div>
+                </a>
+            </div>
+            <div class="col-md-2 col-4">
+                <a asp-area="Technologies" asp-controller="Practices" asp-action="CloudDevOps" class="btn btn-link btn-just-icon btn-white" rel="tooltip" title="" data-placement="bottom" data-original-title="@SharedLocalizer["Development + Operations"]">
+                    <i class="material-icons fas fa-code-branch"></i>
+                    <div class="ripple-container"></div>
+                </a>
+            </div>
+            <div class="col-md-2 col-4">
+                <a asp-area="Technologies" asp-controller="Practices" asp-action="CloudInfrastructureManagement" class="btn btn-link btn-just-icon btn-white" rel="tooltip" title="" data-placement="bottom" data-original-title="@SharedLocalizer["Cloud Infrastructure"]">
+                    <i class="material-icons fas fa-cloud"></i>
+                    <div class="ripple-container"></div>
+                </a>
+            </div>
+            <div class="col-md-2 col-4">
+                <a asp-area="Technologies" asp-controller="Practices" asp-action="IoT" class="btn btn-link btn-just-icon btn-white" rel="tooltip" title="" data-placement="bottom" data-original-title="@SharedLocalizer["Internet of Things"]">
+                    <i class="material-icons fas fa-microchip"></i>
+                    <div class="ripple-container"></div>
+                </a>
+            </div>
+            <div class="col-md-2 col-4">
+                <a asp-area="Technologies" asp-controller="Practices" asp-action="ESM" class="btn btn-link btn-just-icon btn-white" rel="tooltip" title="" data-placement="bottom" data-original-title="@SharedLocalizer["Security and Mobility"]">
+                    <i class="material-icons fas fa-shield"></i>
+                    <div class="ripple-container"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Raw(@ViewBag.EndBar)
+
+

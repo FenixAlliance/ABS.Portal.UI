@@ -1,0 +1,118 @@
+﻿@model FenixAlliance.ABM.Models.Holders.AllianceIDHolder
+
+@using System.Security.Principal
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABM.Models.Holders
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+
+@{
+    var ActiveTenants = (List<AllianceIDHolder>)ViewData["TenantsActiveInBusiness"];
+}
+
+<!-- Fixed Sidebar Right-Responsive -->
+<div class="fixed-sidebar right fixed-sidebar-responsive">
+    <div class="fixed-sidebar-right sidebar--small" id="sidebar-right-responsive">
+        <a asp-area="ID" asp-controller="Account" asp-action="Index" class="dashboard-chat inline-item">
+            <i class="fas fa-user fa-2x" style="color:white"></i>
+        </a>
+    </div>
+</div>
+
+<div class="fixed-sidebar right">
+    <div class="fixed-sidebar-right sidebar--small" id="sidebar-right">
+        @if (Model.SelectedBusiness != null)
+        {
+            <div class="dashboard-customScrollbar ps ps--theme_default">
+                <ul class="chat-users">
+                    @foreach (var item in ActiveTenants)
+                    {
+                        <li class="inline-items js-chat-open" onclick="OpenChat('@item.GUID','@item.GUID','@item.AvatarURL');">
+                            <div class="author-thumb">
+                                <img alt="author" src="@item.AvatarURL" style="max-height:40px" class="avatar">
+                                <span class="icon-status online"></span>
+                            </div>
+                        </li>
+                    }
+                </ul>
+                <div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div>
+            </div>
+        }
+
+        <a href="#" class="dashboard-chat inline-items js-sidebar-open" style="background-color:#002050">
+            <i class="fas fa-bars fa-2x text-white" style="margin-top:-5px;"></i>
+        </a>
+    </div>
+
+    <div class="fixed-sidebar-right sidebar--large" id="sidebar-right-1">
+
+        <div class="dashboard-customScrollbar ps ps--theme_default ps--active-y" data-mcs-theme="dark" data-ps-id="5b0b09d3-4bca-4e47-6666-8322c043bb61">
+
+            <div class="ui-block-title ui-block-title-small">
+                <a href="#" class="title">@_["Active Business Team"]</a>
+                <a href="#">@_["Settings"]</a>
+            </div>
+
+            <ul class="chat-users">
+                @if (Model.SelectedBusiness != null)
+                {
+                    @foreach (var item in Model.SelectedBusiness.ActiveUsers)
+                    {
+                        <li class="inline-items js-chat-open">
+
+                            <div class="author-thumb">
+                                <img alt="author" src="@item.AvatarURL" style="max-height:40px" class="avatar">
+                                <span class="icon-status online"></span>
+                            </div>
+
+                            <div class="author-status">
+                                <a href="#" class="h6 author-name">@item.Name</a>
+                                <span class="status">@_["Online"]</span>
+                            </div>
+
+                            <div class="more">
+                                <i class="fas fa-bars"></i>
+                                <ul class="more-icons">
+                                    <li>
+                                        <i data-toggle="tooltip" data-placement="top" data-original-title="@_["START CONVERSATION"]" class="fas fa-bars"></i>
+                                    </li>
+
+                                    <li>
+                                        <i data-toggle="tooltip" data-placement="top" data-original-title="@_["ADD TO CONVERSATION"]" class="fas fa-bars"></i>
+                                    </li>
+
+                                    <li>
+                                        <i data-toggle="tooltip" data-placement="top" data-original-title="@_["BLOCK FROM CHAT"]" class="fas fa-bars"></i>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </li>
+                    }
+                }
+
+            </ul>
+
+            <div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                <div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;">
+                </div>
+            </div>
+
+            <div class="ps__scrollbar-y-rail" style="top: 0px; height: 708px; right: 0px;">
+                <div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 603px;">
+                </div>
+            </div>
+
+        </div>
+
+        <a href="#" class="dashboard-chat inline-items js-sidebar-open" style="background-color:#002050">
+            <h6 class="dashboard-chat-title">@_["Close"]</h6>
+            <i data-toggle="tooltip" data-placement="top" data-original-title="@_["CLOSE PANEL"]" class="fas fa-window-close fa-2x text-white" style="margin-top:-4px;"></i>
+        </a>
+
+    </div>
+</div>

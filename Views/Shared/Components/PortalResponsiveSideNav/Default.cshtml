@@ -1,0 +1,132 @@
+﻿@model FenixAlliance.ABM.Models.Holders.AllianceIDHolder
+
+@using System.Security.Principal
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+
+@{
+
+}
+<!-- Profile Settings Responsive -->
+<div class="profile-settings-responsive">
+
+    <a href="#" class="js-profile-settings-open profile-settings-open">
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+    </a>
+    <div class="mCustomScrollbar" data-mcs-theme="dark">
+        <div class="ui-block">
+            <div class="your-profile">
+                <div class="ui-block-title ui-block-title-small">
+                    <h6 class="title">@_["Your profile"]</h6>
+                </div>
+
+                <div id="accordion1" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne-1">
+                            <h6 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne">
+                                    @_["Profile Settings"]
+                                    <i class="fas fa-toggle-down"></i>
+                                </a>
+                            </h6>
+                        </div>
+
+                        <div id="collapseOne-1" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                            <ul class="your-profile-menu">
+                                <li>
+                                    <a asp-area="ID" asp-controller="Account" asp-action="Index">@_["Your Alliance ID"]</a>
+                                </li>
+
+                                <li>
+                                    <a asp-area="Business" asp-controller="SelectBusiness" asp-action="Index">@_["Your Businesses"]</a>
+                                </li>
+                                <li>
+                                    <a asp-area="Education" asp-controller="MyLearningProfile" asp-action="Index">@_["Your Learner Profile"]</a>
+                                </li>
+                                <li>
+                                    <a asp-area="Careers" asp-controller="MyCareersProfile" asp-action="Index">@_["Your Careers profile"]</a>
+                                </li>
+                                <li>
+                                    <a asp-area="Developer" asp-controller="MyDevProfile" asp-action="Index">@_["Your Developer profile"]</a>
+                                </li>
+                                <li>
+                                    <a asp-area="Billing" asp-controller="MyWallet" asp-action="Index">@_["Your Wallet"]</a>
+                                </li>
+                                <li>
+                                    <a asp-area="Billing" asp-controller="MyWallet" asp-action="Index">@_["Your orders"]</a>
+                                </li>
+                                <li>
+                                    <a asp-area="Billing" asp-controller="MyOrderPayments" asp-action="Index">@_["Your Payments"]</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="ui-block-title">
+                    <a asp-area="ID" asp-controller="MyNotifications" asp-action="Index" class="h6 title">@_["Notifications"]</a>
+                    <a href="#" class="items-round-little bg-primary">@Model.SocialProfile.Notifications.Count</a>
+                </div>
+                <div class="ui-block-title">
+                    <a asp-area="ID" asp-controller="MyWishlists" asp-action="Index" class="h6 title">@_["My Wishlists"]</a>
+                </div>
+                <div class="ui-block-title">
+                    <a class="h6 title">@_["Chat / Messages"]</a>
+                </div>
+                @if (Model.SelectedBusiness != null)
+                {
+                    <div class="ui-block-title">
+                        <a href="#" class="h6 title">@_["Active Team Members"]</a>
+                        <a href="#" class="items-round-little bg-blue">@Model.SelectedBusiness.ActiveUsers.Count</a>
+                    </div>
+                }
+
+                <div class="ui-block-title ui-block-title-small">
+                    <h6 class="title">@_["Alliance ID Network"]</h6>
+                </div>
+
+                <div class="ui-block-title">
+                    <a asp-area="Blogs" asp-controller="PostBookmarks" asp-action="Index" class="h6 title">@_["Bookmarks"]</a>
+                </div>
+                <div class="ui-block-title">
+                    <a asp-area="Social" asp-controller="MySocialProfile" asp-action="Index" class="h6 title">@_["Social profile"]</a>
+                </div>
+                <div class="ui-block-title">
+                    <a asp-area="Social" asp-controller="MySocialProfile" asp-action="Followers" class="h6 title">@_["Followers"]</a>
+                </div>
+                <div class="ui-block-title">
+                    <a asp-area="Social" asp-controller="MySocialProfile" asp-action="Following" class="h6 title">@_["Follows"]</a>
+                </div>
+                <div class="ui-block-title">
+                    <a asp-area="Social" asp-controller="MySocialProfile" asp-action="Groups" class="h6 title">@_["Groups"]</a>
+                </div>
+
+                <div class="ui-block-title ui-block-title-small">
+                    <h6 class="title">@_["Account Settings"]</h6>
+                </div>
+                <div class="ui-block-title">
+                    <a asp-area="" asp-controller="Account" asp-action="EditProfile" class="h6 title">@_["Your master profile"]</a>
+                </div>
+                <div class="ui-block-title">
+                    <a asp-area="ID" asp-controller="Account" asp-action="MySettings" class="h6 title">@_["Your account settings"]</a>
+                </div>
+                <div class="ui-block-title">
+                    <a asp-area="ID" asp-controller="MyCommsPreferences" asp-action="Index" class="h6 title">@_["Your communication preferences"]</a>
+                </div>
+                <div class="ui-block-title">
+                    <a asp-area="" asp-controller="Account" asp-action="ResetPassword" class="h6 title">@_["Reset your password"]</a>
+                </div>
+                <div class="ui-block-title">
+                    <a asp-area="" asp-controller="Account" asp-action="SignOut" class="h6 title">@_["Log out"]</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

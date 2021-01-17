@@ -1,0 +1,383 @@
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Configuration
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IConfiguration Configuration
+@inject IHtmlLocalizer<SharedResources> SharedLocalizer
+@{
+    //Meta Tags - Declarations
+    var Date = System.DateTime.Now;
+    var DateUTC = System.DateTime.UtcNow;
+    var HostDomain = Context.Request.Host;
+    var URL = Context.Request.Host + Context.Request.Path;
+
+    var Organization = Configuration["ABS:Portal:Branding:Organization:Name"];
+    var Slogan = Configuration["ABS:Portal:Branding:Organization:Slogan"];
+
+    var TitleSuffix = " | " + Configuration["ABS:Portal:SEO:TitleSuffix"];
+
+    var Title = (!string.IsNullOrEmpty(ViewBag.Title) ? (ViewBag.Title) : Configuration["ABS:Portal:SEO:KeyWords"]) + TitleSuffix;
+
+    var keywords = (!string.IsNullOrEmpty(ViewBag.keywords) ? (ViewBag.keywords) : Configuration["ABS:Portal:SEO:KeyWords"]);
+
+    var Description = (!string.IsNullOrEmpty(ViewBag.Description) ? (ViewBag.Description) : Configuration["ABS:Portal:SEO:Description"]);
+
+
+    var Type = "website";
+
+    // Images
+    var AreaName = (!string.IsNullOrEmpty(ViewBag.AreaName) ? (ViewBag.AreaName) : Configuration["ABS:Portal:SEO:TitleSuffix"]);
+    var Favicon = !string.IsNullOrEmpty(ViewBag.Favicon) ? (ViewBag.Favicon) : Configuration["ABS:Portal:Branding:Organization:Favicon"];
+
+    // Social
+    var TwitterHandler = (!string.IsNullOrEmpty(ViewBag.TwitterHandler) ? (ViewBag.TwitterHandler) : Configuration["ABS:Portal:Branding:Organization:Twitter"]);
+    var CreatorTwitterHandler = (!string.IsNullOrEmpty(ViewBag.CreatorTwitterHandler) ? (ViewBag.CreatorTwitterHandler) : Configuration["ABS:Portal:Branding:Creator:Twitter"]);
+    var FacebookPageUsername = (!string.IsNullOrEmpty(ViewBag.FacebookPageUsername) ? (ViewBag.FacebookPageUsername) : Configuration["ABS:Portal:Branding:Organization:Facebook"]);
+
+    // Props
+    var RevisitAfter = "7 Days";
+    var IP = Context.Connection.RemoteIpAddress.ToString();
+    var Image = (!string.IsNullOrEmpty(ViewBag.Image) ? (ViewBag.Image) : Configuration["ABS:Portal:SEO:SocialImage"]);
+    var Language = (!String.IsNullOrEmpty(Localizer["lang"].ToString()) ? "en" : Localizer["lang"].ToString());
+}
+
+<!-- title -->
+<title>@Title</title>
+
+<!-- Open Graph protocol -->
+<meta property="og:type" content="@Type" />
+<meta property="og:title" content="@Title" />
+<meta property="og:image" content="@Image" />
+<meta property='og:site_name' content='@AreaName' />
+<meta property="og:description" content="@Description" />
+<meta property="og:url" content="@URL" />
+<!-- Image -->
+<meta content="@Image" property="twitter:image" />
+<meta content="@Image" property="og:image" />
+<meta content='@Image' property='og:image:secure_url' />
+<meta content="@Image" property="summary_large_image" />
+<!-- Meta Tags - Facebook -->
+<meta property='article:publisher' content='https://www.facebook.com/@FacebookPageUsername' />
+<meta property='article:author' content='https://www.facebook.com/@FacebookPageUsername' />
+<meta property="fb:app_id" content="533666396806294" />
+<!--  Twitter Cards  -->
+<meta name='twitter:card' content='summary_large_image' />
+<meta name="twitter:image" content="@Image" />
+<meta name='twitter:title' content='@Title' />
+<meta name='twitter:domain' content='@HostDomain' />
+<meta name='twitter:site' content='@TwitterHandler' />
+<meta name='twitter:creator' content='@CreatorTwitterHandler' />
+<meta name='twitter:description' content='@Description' />
+<!-- Base -->
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+<meta http-equiv="content-language" content="@Language" />
+<meta name="language" content="@Language" />
+<meta name="title" content="@Title" />
+<meta name="keywords" content="@keywords" />
+<meta name="description" content="@Description" />
+<meta name="summary" content="@Description">
+<meta name="abstract" content="@Description">
+<meta name="owner" content="@Organization" />
+<meta name="author" content="Daniel Lozano Navas">
+<meta name="copyright" content="@Organization" />
+<meta name="revisit-after" content="@RevisitAfter" />
+<meta name="date" content="@DateUTC" />
+<meta name="description" content="@Description" />
+<meta name="pagename" content="@AreaName" />
+<meta name="subtitle" content="@Slogan" />
+<meta name="url" content="@HostDomain" />
+<meta name="identifier-URL" content="@HostDomain" />
+<meta name="subject" content="@Title" />
+<meta name="robots" content="index,follow" />
+<meta name="topic" content="Business">
+<meta name="coverage" content="Worldwide">
+<meta name="distribution" content="Global">
+<meta name="directory" content="submission">
+<meta name="Classification" content="Business">
+<meta name="rating" content="General">
+<!-- Icons -->
+<meta name="application-name" content="@Configuration["ABS:Portal:Title"]" />
+
+<meta name="theme-color" content="#002050">
+<link href="@Favicon" rel="icon" type="image/x-icon">
+<link href="@Favicon" rel="shortcut icon" type="image/x-icon" />
+<link href="@Favicon" rel='apple-touch-icon' />
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="@Configuration["ABS:Portal:Branding:AppleIcon:57"]" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="@Configuration["ABS:Portal:Branding:AppleIcon:60"]" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="@Configuration["ABS:Portal:Branding:AppleIcon:72"]" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="@Configuration["ABS:Portal:Branding:AppleIcon:76"]" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="@Configuration["ABS:Portal:Branding:AppleIcon:114"]" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="@Configuration["ABS:Portal:Branding:AppleIcon:120"]" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="@Configuration["ABS:Portal:Branding:AppleIcon:144"]" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="@Configuration["ABS:Portal:Branding:AppleIcon:152"]" />
+
+<link rel="icon" type="image/png" href="@Configuration["ABS:Portal:Branding:AppleIcon:57"]" sizes="196x196" />
+<link rel="icon" type="image/png" href="@Configuration["ABS:Portal:Branding:AppleIcon:57"]" sizes="96x96" />
+<link rel="icon" type="image/png" href="@Configuration["ABS:Portal:Branding:AppleIcon:57"]" sizes="32x32" />
+<link rel="icon" type="image/png" href="@Configuration["ABS:Portal:Branding:AppleIcon:57"]" sizes="16x16" />
+<link rel="icon" type="image/png" href="@Configuration["ABS:Portal:Branding:AppleIcon:57"]" sizes="128x128" />
+
+<meta name="msapplication-TileImage" content="@Configuration["ABS:Portal:Branding:AppleIcon:57"]" />
+<meta name="msapplication-square70x70logo" content="@Configuration["ABS:Portal:Branding:AppleIcon:57"]" />
+<meta name="msapplication-TileColor" content="@Configuration["ABS:Portal:Branding:AppleIcon:57"]" />
+
+<!-- Structured Metadata -->
+<script type="application/ld+json">
+    {
+    "@@context": "https://schema.org",
+    "@@type": "Organization",
+    "url": "https://fenixalliance.com.co",
+    "logo": "https://fenixalliance.com.co/images/logo.png",
+    "sameAs": [
+    "https://www.facebook.com/FenixAlliance",
+    "https://www.facebook.com/InfinityComex",
+    "https://www.facebook.com/ComputeWorks",
+    "https://twitter.com/fenixalliance",
+    "https://twitter.com/InfinityComex",
+    "https://twitter.com/ComputeWorks",
+    "https://www.linkedin.com/company/FenixAlliance/",
+    "https://www.linkedin.com/company/InfinityComex/",
+    "https://www.linkedin.com/company/ComputeWorks/",
+    "https://www.linkedin.com/company/FenixAlliance/",
+    "https://www.instagram.com/fenixalliancegroup/",
+    "https://www.instagram.com/InfinityComex/",
+    "https://github.com/FenixAlliance",
+    "https://www.youtube.com/channel/UCMzdCFA6KU4dBlHMDtX-xuA/",
+    "https://www.microsoft.com/es-co/solution-providers/partnerdetails/fenix-alliance-sas_a203651e-1ec8-418c-9da1-2283299be269/06088e84-c7fc-4a80-ac01-5a714bcb120f",
+    "https://www.unglobalcompact.org/what-is-gc/participants/73751-Fenix-Alliance-International.noncommunicating#cop"
+    ],
+    "contactPoint": [{
+    "@@type": "ContactPoint",
+    "telephone": "+1-206-588-6716",
+    "contactType": "customer service",
+    "contactOption": "TollFree",
+    "areaServed": [
+    "US",
+    "CA",
+    "MX",
+    "CH",
+    "EC",
+    "VE",
+    "PE",
+    "AR",
+    "CO",
+    "PR",
+    "PA",
+    "BR"
+    ]
+    },{
+    "@@type": "ContactPoint",
+    "telephone": "+1-206-588-6716",
+    "contactType": "customer service"
+    },{
+    "@@type": "ContactPoint",
+    "telephone": "+57-320-999-6653",
+    "contactType": "customer service",
+    "contactOption": [
+    "TollFree"
+    ],
+    "areaServed": [
+    "US",
+    "CA",
+    "MX",
+    "CH",
+    "EC",
+    "VE",
+    "PE",
+    "AR",
+    "CO",
+    "PR",
+    "PA",
+    "BR"
+    ]
+    },{
+    "@@type": "ContactPoint",
+    "telephone": "+1-206-588-6716",
+    "contactType": "technical support",
+    "contactOption": "TollFree",
+    "areaServed": [
+    "US",
+    "CA",
+    "MX",
+    "CH",
+    "EC",
+    "VE",
+    "PE",
+    "AR",
+    "CO",
+    "PR",
+    "PA",
+    "BR"
+    ],
+    "availableLanguage": [
+    "English",
+    "French",
+    "Deutch",
+    "Spanish",
+    "Italian"
+    ]
+    },{
+    "@@type": "ContactPoint",
+    "telephone": "+57-320-811-7068",
+    "contactType": "bill payment",
+    "contactOption": "TollFree",
+    "areaServed": [
+    "US",
+    "CA",
+    "MX",
+    "CH",
+    "EC",
+    "VE",
+    "PE",
+    "AR",
+    "CO",
+    "PR",
+    "PA",
+    "BR"
+    ]
+    },{
+    "@@type": "ContactPoint",
+    "telephone": "+57-320-999-6653",
+    "contactType": "Billing Support",
+    "contactOption": "TollFree",
+    "areaServed": [
+    "US",
+    "CA",
+    "MX",
+    "CH",
+    "EC",
+    "VE",
+    "PE",
+    "AR",
+    "CO",
+    "PR",
+    "PA",
+    "BR"
+    ]
+    }]
+    }
+</script>
+
+<!-- MS Bing Validation -->
+<meta name="msvalidate.01" content="F30CAAD7D7D7EF889B53BF9C0D1786B8" />
+<!-- Google Validation -->
+<meta name="google-site-verification" content="RJqJxxKfF-Yp2lKS4aNxUZgSgjUxB5NyHsPk8d0axP4" />
+<!-- Pinterest Validation -->
+<meta name="p:domain_verify" content="fa9adee2a8994857a50d041054e7e0f9" />
+<!-- Google Tag Manager -->
+<script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NMFRWG7');
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88449339-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-88449339-1');
+</script>
+
+<script type='text/javascript'>
+     // Zift Analytics
+    (function () {
+        var zanalytics_ = document.createElement('script');
+        zanalytics_.type = 'text/javascript';
+        zanalytics_.async = false;
+        zanalytics_.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'static.ziftsolutions.com/analytics/ff8081815c8588dd015c88ea3ac0281c.js';
+        document.getElementsByTagName('script')[0].parentNode.appendChild(zanalytics_);
+    })();
+
+   // Facebook Pixel Code
+
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '175323709767091');
+    fbq('track', 'PageView');
+</script>
+
+<noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=175323709767091&ev=PageView&noscript=1" />
+</noscript>
+
+<!-- Globals -->
+<link asp-append-version="true" rel="stylesheet" type="text/css" href="~/FenixAlliance.ABS.Portal.UI.Core.V1/min/css/globals.min.css" />
+
+<script asp-append-version="true" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/min/js/globals.min.js"></script>
+
+<!-- Cookie Consent -->
+@await Html.PartialAsync("_CookieConsentPartial")
+
+@if (ViewBag.EnableAzureAppInsights == true)
+{
+    <!-- App Insights -->
+    @Html.Raw(JavaScriptSnippet.FullScript)
+}
+
+@if (ViewBag.EnableSliderRevolution == true)
+{
+    <!-- Slider Revolution CSS Files -->
+    <link rel="stylesheet" type="text/css" href="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/css/navigation.css">
+
+    <!-- Slider Revolution core JavaScript files -->
+    <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    @if (ViewBag.EnableSliderRevolutionDev == true)
+    {
+        <!-- Slider Revolution extension scripts. ONLY NEEDED FOR LOCAL TESTING -->
+        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    }
+}
+
+
+
+@if (ViewBag.EnableSyncfusion == true)
+{
+
+    @* Syncfusion Essential JS 2 Styles *@
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
+
+    @* Syncfusion Essential JS 2 Scripts *@
+    <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
+
+}
+
+
+<style>
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+</style>

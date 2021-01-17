@@ -1,0 +1,149 @@
+﻿@model FenixAlliance.ABM.Models.Contacts.Contact
+
+@using System.Security.Principal
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+
+@{
+
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="ui-block">
+                <div class="top-header top-header-favorit">
+                    <div class="top-header-thumb">
+                        <img src="@Html.DisplayFor(model => model.CoverURL)" style="max-height:400px; min-width:100%;object-fit: cover; overflow: hidden; display: block;" alt="nature">
+                        <div class="top-header-author">
+                            <div class="author-thumb">
+                                <img src="@Html.DisplayFor(model => model.AvatarURL)" alt="Contact">
+                            </div>
+                            <div class="author-content">
+                                <a asp-area="Contacts" asp-controller="Individuals" asp-action="Details" asp-route-id="@Model.ID" class="h3 author-name">@Html.DisplayFor(model => model.QualifiedName)</a>
+
+                                <div class="country">
+                                    @if (Model.Country != null)
+                                    {
+                                        @Html.DisplayFor(model => model.Country.Name)
+                                        <text> | </text>
+                                        @Html.DisplayFor(model => model.Country.Region)
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-section">
+                    <div class="row">
+                        <div class="col col-xl-8 m-auto col-lg-8 col-md-12">
+                            <ul class="profile-menu">
+                                <li>
+                                    <a asp-area="Contacts" asp-controller="Individuals" asp-action="Details" asp-route-id="@Model.ID" class="active">Profile</a>
+                                </li>
+                                <li>
+                                    <a asp-area="Contacts" asp-controller="Individuals" asp-action="DealUnits" asp-route-id="@Model.ID">Deals</a>
+                                </li>
+                                <li>
+                                    <a asp-area="Contacts" asp-controller="Individuals" asp-action="Accounts" asp-route-id="@Model.ID">Accounts</a>
+                                </li>
+                                <li>
+                                    <a asp-area="Contacts" asp-controller="Individuals" asp-action="Calendar" asp-route-id="@Model.ID">Calendar</a>
+                                </li>
+                                <li>
+                                    <a asp-area="Contacts" asp-controller="Individuals" asp-action="Orders" asp-route-id="@Model.ID">Orders</a>
+                                </li>
+
+                                <li>
+                                    <div class="more">
+                                        <i class="fas fa-bars"></i>
+                                        <ul class="more-dropdown more-with-triangle">
+                                             
+                                            <li>
+                                                <a asp-area="Contacts" asp-controller="Individuals" asp-action="Cart" asp-route-id="@Model.ID">Cart</a>
+                                            </li>                                    
+
+                                            <li>
+                                                <a asp-area="Contacts" asp-controller="Individuals" asp-action="Tasks" asp-route-id="@Model.ID">Tasks</a>
+                                            </li>  
+                                            <li>
+                                                <a asp-area="Contacts" asp-controller="Individuals" asp-action="Wallet" asp-route-id="@Model.ID">Wallet</a>
+                                            </li>            
+                                                                                           
+                                            <li>
+                                                <a asp-area="Contacts" asp-controller="Individuals" asp-action="Invoices" asp-route-id="@Model.ID">Invoices</a>
+                                            </li>            
+                                                                       
+                                            <li>
+                                                <a asp-area="Contacts" asp-controller="Individuals" asp-action="Payments" asp-route-id="@Model.ID">Payments</a>
+                                            </li>            
+                                                                                                         
+                                            <li>
+                                                <a asp-area="Contacts" asp-controller="Individuals" asp-action="Organizations" asp-route-id="@Model.ID">Organizations</a>
+                                            </li>            
+                                                         
+                                            <li>
+                                                <a asp-area="Contacts" asp-controller="Individuals" asp-action="Notifications" asp-route-id="@Model.ID">Notifications</a>
+                                            </li>            
+                                            
+                                            <li>
+                                                <a asp-area="Contacts" asp-controller="Individuals" asp-action="Curriculum" asp-route-id="@Model.ID">Curriculum</a>
+                                            </li>            
+                                                                         
+                                            <li>
+                                                <a asp-area="Contacts" asp-controller="Individuals" asp-action="Locations" asp-route-id="@Model.ID">Locations</a>
+                                            </li>            
+                                                                                                       
+                                            <li>
+                                                <a asp-area="Contacts" asp-controller="Individuals" asp-action="Inquiries" asp-route-id="@Model.ID">Inquiries</a>
+                                            </li>            
+                                            
+                                            <li>
+                                                <a asp-area="Contacts" asp-controller="Individuals" asp-action="Followers" asp-route-id="@Model.ID">Followers</a>
+                                            </li>            
+                                            
+                                            <li>
+                                                <a asp-area="Contacts" asp-controller="Individuals" asp-action="Following" asp-route-id="@Model.ID">Following</a>
+                                            </li>            
+                                                                                              
+                                            <li>
+                                                <a asp-area="Contacts" asp-controller="Individuals" asp-action="Reviews" asp-route-id="@Model.ID">Reviews</a>
+                                            </li>            
+                                            
+                                            <li>
+                                                <a asp-area="Contacts" asp-controller="Individuals" asp-action="Delete" asp-route-id="@Model.ID">Delete Individual</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="control-block-button">
+                        @if (!String.IsNullOrEmpty(Model.BusinessPhone))
+                        {
+
+                            <a href="tel:@Html.DisplayFor(model => model.BusinessPhone)" class="btn btn-control bg-primary">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        }
+                        @if (!String.IsNullOrEmpty(Model.Email))
+                        {
+                            <a href="mailto:@Html.DisplayFor(model => model.Email)" class="btn btn-control bg-purple">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

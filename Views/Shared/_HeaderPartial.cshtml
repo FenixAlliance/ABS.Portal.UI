@@ -1,0 +1,310 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> SharedLocalizer
+    
+<style>
+    @@media screen and (min-width: 0px) and (max-width: 780px) {
+        .HideOnMobile {
+            display: none;
+        }
+        #mainHeader {
+            margin-top:-65px;
+        }
+    }
+</style>
+
+<div id="mainHeader" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators" data-placement="top" rel="tooltip" title="" data-original-title="Hover on each card to stop">
+        <li data-target="#mainHeader" data-slide-to="0" class="active"></li>
+        <li data-target="#mainHeader" data-slide-to="1"></li>
+        <li data-target="#mainHeader" data-slide-to="2"></li>
+        <li data-target="#mainHeader" data-slide-to="3"></li>
+        <li data-target="#mainHeader" data-slide-to="4"></li>
+        <li data-target="#mainHeader" data-slide-to="5"></li>
+        <li data-target="#mainHeader" data-slide-to="6"></li>
+        <li data-target="#mainHeader" data-slide-to="7"></li>
+        <li data-target="#mainHeader" data-slide-to="8"></li>
+        <li data-target="#mainHeader" data-slide-to="9"></li>
+    </ol>
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <div class="page-header header-filter" style="background-image: url('/images/Pictures/cod (486).jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 rounded text-center " style="background-color:#002050; opacity:.7; padding:2rem;">
+                            <h2 class="title">@SharedLocalizer["Information Technologies, Made easy."]</h2>
+                            <h4>
+                                <span>@SharedLocalizer["When you combine your vision's potential and your cloud of trust with our extense expertise on cloud technologies, our DevOps practices, and our enterprise-grade operation standards, unbelievable things begin to happen at and beyond the workplace."]</span>
+
+                                <span class="HideOnMobile">
+                                    <br>
+                                    <br>
+                                    @SharedLocalizer["Thanks to world-class technologies used by nearly 99% of Fortune 500 Companies, we turn your ideas into solutions far more quickly than our competitors while delivering high performance IT operations that are led by data and designed with nothing else in mind but to help you realize your goals."]
+                                </span>
+                                <br>
+                            </h4>
+                            <br>
+                            <a asp-area="Technologies" asp-controller="Practices" asp-action="Index" class="btn btn-outline-success btn-lg border-white text-white">
+                                <i class="fas fa-id-badge"></i>&nbsp;@SharedLocalizer["Discover our practices"]
+                            </a>
+                        </div>
+                        <div class="col-md-6  text-right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="page-header header-filter" style="background-image: url('/images/Pictures/cod (38).png');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6  text-right">
+                        </div>
+                        <div class="col-md-6 rounded text-center " style="background-color:#002050; opacity:.7; padding:2rem;">
+                            <h2 class="title">@SharedLocalizer["Infinity Comex"]</h2>
+                            <h4>
+                                @SharedLocalizer["It is finally here!"] 😃🎉
+                                <br />
+                                <br />
+                                @SharedLocalizer["At Infinity Comex we are building the cutting-edge marketplace for the most powerful technology!"] 
+                                <br>
+                                <br> 
+                                @SharedLocalizer["Choose from thousands of products from hundreds of world-leading brands such as Intel, Lenovo, Microsoft, MSI, Nvidia, Oracle, Hewlett Packard, HPE, Samsung and so much more!"]
+                                <br>
+                            </h4>
+                            <br>
+                            <a asp-area="Store" asp-controller="Home" asp-action="Index" class="btn btn-outline-success btn-lg border-white text-white">
+                                <i class="fas fa-infinity"></i>&nbsp;@SharedLocalizer["Visit the marketplace"]
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="page-header header-filter" style="background-image: url('/images/Pictures/cod (264).png');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6  text-right">
+                        </div>
+                        <div class="col-md-6 rounded text-center " style="background-color:#002050; opacity:.7; padding:2rem;">
+                            <h2 class="title">@SharedLocalizer["Get your free <strong>Alliance ID</strong> account."]</h2>
+                            <h4>
+                                @SharedLocalizer["Your Alliance ID is a totally free digital credential that allows you to access our marketplaces and leverage our entire platform's capabilities for your own business. Collaborate in real-time with your team, build B2B/B2C connections and extend your reach without the hustle."]
+
+                                <span class="HideOnMobile">
+                                    <br />
+                                    <br />
+                                    @SharedLocalizer["Get right out of the box the power of our CRM, custom analytics, marketing automation, talent management & collaboration tools as an isolated and completely managed environment that fits your business needs."]
+                                </span>
+                            </h4>
+                            <br>
+                            <a asp-area="" asp-controller="Account" asp-action="SignIn" class="btn btn-outline-success btn-lg border-white text-white">
+                                <i class="fas fa-id-badge"></i>&nbsp;@SharedLocalizer["Get it for free!"]
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="page-header header-filter" style="background-image: url('/images/Pictures/cod (811).jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 rounded text-center " style="background-color:#002050; opacity:.7; padding:2rem;">
+                            <h2 class="title">@SharedLocalizer["We are hiring!"]</h2>
+                            <h4>
+                                @SharedLocalizer["At Fenix Alliance we understand the value of diversity, so we are always looking for people who can bring new perspectives and life experiences for us. If you are looking for a place where passion, curiosity, and excellence meet, you are in the right place!"] 🎉
+                                <span class="HideOnMobile">
+                                    <br />
+                                    <br />
+                                    @SharedLocalizer["Through our Talent Tool and your Alliance ID, you can now apply for every career position on our business network and automatically scheduled your interview."]
+                                </span>
+                            </h4>
+                            <br>
+                            <a asp-area="Social" asp-controller="Businesses" asp-action="JobOffers" asp-route-BusinessID="FenixAlliance" class="btn btn-outline-success btn-lg border-white text-white">
+                                <i class="fas fa-id-badge"></i>&nbsp;@SharedLocalizer["Find your role!"]
+                            </a>
+                            <br>
+                            <a asp-area="Corporate" asp-controller="Careers" asp-action="Index" class="btn btn-outline-success btn-lg border-white text-white">
+                                <i class="fas fa-id-badge"></i>&nbsp;@SharedLocalizer["Discover Life at FA"]
+                            </a>
+                        </div>
+                        <div class="col-md-6  text-right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="page-header header-filter" style="background-image: url('/images/Commons/98467323434.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 rounded text-center " style="background-color:#002050; opacity:.7; padding:2rem;">
+                            <h2 class="title">@SharedLocalizer["Learn Alliance"]</h2>
+                            <h4>
+                                @SharedLocalizer["Learn Alliance provides free online training by world-class experts to help you build your technical skills and advance your career. Make it your destination of choice to get started on the latest technologies and join our vibrant community."]
+
+                                <span class="HideOnMobile">
+                                    <br />
+                                    <br />
+                                    @SharedLocalizer["Learn Alliance is being built to jump-start your career and certify your achievements by bringing closer than ever before a wide range of programs designed to fit your learning needs and help you take your IT skills and your career to the next level."]
+                                </span>
+                            </h4>
+                            <br>
+                            <a asp-area="Education" asp-controller="Home" asp-action="Index" class="btn btn-outline-success btn-lg border-white text-white">
+                                <i class="fas fa-id-badge"></i>&nbsp;@SharedLocalizer["Advance your career"]
+                            </a>
+                        </div>
+                        <div class="col-md-6  text-right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="page-header header-filter" style="background-image: url('/images/Pictures/cod (395).jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 rounded text-center " style="background-color:#002050; opacity:.7; padding:2rem;">
+                            <h2 class="title">@SharedLocalizer["UN's Global Compact - Our COP Report"]</h2>
+                            <h4>
+                                @SharedLocalizer["We are inspired by the causes that help us advance as a society. Our mission goes far beyond profit, to the extent of helping everyone to reach beyond expectations, using state of the art technology tools to unlock and unchain everyone's great potential as our contribution to achieving a brighter future."]
+                                <br />
+                            </h4>
+                            <br>
+                            <a href="https://www.unglobalcompact.org/what-is-gc/participants/73751-Fenix-Alliance-International.noncommunicating#cop" target="_blank" class="btn btn-outline-success btn-lg border-white text-white">
+                                <i class="fas fa-id-badge"></i>&nbsp;@SharedLocalizer["Read our latest report"]
+                            </a>
+                        </div>
+                        <div class="col-md-6  text-right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="page-header header-filter" style="background-image: url('/images/Pictures/cod (165).png');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 rounded text-center " style="background-color:#002050; opacity:.7; padding:2rem;">
+                            <h2 class="title">@SharedLocalizer["Helping you to take down the boundaries for your startup."]</h2>
+                            <h4>
+                                @SharedLocalizer["The path we've chosen to succeed is by becoming the engine for others' success."]
+                                <span class="HideOnMobile">
+                                    <br />
+                                    <br />
+                                    @SharedLocalizer["We understand how hard it is; as a matter of fact, we are still in the process. So we're helping startups like yours to grow faster by providing our advice, expertise, continuous training and resources from industry-leading professionals in business, marketing, sales and technology, as well as free support in the implementation of cloud-based solutions and search for seed capital & resources to carry out your business model in a solid and profitable way."]
+                                </span>
+                            </h4>
+                            <br>
+                            <a asp-area="Startups" asp-controller="Home" asp-action="Index" class="btn btn-outline-success btn-lg border-white text-white">
+                                <i class="fas fa-id-badge"></i>&nbsp;@SharedLocalizer["Jumpstart your venture"]
+                            </a>
+                        </div>
+                        <div class="col-md-6  text-right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="page-header header-filter" style="background-image: url('/images/Pictures/cod (369).jpeg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6  text-right">
+                        </div>
+                        <div class="col-md-6 rounded text-center " style="background-color:#002050; opacity:.7; padding:2rem;">
+                            <h2 class="title">@SharedLocalizer["Showcasing our Partner Program"]</h2>
+                            <h4>
+                                @SharedLocalizer["We are deeply committed to being the ideal business partner for any organization in the world. Being an Alliance Trusted Advisor is much more than collaborating towards building our clients' vision through world-class technologies, but to grow knowing that we are working for your success and taking care of what we build day to day for ourselves and our clients. More than a group, we are a team. We are Alliance."]
+                            </h4>
+                            <br>
+                            <a asp-area="Partner" asp-controller="Home" asp-action="Index" class="btn btn-outline-success btn-lg border-white text-white">
+                                <i class="fas fa-id-badge"></i>&nbsp;@SharedLocalizer["Become a trusted partner"]
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="page-header header-filter" style="background-image: url('/images/Pictures/cod (268).png');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 rounded text-center " style="background-color:#002050; opacity:.7; padding:2rem;">
+                            <h2 class="title">@SharedLocalizer["Welcome Investors."]</h2>
+                            <h4>
+                                @SharedLocalizer["As spending on SaaS, PaaS, IaaS, plus all professional and managed services around the cloud technology (both public and private) continues to increase, and predintions state that the \"Whole Cloud\" Revenue Will Reach $554 Billion in 2021. We believe that we have been positioning ourselves to capitalize on this demand."]
+                                <span class="HideOnMobile">
+                                    <br />
+                                    <br />
+                                    @SharedLocalizer["We are leaders in the provision of integrated IT solutions outsourced to small and medium-sized companies, we have a strong presence in the market, an attractive set of offers and the technical means to exploit this commercial opportunity, as well as the support software, hardware and tools to facilitate everyone's transition to the cloud, regardless of complexity."]
+                                </span>
+                            </h4>
+                            <br>
+                            <a href="/Corporate/Presentation" class="btn btn-outline-success btn-lg border-white text-white">
+                                <i class="fas fa-presentation"></i>&nbsp;@SharedLocalizer["Review our investor presentation"]
+                            </a>
+                            <br>
+                        </div>
+                        <div class="col-md-6  text-right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item ">
+            <div class="page-header header-filter" style="background-image: url('/images/Pictures/cod (762).jpeg'); background-size:cover;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 ml-auto text-center rounded" style="background-color:#002050; opacity:.8; padding:2rem;">
+                            <h2 class="title">@SharedLocalizer["Global Alliances"]<br />@SharedLocalizer["To Reach beyond expectations."]</h2>
+                            <h4>
+                                <br>
+                                @SharedLocalizer["We understand the power of cooperation, that is why we have established Partnerships with world-leading companies for the development and deployment of cutting edge solutions, as well as the best service through these strategic alliances."]
+                                <br>
+                                <span class="HideOnMobile">
+                                    <br>
+                                    @SharedLocalizer["We work together with global leaders in the provision of cloud computing services and digital transformation. We constantly seek to verify compliance in our supply chain taking into account goals, practices and sustainability indices in all our operations and those of our suppliers."]
+                                    <br>
+                                </span>
+                            </h4>
+                            <br>
+                            <a asp-area="Corporate" asp-controller="About" asp-action="CorporatePartners" class="btn btn-outline-success btn-lg border-white text-white">
+                                <i class="fas fa-cloud"></i> @SharedLocalizer["Discover our Partnerships"]
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#mainHeader" role="button" data-slide="prev">
+            <i class="fas fa-arrow-left fa-2x"></i>
+            <span class="sr-only">@SharedLocalizer["Previous"]</span>
+        </a>
+
+        <a class="carousel-control-next" href="#mainHeader" role="button" data-slide="next">
+            <i class="fas fa-arrow-right fa-2x"></i>
+            <span class="sr-only">@SharedLocalizer["Next"]</span>
+        </a>
+
+    </div>
+</div>
+

@@ -1,0 +1,8 @@
+﻿:root {
+    --primaryColor: #002050;
+    --secondaryColor: #f4f4f4;
+    --bgMenuActive: #38477d;
+    --bgButton: #000028;
+    --logoImageUrl: url(https://fenixalliance.com.co/images/FenixAlliance/mobilelogo-2x.png);
+    --bgAside: var(--primaryColor);
+}

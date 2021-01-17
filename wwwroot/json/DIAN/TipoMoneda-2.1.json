@@ -1,0 +1,2204 @@
+{
+	"gc:CodeList": {
+		"-xmlns:gc": "http://docs.oasis-open.org/codelist/ns/genericode/1.0/",
+		"Identification": {
+			"ShortName": "TipoMoneda",
+			"LongName": {
+				"-xml:lang": "es",
+				"#text": "Moneda"
+			},
+			"Version": "1",
+			"CanonicalUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:TipoMoneda",
+			"CanonicalVersionUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:TipoMoneda-2.1",
+			"LocationUri": "http://dian.gov.co/ubl/os-ubl-2.0/cl/gc/default/TipoMoneda-2.1.gc",
+			"Agency": {
+				"LongName": {
+					"-xml:lang": "es",
+					"#text": "DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+				},
+				"Identifier": "195"
+			}
+		},
+		"ColumnSet": {
+			"Column": [
+				{
+					"-Id": "code",
+					"-Use": "required",
+					"ShortName": "Code",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Codigo Comun"
+					},
+					"Data": { "-Type": "normalizedString" }
+				},
+				{
+					"-Id": "name",
+					"-Use": "required",
+					"ShortName": "Name",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Nombre"
+					},
+					"Data": { "-Type": "string" }
+				}
+			],
+			"Key": {
+				"-Id": "codeKey",
+				"ShortName": "CodeKey",
+				"ColumnRef": { "-Ref": "code" }
+			}
+		},
+		"SimpleCodeList": {
+			"Row": [
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AED"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dírham de los Emiratos Árabes Unidos"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AFN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Afgani"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ALL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Lek"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AMD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dram armenio"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ANG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Florín antillano neerlandés"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AOA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kwanza"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ARS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Peso argentino"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AUD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar australiano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AWG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Florín arubeño"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AZN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Manat azerbaiyano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BAM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Marco convertible"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BBD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar de Barbados"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BDT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Taka"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BGN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Lev búlgaro"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BHD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dinar bareiní"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BIF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Franco de Burundi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BMD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar bermudeño"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BND"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar de Brunéi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BOB"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Boliviano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BOV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "MVDOL"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BRL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Real brasileño"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BSD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar bahameño"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BTN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ngultrum"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BWP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Pula"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BYR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rublo bielorruso"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BZD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar beliceño"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CAD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar canadiense"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CDF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Franco congoleño"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CHE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Euro WIR"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CHF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Franco suizo"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CHW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Franco WIR"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CLF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Unidad de fomento"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CLP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Peso chileno"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CNY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Yuan chino"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "COP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Peso colombiano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "COU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Unidad de valor real"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CRC"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Colón costarricense"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CUC"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Peso convertible"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CUP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Peso cubano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CVE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Escudo caboverdiano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CZK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Corona checa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DJF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Franco yibutiano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DKK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Corona danesa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DOP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Peso dominicano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DZD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dinar argelino"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "EGP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Libra egipcia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ERN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nakfa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ETB"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Birr etíope"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "EUR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Euro"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FJD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar fiyiano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FKP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Libra malvinense"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GBP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Libra esterlina"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GEL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Lari"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GHS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cedi ghanés"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GIP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Libra de Gibraltar"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GMD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dalasi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GNF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Franco guineano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GTQ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Quetzal"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GYD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar guyanés"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HKD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar de Hong Kong"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HNL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Lempira"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HRK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kuna"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HTG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Gourde"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HUF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Forinto"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IDR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rupia indonesia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ILS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nuevo shéquel israelí"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "INR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rupia india"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IQD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dinar iraquí"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IRR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rial iraní"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ISK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Corona islandesa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "JMD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar jamaiquino"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "JOD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dinar jordano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "JPY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Yen"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KES"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chelín keniano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KGS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Som"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KHR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Riel"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KMF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Franco comorense"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KPW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Won norcoreano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KRW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Won"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KWD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dinar kuwaití"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KYD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar de las Islas Caimán"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KZT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tenge"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LAK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kip"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LBP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Libra libanesa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LKR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rupia de Sri Lanka"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LRD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar liberiano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LSL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Loti"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LYD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dinar libio"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MAD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dírham marroquí"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MDL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Leu moldavo"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MGA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ariary malgache"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MKD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Denar"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MMK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kyat"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MNT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tugrik"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MOP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Pataca"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MRO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Uguiya"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MUR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rupia de Mauricio"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MVR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rufiyaa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MWK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kwacha"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MXN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Peso mexicano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MXV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Unidad de Inversión (UDI) mexicana"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MYR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ringgit malayo"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MZN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Metical mozambiqueño"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NAD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar namibio"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NGN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Naira"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NIO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Córdoba"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NOK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Corona noruega"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NPR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rupia nepalí"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NZD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar neozelandés"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "OMR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rial omaní"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PAB"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Balboa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PEN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sol"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PGK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kina"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PHP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Peso filipino"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PKR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rupia pakistaní"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PLN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Złoty"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PYG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Guaraní"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "QAR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Riyal qatarí"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "RON"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Leu rumano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "RSD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dinar serbio"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "RUB"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rublo ruso"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "RWF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Franco ruandés"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SAR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Riyal saudí"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SBD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar de las Islas Salomón"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SCR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rupia seychelense"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SDG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dinar sudanés"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SEK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Corona sueca"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SGD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar de Singapur"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SHP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Libra de Santa Elena"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SLL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Leone"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SOS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chelín somalí"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SRD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar surinamés"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SSP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Libra sursudanesa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "STD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dobra"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SVC"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Colon Salvadoreño"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SYP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Libra siria"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SZL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Lilangeni"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "THB"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Baht"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TJS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Somoni tayiko"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TMT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Manat turcomano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TND"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dinar tunecino"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TOP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Paʻanga"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TRY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Lira turca"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TTD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar de Trinidad y Tobago"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TWD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nuevo dólar taiwanés"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TZS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chelín tanzano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "UAH"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Grivna"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "UGX"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chelín ugandés"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "USD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar estadounidense"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "USN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar estadounidense (Siguiente día)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "UYI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Peso en Unidades Indexadas (Uruguay)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "UYU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Peso uruguayo"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "UZS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Som uzbeko"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "VEF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bolívar"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "VES7"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bolívar soberano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "VND"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dong vietnamita"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "VUV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Vatu"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "WST"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tala"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XAF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Franco CFA de África Central"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XAG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Plata (una onza troy)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XAU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Oro (una onza troy)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XBA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Unidad compuesta europea (EURCO) (Unidad del mercado de bonos)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XBB"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Unidad Monetaria europea (E.M.U.-6) (Unidad del mercado de bonos)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XBC"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Unidad europea de cuenta 9 (E.U.A.-9) (Unidad del mercado de bonos)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XBD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Unidad europea de cuenta 17 (E.U.A.-17) (Unidad del mercado de bonos)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XCD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar del Caribe Oriental"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XDR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Derechos especiales de giro"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XOF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Franco CFA de África Occidental"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XPD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Paladio (una onza troy)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XPF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Franco CFP"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XPT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Platino (una onza troy)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XSU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "SUCRE"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XTS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Reservado para pruebas"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XUA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Unidad de cuenta BAD"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "XXX"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sin divisa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "YER"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rial yemení"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ZAR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rand"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ZMW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kwacha zambiano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ZWL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dólar zimbabuense"
+						}
+					]
+				}
+			]
+		}
+	}
+}

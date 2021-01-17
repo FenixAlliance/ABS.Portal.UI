@@ -1,0 +1,188 @@
+{
+	"gc:CodeList": {
+		"-xmlns:gc": "http://docs.oasis-open.org/codelist/ns/genericode/1.0/",
+		"Identification": {
+			"ShortName": "TipoEntrega",
+			"LongName": {
+				"-xml:lang": "es",
+				"#text": "Condiciones de Entrega"
+			},
+			"Version": "1",
+			"CanonicalUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:TipoEntrega",
+			"CanonicalVersionUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:TipoEntrega-2.1",
+			"LocationUri": "http://dian.gov.co/ubl/os-ubl-2.0/cl/gc/default/TipoEntrega-2.1.gc",
+			"Agency": {
+				"LongName": {
+					"-xml:lang": "es",
+					"#text": "DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+				},
+				"Identifier": "195"
+			}
+		},
+		"ColumnSet": {
+			"Column": [
+				{
+					"-Id": "code",
+					"-Use": "required",
+					"ShortName": "Code",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Codigo Comun"
+					},
+					"Data": { "-Type": "normalizedString" }
+				},
+				{
+					"-Id": "name",
+					"-Use": "required",
+					"ShortName": "Name",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Nombre"
+					},
+					"Data": { "-Type": "string" }
+				}
+			],
+			"Key": {
+				"-Id": "codeKey",
+				"ShortName": "CodeKey",
+				"ColumnRef": { "-Ref": "code" }
+			}
+		},
+		"SimpleCodeList": {
+			"Row": [
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CFR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Costo y flete"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CIF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Costo, flete y seguro"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CIP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Transporte y Seguro Pagados hasta"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CPT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Transporte Pagado Hasta"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DAP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Entregado en un Lugar"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DAT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Entregado en Terminal"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DDP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Entregado con Pago de Derechos"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "EXW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "En Fábrica"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FAS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Franco al costado del buque"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FCA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Franco transportista"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FOB"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Franco a bordo"
+						}
+					]
+				}
+			]
+		}
+	}
+}

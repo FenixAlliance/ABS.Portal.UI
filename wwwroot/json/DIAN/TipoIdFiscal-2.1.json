@@ -1,0 +1,176 @@
+{
+	"gc:CodeList": {
+		"-xmlns:gc": "http://docs.oasis-open.org/codelist/ns/genericode/1.0/",
+		"Identification": {
+			"ShortName": "TipoIdFiscal",
+			"LongName": {
+				"-xml:lang": "es",
+				"#text": "Tipo de Identificador Fiscal"
+			},
+			"Version": "1",
+			"CanonicalUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:TipoIdFiscal",
+			"CanonicalVersionUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:TipoIdFiscal-2.1",
+			"LocationUri": "http://dian.gov.co/ubl/os-ubl-2.0/cl/gc/default/TipoIdFiscal-2.1.gc",
+			"Agency": {
+				"LongName": {
+					"-xml:lang": "es",
+					"#text": "DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+				},
+				"Identifier": "195"
+			}
+		},
+		"ColumnSet": {
+			"Column": [
+				{
+					"-Id": "code",
+					"-Use": "required",
+					"ShortName": "Code",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Codigo Comun"
+					},
+					"Data": { "-Type": "normalizedString" }
+				},
+				{
+					"-Id": "name",
+					"-Use": "required",
+					"ShortName": "Name",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Nombre"
+					},
+					"Data": { "-Type": "string" }
+				}
+			],
+			"Key": {
+				"-Id": "codeKey",
+				"ShortName": "CodeKey",
+				"ColumnRef": { "-Ref": "code" }
+			}
+		},
+		"SimpleCodeList": {
+			"Row": [
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "11"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Registro civil "
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "12"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tarjeta de identidad "
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "13"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cédula de ciudadanía "
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "21"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tarjeta de extranjería "
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "22"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cédula de extranjería "
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "31"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "NIT"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "41"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Pasaporte "
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "42"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Documento de identificación extranjero "
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "50"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "NIT de otro país"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "91"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "NUIP * "
+						}
+					]
+				}
+			]
+		}
+	}
+}

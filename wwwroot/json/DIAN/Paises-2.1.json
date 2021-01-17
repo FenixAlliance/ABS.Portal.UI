@@ -1,0 +1,3044 @@
+{
+	"gc:CodeList": {
+		"-xmlns:gc": "http://docs.oasis-open.org/codelist/ns/genericode/1.0/",
+		"Identification": {
+			"ShortName": "Paises",
+			"LongName": {
+				"-xml:lang": "es",
+				"#text": "Paises"
+			},
+			"Version": "1",
+			"CanonicalUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:Paises",
+			"CanonicalVersionUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:Paises-2.1",
+			"LocationUri": "http://dian.gov.co/ubl/os-ubl-2.0/cl/gc/default/Paises-2.1.gc",
+			"Agency": {
+				"LongName": {
+					"-xml:lang": "es",
+					"#text": "DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+				},
+				"Identifier": "195"
+			}
+		},
+		"ColumnSet": {
+			"Column": [
+				{
+					"-Id": "code",
+					"-Use": "required",
+					"ShortName": "Code",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Codigo Comun"
+					},
+					"Data": { "-Type": "normalizedString" }
+				},
+				{
+					"-Id": "name",
+					"-Use": "required",
+					"ShortName": "Name",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Nombre"
+					},
+					"Data": { "-Type": "string" }
+				}
+			],
+			"Key": {
+				"-Id": "codeKey",
+				"ShortName": "CodeKey",
+				"ColumnRef": { "-Ref": "code" }
+			}
+		},
+		"SimpleCodeList": {
+			"Row": [
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Afganistán"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AX"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Åland"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Albania"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Alemania"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Andorra"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Angola"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Anguila"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AQ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Antártida"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Antigua y Barbuda"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Arabia Saudita"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DZ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Argelia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Argentina"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Armenia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Aruba"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Australia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Austria"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AZ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Azerbaiyán"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bahamas"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bangladés"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BB"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Barbados"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BH"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Baréin"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bélgica"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BZ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Belice"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BJ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Benín"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bermudas"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bielorrusia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bolivia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BQ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bonaire, San Eustaquio y Saba"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bosnia y Herzegovina"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Botsuana"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Brasil"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Brunéi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bulgaria"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Burkina Faso"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Burundi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bután"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cabo Verde"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KH"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Camboya"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Camerún"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Canadá"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "QA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Catar"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chad"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chile"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "China"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Chipre"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Colombia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Comoras"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Corea del Norte"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Corea del Sur"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Costa de Marfil"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Costa Rica"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Croacia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cuba"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Curazao"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dinamarca"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Dominica"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "EC"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ecuador"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "EG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Egipto"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "El Salvador"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Emiratos Árabes Unidos"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ER"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Eritrea"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Eslovaquia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Eslovenia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ES"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "España"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "US"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Estados Unidos"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "EE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Estonia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ET"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Etiopía"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PH"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Filipinas"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Finlandia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FJ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Fiyi"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Francia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Gabón"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Gambia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Georgia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GH"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ghana"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Gibraltar"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Granada"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Grecia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Groenlandia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Guadalupe"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Guam"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Guatemala"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Guayana Francesa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Guernsey"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Guinea"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Guinea-Bisáu"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GQ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Guinea Ecuatorial"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Guyana"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Haití"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Honduras"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Hong Kong"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Hungría"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "India"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ID"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Indonesia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IQ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Irak"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Irán"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Irlanda"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Isla Bouvet"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Isla de Man"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CX"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Isla de Navidad"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Islandia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Islas Caimán"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CC"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Islas Cocos"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Islas Cook"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Islas Feroe"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Islas Georgias del Sur y Sandwich del Sur"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "HM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Islas Heard y McDonald"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Islas Malvinas"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Islas Marianas del Norte"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MH"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Islas Marshall"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Islas Pitcairn"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SB"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Islas Salomón"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TC"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Islas Turcas y Caicos"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "UM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Islas ultramarinas de Estados Unidos"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "VG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Islas Vírgenes Británicas"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "VI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Islas Vírgenes de los Estados Unidos"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Israel"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Italia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "JM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Jamaica"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "JP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Japón"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "JE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Jersey"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "JO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Jordania"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KZ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kazajistán"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kenia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kirguistán"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kiribati"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Kuwait"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Laos"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Lesoto"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Letonia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LB"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Líbano"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Liberia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Libia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Liechtenstein"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Lituania"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Luxemburgo"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Macao"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Macedonia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Madagascar"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Malasia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Malaui"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Maldivas"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ML"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Malí"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Malta"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Marruecos"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MQ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Martinica"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Mauricio"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Mauritania"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "YT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Mayotte"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MX"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "México"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "FM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Micronesia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Moldavia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MC"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Mónaco"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Mongolia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ME"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Montenegro"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Montserrat"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MZ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Mozambique"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Myanmar"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Namibia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nauru"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NP"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nepal"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nicaragua"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Níger"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nigeria"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "UN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Niue"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Norfolk"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Noruega"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NC"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nueva Caledonia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NZ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nueva Zelanda"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "OM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Omán"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "NL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Países Bajos"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Pakistán"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Palaos"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Palestina"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Panamá"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Papúa Nueva Guinea"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Paraguay"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Perú"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Polinesia Francesa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Polonia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Portugal"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Puerto Rico"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "GB"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Reino Unido"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "EH"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "República Árabe Saharaui Democrática"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "República Centroafricana"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CZ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "República Checa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "República del Congo"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "República Democrática del Congo"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "República Dominicana"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "RE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Reunión"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "RW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ruanda"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "RO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rumania"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "RU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rusia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "WS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Samoa"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "AS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Samoa Americana"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "BL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "San Bartolomé"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "KN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "San Cristóbal y Nieves"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "San Marino"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "MF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "San Martín"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "PM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "San Pedro y Miquelón"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "VC"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "San Vicente y las Granadinas"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SH"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Santa Elena, Ascensión y Tristán de Acuña"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LC"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Santa Lucía"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ST"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Santo Tomé y Príncipe"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Senegal"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "RS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Serbia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SC"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Seychelles"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sierra Leona"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Singapur"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SX"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sint Maarten"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Siria"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Somalia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "LK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sri Lanka"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SZ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Suazilandia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ZA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sudáfrica"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SD"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sudán"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SS"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Sudán del Sur"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SI"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Suecia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "CH"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Suiza"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Surinam"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "SJ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Svalbard y Jan Mayen"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TH"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tailandia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Taiwán (República de China)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TZ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tanzania"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TJ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tayikistán"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "IO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Territorio Británico del Océano Índico"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tierras Australes y Antárticas Francesas"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TL"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Timor Oriental"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Togo"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TK"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tokelau"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TO"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tonga"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TT"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Trinidad y Tobago"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Túnez"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Turkmenistán"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TR"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Turquía"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "TV"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tuvalu"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "UA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ucrania"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "UG"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Uganda"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "UY"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Uruguay"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "UZ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Uzbekistán"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "VU"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Vanuatu"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "VA"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Vaticano, Ciudad del"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "VE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Venezuela"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "VN"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Vietnam"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "WF"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Wallis y Futuna"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "YE"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Yemen"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "DJ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Yibuti"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ZM"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Zambia"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ZW"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Zimbabue"
+						}
+					]
+				}
+			]
+		}
+	}
+}

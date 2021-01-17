@@ -1,0 +1,143 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+
+<div class="dashboard-footer dashboard-footer-dark" style="width:100% !important; margin-top:40px;" id="footer">
+    <div class="container">
+        <div class="row">
+        
+            <div class="col col-lg-4 col-md-4 col-sm-6 col-6">
+                <!-- Widget About -->
+                <div class="widget w-about" style="z-index:0">
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="logo" style="z-index:0">
+                        <div class="img-wrap">
+                            <img src="~/images/FenixAlliance/Branding/logo-silver-220x40.png" style="max-width:80% !important" alt="Fenix Alliance Logo">
+                        </div>
+                    </a>
+                    <p>@_["Fenix ​​Alliance Group is a Colombian IT company that specializes in helping businesses and organizations to increase productivity while reducing technology costs by enabling them to collaborate and optimize efficiencies in a cognitive, secure and reliable way."]</p>
+                    <ul class="socials">
+                        <li>
+                            <a target="_blank" href="https://www.facebook.com/FenixAlliance"><i class="fab fa-facebook-square"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://twitter.com/fenixalliance"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.linkedin.com/company/FenixAlliance/"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://github.com/FenixAlliance/"><i class="fab fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.instagram.com/fenixalliancegroup/"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://pinterest.com/FenixAllianceGroup/"><i class="fab fa-pinterest-p"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.youtube.com/channel/UCMzdCFA6KU4dBlHMDtX-xuA/"><i class="fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ... end Widget About -->
+            </div>
+            <div class="col col-lg-2 col-md-4 col-sm-6 col-6">
+                <!-- Widget List -->
+                <div class="widget w-list">
+                    <h6 class="title">Main Links</h6>
+                    <ul>
+                        <li>
+                            <a onclick="NProgress.start()" asp-area="Technologies" asp-controller="Home" asp-action="Index">@_["Technologies"]</a>
+                        </li>
+                        <li>
+                            <a onclick="NProgress.start()" asp-area="Store" asp-controller="Home" asp-action="Index">@_["Infinity Comex"]</a>
+                        </li>
+                        <li>
+                            <a onclick="NProgress.start()" asp-area="Education" asp-controller="Home" asp-action="Index">@_["Learn Alliance"]</a>
+                        </li>
+
+                        <li>
+                            <a onclick="NProgress.start()" asp-area="Support" asp-controller="Home" asp-action="Index">@_["Alliance ID Support"]</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ... end Widget List -->
+            </div>
+            <div class="col col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="widget w-list">
+                    <h6 class="title">Your Alliance ID</h6>
+                    <ul>
+                        <li>
+                            <a asp-area="ID" asp-controller="Account" asp-action="Index">@_["Your Account"]</a>
+                        </li>
+                        <li>
+                            <a asp-area="ID" asp-controller="MySocialProfile" asp-action="Index">@_["Social Profile"]</a>
+                        </li>
+                        <li>
+                            <a asp-area="Careers" asp-controller="Home" asp-action="Index">@_["Careers"]</a>
+                        </li>
+                        <li>
+                            <a asp-area="Projects" asp-controller="Home" asp-action="Index">@_["Persona Projects"]</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="widget w-list">
+                    <h6 class="title">Features</h6>
+                    <ul>
+                        <li>
+                            <a asp-area="Blogs" asp-controller="Home" asp-action="Index">@_["Blogs"]</a>
+                        </li>
+                        <li>
+                            <a asp-area="Forums" asp-controller="Home" asp-action="Index">@_["Forums"]</a>
+                        </li>
+                        <li>
+                            <a asp-area="Partner" asp-controller="Home" asp-action="Index">@_["Alliance Trusted Advisors"]</a>
+                        </li>
+                        <li>
+                            <a asp-area="ID" asp-controller="Home" asp-action="Index">@_["Groups and Communities"]</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="widget w-list">
+                    <h6 class="title">About</h6>
+                    <ul>
+                        <li>
+                            <a asp-area="Corporate" asp-controller="About" asp-action="Outlook">@_["Fenix Alliance at a glance"]</a>
+                        </li>
+                        <li>
+                            <a asp-area="Legal" asp-controller="Policies" asp-action="TermsAndConditions">@_["Terms and conditions"]</a>
+                        </li>
+                        <li>
+                            <a asp-area="Legal" asp-controller="Policies" asp-action="PrivacyPolicy">@_["Privacy policy"]</a>
+                        </li>
+                        <li>
+                            <a asp-area="Sustainability" asp-controller="Home" asp-action="Index">@_["Sustainability"]</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
+                <!-- SUB Footer -->
+                <div class="dashboard-sub-footer-copyright">
+                    <span>
+                        @_["Copyright"] &copy; @DateTime.Now.Year | &nbsp;
+                        <a asp-area="" asp-controller="Home" asp-action="Index">Fenix Alliance S.A.S</a>.
+                    </span>
+                </div>
+                <!-- ... end SUB Footer -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

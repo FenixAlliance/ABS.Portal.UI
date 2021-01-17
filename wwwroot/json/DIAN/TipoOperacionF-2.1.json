@@ -1,0 +1,84 @@
+{
+  "gc:CodeList": {
+    "-xmlns:gc": "http://docs.oasis-open.org/codelist/ns/genericode/1.0/",
+    "Identification": {
+      "ShortName": "TipoOperacion",
+      "LongName": {
+        "-xml:lang": "es",
+        "#text": "Tipo de operacion del documento"
+      },
+      "Version": "1",
+      "CanonicalUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:TipoOperacion",
+      "CanonicalVersionUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:TipoOperacion-2.1",
+      "LocationUri": "http://dian.gov.co/ubl/os-ubl-2.0/cl/gc/default/TipoOperacion-2.1.gc",
+      "Agency": {
+        "LongName": {
+          "-xml:lang": "es",
+          "#text": "DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+        },
+        "Identifier": "195"
+      }
+    },
+    "ColumnSet": {
+      "Column": [
+        {
+          "-Id": "code",
+          "-Use": "required",
+          "ShortName": "Code",
+          "Data": { "-Type": "normalizedString" }
+        },
+        {
+          "-Id": "name",
+          "-Use": "required",
+          "ShortName": "Nombre",
+          "Data": { "-Type": "normalizedString" }
+        }
+      ],
+      "Key": {
+        "-Id": "codeKey",
+        "ShortName": "CodeKey",
+        "ColumnRef": { "-Ref": "code" }
+      }
+    },
+    "SimpleCodeList": {
+      "Row": [
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "10"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "Estandar"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "09"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "AIU"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "11"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "Mandatos"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

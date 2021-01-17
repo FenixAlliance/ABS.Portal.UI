@@ -1,0 +1,191 @@
+﻿@model FenixAlliance.ABM.Models.Holders.AllianceIDHolder
+
+@using System.Security.Principal
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+
+@{
+    var time = DateTime.Now.Hour;
+}
+
+<div class="author-page author vcard inline-items more">
+    <div class="author-thumb">
+        @if (Model.SelectedBusinessID == null)
+        {
+            <img alt="author" src="@Model.AvatarURL" style="max-height:30px;" class="avatar">
+        }
+        else
+        {
+            <img alt="author" src="@Model.SelectedBusiness.BusinessAvatarURL" style="max-height:30px;" class="avatar">
+            <span class="icon-status online"></span>
+        }
+        <div class="more-dropdown more-with-triangle">
+            <ul class="mCustomScrollbar" style="padding:5px;">
+                <li class="mCustomScrollbar" data-mcs-theme="dark">
+                    <div class="ui-block-title ui-block-title-small">
+                        <h6 class="title">@_["Your Alliance ID"]</h6>
+                    </div>
+                    <ul class="account-settings">
+                        <li>
+                            <a asp-area="ID" asp-controller="Account" asp-action="Index">
+                                <i class="fas fa-user"></i>
+                                <span>@_["Your Profile"]</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="ID" asp-controller="MySettings" asp-action="Index">
+                                <i class="fas fa-user-cog"></i>
+                                <span>@_["Profile Settings"]</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a asp-area="" asp-controller="Account" asp-action="SignOut">
+                                <i class="fas fa-sign-out"></i>
+
+                                <span>@_["Log Out"]</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="ui-block-title ui-block-title-small">
+                        <h6 class="title">@_["Switch to business profile"]</h6>
+                    </div>
+
+                    <ul class="chat-settings">
+                        @if (Model.SelectedBusinessID != null)
+                        {
+                            <li>
+                                <a class="nav-link" asp-area="Business" asp-controller="Businesses" asp-action="Deselect" id="DeSelectedBusiness">
+                                    <img style="max-height:20px;" alt="Avatar" src="@Model.AvatarURL" class="rounded-circle img-fluid"> @_["Back to my profile"]
+                                </a>
+                            </li>
+                        }
+
+                        @if (@Model.BusinessProfileRecords.Count() == 0)
+                        {
+                            <li>
+                                <a asp-area="Business" asp-controller="MyBusiness" asp-action="Create" class="dropdown-item">
+                                    <span>@_["New business"]</span>
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            @foreach (var item in Model.BusinessProfileRecords.Where(b => b.IsBusinessOwner == true))
+                            {
+                                <li>
+                                    <a class="nav-link" asp-area="Business" asp-controller="Businesses" asp-action="Select" asp-route-id="@item.Business.ID" id="SelectedBusiness">
+                                        <img style="max-height:20px;" alt="Avatar" src="@item.Business.BusinessAvatarURL" class="rounded-circle img-fluid"> @item.Business.BusinessName
+                                    </a>
+                                </li>
+                            }
+
+                            @foreach (var item in Model.BusinessProfileRecords.Where(b => b.IsBusinessOwner == false))
+                            {
+                                <li>
+                                    <a class="nav-link" asp-area="Business" asp-controller="Businesses" asp-action="Select" asp-route-id="@item.Business.ID" id="SelectedBusiness">
+                                        <i class="material-icons"><img style="max-height:40px;" alt="Avatar" src="@item.Business.BusinessAvatarURL" class="rounded-circle img-fluid"></i> @item.Business.BusinessName
+                                    </a>
+                                </li>
+                            }
+                        }
+                    </ul>
+
+
+                    <div class="ui-block-title ui-block-title-small">
+                        <h6 class="title">@_["Public Status"]</h6>
+                    </div>
+
+                    <ul class="chat-settings">
+                        <li>
+                            <a href="#">
+                                <span class="icon-status online"></span>
+                                <span>@_["Online"]</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon-status away"></span>
+                                <span>@_["Away"]</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon-status disconected"></span>
+                                <span>@_["Disconnected"]</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <span class="icon-status status-invisible"></span>
+                                <span>@_["Invisible"]</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="ui-block-title ui-block-title-small">
+                        <h6 class="title">@_["Custom Status"]</h6>
+                    </div>
+
+                    <form class="form-group with-button custom-status">
+                        <input class="form-control" placeholder="" type="text" value="Away">
+
+                        <button class="bg-purple">
+                            <i class="fas fa-check"></i>
+                        </button>
+                    </form>
+
+                    <div class="ui-block-title ui-block-title-small">
+                        <h6 class="title">@_["About Fenix Alliance"]</h6>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <a asp-area="Legal" asp-controller="Policies" asp-action="TermsAndConditions">
+                                <span>@_["Terms and Conditions"]</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="Docs" asp-controller="Home" asp-action="Index">
+                                <span>@_["FAQs"]</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="Careers" asp-controller="MyCareersProfile" asp-action="Index">
+                                <span>@_["Careers"]</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="Support" asp-controller="Contact" asp-action="Index">
+                                <span>@_["Contact"]</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <a href="#" class="author-name fn">
+        @if (Model.SelectedBusinessID == null)
+        {
+            <div class="author-title">
+                @User.Identity.Name <i class="fas fa-caret-down"></i>
+            </div>
+            <span class="author-subtitle">@_["ACCOUNT HOLDER"]</span>
+        }
+        else
+        {
+            <div class="author-title">
+                @Model.SelectedBusiness.BusinessName <i class="fas fa-caret-down"></i>
+            </div>
+            <span class="author-subtitle">@_["BUSINESS TENANT"]</span>
+        }
+    </a>
+</div>

@@ -1,0 +1,84 @@
+{
+  "gc:CodeList": {
+    "-xmlns:gc": "http://docs.oasis-open.org/codelist/ns/genericode/1.0/",
+    "Identification": {
+      "ShortName": "TipoCodigoProducto",
+      "LongName": {
+        "-xml:lang": "es",
+        "#text": "Eventos de un documento electronico"
+      },
+      "Version": "1",
+      "CanonicalUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:TipoCodigoProducto",
+      "CanonicalVersionUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:TipoCodigoProducto-2.1",
+      "LocationUri": "http://dian.gov.co/ubl/os-ubl-2.0/cl/gc/default/TipoCodigoProducto-2.1.gc",
+      "Agency": {
+        "LongName": {
+          "-xml:lang": "es",
+          "#text": "DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+        },
+        "Identifier": "195"
+      }
+    },
+    "ColumnSet": {
+      "Column": [
+        {
+          "-Id": "code",
+          "-Use": "required",
+          "ShortName": "Code",
+          "Data": { "-Type": "normalizedString" }
+        },
+        {
+          "-Id": "name",
+          "-Use": "required",
+          "ShortName": "Nombre",
+          "Data": { "-Type": "normalizedString" }
+        }
+      ],
+      "Key": {
+        "-Id": "codeKey",
+        "ShortName": "CodeKey",
+        "ColumnRef": { "-Ref": "code" }
+      }
+    },
+    "SimpleCodeList": {
+      "Row": [
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "001"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "UNSPSC"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "010"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "GTIN"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "999"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "Estándar de adopción del contribuyente"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

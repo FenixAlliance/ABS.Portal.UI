@@ -1,0 +1,205 @@
+﻿@model FenixAlliance.ABM.Models.Holders.AllianceIDHolder
+
+@using System.Security.Principal
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+
+@{
+    var FollowersCount = Model.SocialProfile.Followers.Count;
+    var FollowsCount = Model.SocialProfile.Follows.Count;
+    var BusinessCount = Model.BusinessProfileRecords.Count;
+    var GroupsCount = Model.SocialProfile.GroupMembershipRecords.Count;
+}
+
+
+@if (ViewBag.DisplaySocialHeader != true)
+{
+    <div class="container">
+        <div class="row">
+            <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="ui-block">
+                    <div class="top-header">
+                        <div class="top-header-thumb">
+                            <img src="~/images/Background/bg (1).jpg" style="max-height:350px;" alt="@_["Profile Cover"]">
+                        </div>
+                        <div class="profile-section">
+                            <div class="row">
+                                <div class="col col-lg-5 col-md-5 col-sm-12 col-12">
+                                    <ul class="profile-menu">
+                                        <li>
+                                            <a asp-area="ID" asp-controller="Account" asp-action="Index">@_["Account"]</a>
+                                        </li>
+                                        <li>
+                                            <a asp-area="Social" asp-controller="Holders" asp-action="Following" asp-route-id="@Model.GUID">@_["Following"] (@FollowsCount)</a>
+                                        </li>
+                                        <li>
+                                            <a asp-area="Social" asp-controller="Holders" asp-action="Followers" asp-route-id="@Model.GUID">@_["Followers"] (@FollowersCount)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col col-lg-5 ml-auto col-md-5 col-sm-12 col-12">
+                                    <ul class="profile-menu">
+                                        <li>
+                                            <a asp-area="Business" asp-controller="SelectBusiness" asp-action="Index">@_["Businesses"] (@BusinessCount)</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Suite/Me/Tools/Storage">@_["Storage"]</a>
+                                        </li>
+                                        <li>
+                                            <div class="more">
+                                                <i class="fas fa-bars"></i>
+                                                <ul class="more-dropdown more-with-triangle">
+                                                    <li>
+                                                        <a href="https://learn.fenixalliance.com.co/my/" target="_blank" title="@_["My Learning Profile"]">
+                                                            @_["Learning Profile"]
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a asp-area="Careers" asp-controller="MyCareersProfile" asp-action="Index" title="@_["My Careers Profile"]">
+                                                            @_["Careers Profile"]
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a asp-area="Careers" asp-controller="MyJobOfferApplications" asp-action="Index" title="@_["My Job Offer Applications"]">
+                                                            @_["Job Applications"]
+                                                        </a>
+                                                    </li>
+                                                    @if (Model.PersonaPartnerProfile != null)
+                                                    {
+
+                                                        <li>
+                                                            <a asp-area="Partner" asp-controller="PersonaPartnerProfiles" asp-action="Details" title="@_["Partner Profile"]" asp-route-id="@Model.PersonaPartnerProfile.ID">
+                                                                @_["Manage Partner Profile"]
+                                                            </a>
+                                                        </li>
+                                                    }
+                                                    else
+                                                    {
+                                                        <li>
+                                                            <a asp-area="Partner" asp-controller="PersonaPartnerProfiles" asp-action="Create" title="@_["Create Partner Profile"]">
+                                                                @_["Create Partner Profile"]
+                                                            </a>
+                                                        </li>
+                                                    }
+                                                    <li>
+                                                        <a asp-area="Billing" asp-controller="Orders" asp-action="Index">
+                                                            @_["Orders, Payments and Invoices"]
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a asp-area="ID" asp-controller="MyAddresses" asp-action="Index">
+                                                            @_["Billing / Shipping Addreses"]
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a asp-area="Billing" asp-controller="Wallet" asp-action="Index">
+                                                            @_["Your Wallet account"]
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="control-block-button">
+
+
+                            </div>
+                            
+                        </div>
+                        <div class="top-header-author">
+                            <a href="#" class="author-thumb">
+                                <img src="@Html.DisplayFor(model => model.AvatarURL)" style=" max-height:100%; background-size: cover;" alt="@_["Avatar"]">
+                            </a>
+                            <div class="author-content">
+                                <a href="#" class="h6 author-name">@Html.DisplayFor(model => model.PublicName)</a>
+                                <div class="country">@Html.DisplayFor(model => model.JobTitle)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="container">
+        <div class="row">
+            <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="ui-block">
+                    <div class="top-header">
+                        <div class="top-header-thumb">
+                            <img src="~/images/Background/bg (1).jpg" style="max-height:350px;" alt="@_["Profile Cover"]">
+                        </div>
+                        <div class="profile-section">
+                            <div class="row">
+                                <div class="col col-lg-5 col-md-5 col-sm-12 col-12">
+                                    <ul class="profile-menu">
+                                        <li>
+                                            <a asp-area="Social" asp-controller="Holders" asp-action="Details" asp-route-id="@Model.GUID">@_["Profile"]</a>
+                                        </li>
+                                        <li>
+                                            <a asp-area="Social" asp-controller="Holders" asp-action="Following" asp-route-id="@Model.GUID">@_["Following"] (@FollowsCount)</a>
+                                        </li>
+                                        <li>
+                                            <a asp-area="Social" asp-controller="Holders" asp-action="Followers" asp-route-id="@Model.GUID">@_["Followers"] (@FollowersCount)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col col-lg-5 ml-auto col-md-5 col-sm-12 col-12">
+                                    <ul class="profile-menu">
+                                        <li>
+                                            <a asp-area="Social" asp-controller="Holders" asp-action="Businesses" asp-route-id="@Model.GUID">@_["Businesses"] (@BusinessCount)</a>
+                                        </li>
+                                        <li>
+                                            <a asp-area="Social" asp-controller="Holders" asp-action="Groups" asp-route-id="@Model.GUID">@_["Groups"]  (@GroupsCount) </a>
+                                        </li>
+                                        <li>
+                                            <div class="more">
+                                                <i class="fas fa-bars"></i>
+                                                <ul class="more-dropdown more-with-triangle">
+                                                    @if (Model.PersonaPartnerProfile != null)
+                                                    {
+
+                                                        <li>
+                                                            <a asp-area="Partner" asp-controller="PersonaPartnerProfiles" asp-action="Details" title="@_["Partner Profile"]" asp-route-id="@Model.PersonaPartnerProfile.ID">
+                                                                @_["Partner Profile"]
+                                                            </a>
+                                                        </li>
+                                                    }
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="control-block-button">
+
+
+                            </div>
+                        </div>
+                        <div class="top-header-author">
+                            <a href="#" class="author-thumb">
+                                <img src="@Html.DisplayFor(model => model.AvatarURL)" style=" max-height:100%; background-size: cover;" alt="@_["Avatar"]">
+                            </a>
+                            <div class="author-content">
+                                <a href="#" class="h6 author-name">@Html.DisplayFor(model => model.PublicName)</a>
+                                <div class="country">@Html.DisplayFor(model => model.JobTitle)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

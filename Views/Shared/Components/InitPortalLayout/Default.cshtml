@@ -1,0 +1,48 @@
+﻿@model FenixAlliance.ABM.Models.Holders.AllianceIDHolder
+@using Microsoft.AspNetCore.Authentication
+@using Microsoft.Extensions.Options
+@using System.Security.Principal
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+@{
+    var time = DateTime.Now.Hour;
+}
+
+@await Component.InvokeAsync("PortalHeader", Model)
+@await Component.InvokeAsync("PortalLeftSideNavigation", Model)
+@await Component.InvokeAsync("PortalResponsiveHeader", Model)
+@if (ViewBag.SmallSpaceHeader == true)
+{
+    <div class="header-spacer header-spacer-small"></div>
+}
+else
+{
+    <div class="header-spacer"></div>
+}
+@if (User.Identity.IsAuthenticated)
+{
+    @await Component.InvokeAsync("PortalResponsiveSideNav", Model)
+
+    @if (Model.SelectedBusiness != null)
+    {
+        @await Component.InvokeAsync("PortalRightSideNavigation", Model)
+        @await Component.InvokeAsync("ChatWindow", new { Tenant = Model, user = User })
+    }
+
+    @if (ViewBag.HideAccountHeader != true)
+    {
+        @if (Model.SelectedBusiness != null && ViewBag.ForceTenantHeader != true || ViewBag.ForceBusinessHeader == true && ViewBag.ForceTenantHeader != true)
+        {
+            @await Component.InvokeAsync("BusinessAccountHeader", new { Business = Model.SelectedBusiness })
+        }
+        if (Model.SelectedBusiness == null && ViewBag.ForceBusinessHeader != true || ViewBag.ForceTenantHeader == true && ViewBag.ForceBusinessHeader != true)
+        {
+            @await Component.InvokeAsync("AccountHeader", new { Holder = Model })
+        }
+    }
+}

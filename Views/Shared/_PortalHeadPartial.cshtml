@@ -1,0 +1,165 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+
+@using FenixAlliance.ABS.Portal.Core
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using FenixAlliance.ACL.Configuration.Types
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+@inject SuiteOptions ABSPortal
+@inject IHtmlLocalizer<SharedResources> _
+
+@{
+
+}
+<!-- Dashboard CSS -->
+<link rel="stylesheet" href="~/FenixAlliance.UI.Portal.V1/min/css/dashboard.all.min.css" />
+
+@if (ViewBag.EnablePrettyfy == true)
+{
+    <!-- #region Code Prettyfy -->
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/google/code-prettify/master/loader/skins/sunburst.css">
+}
+
+@if (ViewBag.EnableChosen == true)
+{
+    <!-- #region Chosen files -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+}
+
+@if (ViewBag.EnableCleave == true)
+{
+    <!-- #region Cleave.JS files -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.4.10/cleave.min.js"></script>
+}
+
+@if (ViewBag.EnableSelectize == true)
+{
+    <!-- #region Selectize.JS files -->
+    <script type="text/javascript" src="~/lib/selectize/dist/js/standalone/selectize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/lib/selectize/dist/css/selectize.default.css" />
+}
+
+@if (ViewBag.EnableTinyMce == true)
+{
+    <!-- #region Tinymce files -->
+    <script type="text/javascript" src="~/FenixAlliance.UI.Core.V1/lib/tinymce/tinymce.min.js"></script>
+    <!-- #Init scripts -->
+    <script>
+    tinymce.init({
+        selector: '.tinymce_area',
+        plugins: '',
+        //plugins: 'stickytoolbar code print preview fullpage powerpaste searchreplace autolink directionality advcode visualblocks visualchars fullscreen image link media mediaembed template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount tinymcespellchecker a11ychecker imagetools textpattern formatpainter permanentpen pageembed tinycomments mentions linkchecker ',
+        toolbar: 'formatselect | bold italic strikethrough forecolor backcolor permanentpen formatpainter | link image media pageembed | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent | removeformat | addcomment | code ',
+        image_dimensions: false,
+        height: "800",
+        link_assume_external_targets: "https",
+        default_link_target: "_blank",
+        image_class_list: [
+            { title: 'Responsive', value: 'img-responsive' }
+        ]
+    });
+
+    document.querySelectorAll('.currency').forEach(function (el) {
+        new Cleave(el, { numeral: true, numeralThousandsGroupStyle: 'thousand' });
+    });
+    document.querySelectorAll('.cardNumber').forEach(function (el) {
+        new Cleave(el, { creditCard: true });
+    });
+    </script>
+}
+
+@if (ViewBag.EnableFacebookSdk == true)
+{
+    <script>
+            window.fbAsyncInit = function () {
+                FB.init({
+                    //appId: 'xxxxxxxxxx', // Prod
+                    appId: 'xxxxxxxxxx', // Test
+                    autoLogAppEvents: true,
+                    xfbml: true,
+                    version: 'v3.3'
+                });
+            };
+
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) { return; }
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+}
+
+@if (ViewBag.EnableTwitterSdk == true)
+{
+    <script>
+        window.twttr = (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function (f) {
+                t._e.push(f);
+            };
+
+            return t;
+        }(document, "script", "twitter-wjs"));
+
+    </script>
+}
+
+@if (ViewBag.EnableYouTubeSdk == true)
+{
+    <script src="https://www.youtube.com/iframe_api"></script>
+}
+
+<script src="~/FenixAlliance.UI.Core.V1/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+
+<style>
+    label {
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @@media (min-width: 1024px) {
+        .container {
+            max-width: 87%;
+        }
+    }
+</style>
+
+
+<style>
+    @@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+    label {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: 'Open Sans';
+    }
+
+    .mce-branding {
+        display: none;
+    }
+
+    /*.image_picker_image {
+        max-width: 140px;
+        max-height: 100px;
+        background-color: #FF0000;
+    }*/
+
+</style>

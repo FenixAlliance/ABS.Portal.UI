@@ -1,0 +1,127 @@
+﻿[
+  {
+    "outputFileName": "wwwroot/min/css/globals.min.css",
+    "inputFiles": [
+      "wwwroot/styles/commons.css",
+      "wwwroot/design-blocks/css/blocks.min.css",
+      "wwwroot/lib/Offline/themes/offline-theme-default.css",
+      "wwwroot/lib/Offline/themes/offline-language-english.css",
+      "wwwroot/lib/tour/build/css/bootstrap-tour.min.css",
+      "wwwroot/lib/fontawesome/css/fontawesome.css",
+      "wwwroot/lib/toastr/build/toastr.min.css",
+      "wwwroot/lib/tingle/dist/tingle.css",
+      "wwwroot/lib/nprogress/nprogress.css",
+      "wwwroot/lib/chosen/chosen.css"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/min/js/globals.min.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery/dist/jquery-2.1.3.min.js",
+      "wwwroot/lib/moment/moment.js",
+      "wwwroot/lib/Offline/offline.min.js",
+      "wwwroot/lib/tingle/dist/tingle.js",
+      "wwwroot/lib/nprogress/nprogress.js",
+      "wwwroot/lib/toastr/build/toastr.min.js",
+      "wwwroot/lib/js-cookie/js.cookie.min.js",
+      "wwwroot/lib/livestampjs/livestamp.js",
+      "wwwroot/lib/money/money.min.js"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/min/css/dashboard.all.min.css",
+    "inputFiles": [
+      "wwwroot/css/bootstrap/bootstrap-reboot.css",
+      "wwwroot/css/bootstrap/bootstrap.css",
+      "wwwroot/css/bootstrap/bootstrap-grid.css",
+      "wwwroot/css/fontawesome/fontawesome.css",
+      "wwwroot/css/dashboard.css"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/min/js/dashboard.all.min.js",
+    "inputFiles": [
+      "wwwroot/js/jquery.appear.js",
+      "wwwroot/js/jquery.mousewheel.js",
+      "wwwroot/js/perfect-scrollbar.js",
+      "wwwroot/js/jquery.matchHeight.js",
+      "wwwroot/js/imagesloaded.pkgd.js",
+      "wwwroot/js/Headroom.js",
+      "wwwroot/js/velocity.js",
+      "wwwroot/js/ScrollMagic.js",
+      "wwwroot/js/jquery.waypoints.js",
+      "wwwroot/js/jquery.countTo.js",
+      "wwwroot/js/popper.min.js",
+      "wwwroot/js/material.min.js",
+      "wwwroot/js/bootstrap-select.js",
+      "wwwroot/js/smooth-scroll.js",
+      "wwwroot/js/selectize.js",
+      "wwwroot/js/swiper.jquery.js",
+      "wwwroot/js/moment.js",
+      "wwwroot/js/daterangepicker.js",
+      "wwwroot/js/simplecalendar.js",
+      "wwwroot/js/fullcalendar.js",
+      "wwwroot/js/isotope.pkgd.js",
+      "wwwroot/js/ajax-pagination.js",
+      "wwwroot/js/Chart.js",
+      "wwwroot/js/chartjs-plugin-deferred.js",
+      "wwwroot/js/circle-progress.js",
+      "wwwroot/js/loader.js",
+      "wwwroot/js/run-chart.js",
+      "wwwroot/js/jquery.magnific-popup.js",
+      "wwwroot/js/jquery.gifplayer.js",
+      "wwwroot/js/mediaelement-and-player.js",
+      "wwwroot/js/mediaelement-playlist-plugin.min.js",
+      "wwwroot/js/base-init.js",
+      "wwwroot/js/bootstrap.bundle.js"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+
+  {
+    "outputFileName": "wwwroot/min/css/material.min.css",
+    "inputFiles": [
+      "wwwroot/css/material-bootstrap.css",
+      "wwwroot/css/material-menu.css",
+      "wwwroot/css/vertical-nav.css",
+      "wwwroot/css/fontawesome.css"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/min/js/material.min.js",
+    "inputFiles": [
+      "wwwroot/js/core/jquery.min.js",
+      "wwwroot/js/core/popper.min.js",
+      "wwwroot/js/core/material-design.js",
+      "wwwroot/js/plugins/moment.min.js",
+      "wwwroot/js/plugins/bootstrap-datetimepicker.js",
+      "wwwroot/js/plugins/nouislider.min.js",
+      "wwwroot/js/plugins/jquery.sharrre.js",
+      "wwwroot/js/plugins/bootstrap-tagsinput.js",
+      "wwwroot/js/plugins/bootstrap-selectpicker.js",
+      "wwwroot/js/plugins/jasny-bootstrap.min.js",
+      "wwwroot/js/plugins/jquery.flexisel.js",
+      "wwwroot/js/modernizr.js",
+      "wwwroot/js/vertical-nav.js",
+      "wwwroot/js/material-menu.js",
+      "wwwroot/js/material-bootstrap.min.js"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  }
+]

@@ -1,0 +1,61 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> SharedLocalizer
+
+<!-- Load Facebook SDK for JavaScript -->
+@*<div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({ xfbml: true, version: 'v3.2' });
+        };
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="fb-customerchat" attribution=setup_tool page_id="599932193359588"></div>*@
+
+
+@*<!-- Start of fenixalliance Zendesk Widget script -->
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=513ee817-5f39-4421-9eaf-04cc036211b0"></script>
+    <!-- End of fenixalliance Zendesk Widget script -->*@
+
+<style>
+    .grecaptcha-badge {
+        display: none
+    }
+
+    .zsiq_floatmain {
+        display: none !important
+    }
+</style>
+<script type="text/javascript">
+
+    function OpenAndy() {
+        window.open("/Support/Andy", 'andy', 'width=600,height=600', false);
+    }
+
+    function OpenZohoSalesIQChat() {
+        $('.zsiq_floatmain').attr("style", "display: block !important");
+    }
+
+    function HideZohoSalesIQChat() {
+        $('.zsiq_floatmain').attr("style", "display: none !important");
+        $("#ZohoSalesIQChatActionBtn").html('@SharedLocalizer["Contact a live support agent"]');
+        $('#ZohoSalesIQChatActionBtn').attr("style", "display: none !important");
+    }
+
+
+    var $zoho = $zoho || {}; $zoho.salesiq = $zoho.salesiq ||
+        { widgetcode: "630ea74c65a34954890a8f49277ad71e106854aad1300b71fc71b2cfd7581bcd2650a6eb66581451abaf530109e1f41f", values: {}, ready: function () { } };
+    var d = document; s = d.createElement("script"); s.type = "text/javascript"; s.id = "zsiqscript"; s.defer = true;
+    s.src = "https://salesiq.zoho.com/widget"; t = d.getElementsByTagName("script")[0]; t.parentNode.insertBefore(s, t); d.write("<div id='zsiqwidget' ></div>");
+
+</script>

@@ -1,0 +1,11 @@
+{
+  "name": "wwwroot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "xterm": "^4.4.0"
+  }
+}

@@ -1,0 +1,78 @@
+﻿@model FenixAlliance.ABM.Models.Tenants.Business
+
+@using System.Security.Principal
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABM.Models.Global.Carts.CartRecords
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+
+@{
+
+}
+
+<div class="control-icon more has-items">
+    <i class="fas fa-shopping-bag fa-2x"></i>
+    <div class="label-avatar bg-primary">@Model.BusinessCart.ItemCartRecords.Count()</div>
+
+    <div class="more-dropdown more-with-triangle triangle-top-center">
+        <div class="ui-block-title ui-block-title-small">
+            <h6 class="title">@Model.BusinessName's cart</h6>
+            <a href="#">Place order</a>
+            <a href="#">Cart Settings</a>
+        </div>
+
+        <div class="mCustomScrollbar" data-mcs-theme="dark">
+            <ul class="notification-list">
+                @if (@Model.BusinessCart.ItemCartRecords.Count() == 0)
+                {
+                    <li>
+                        <div class="notification-event">
+                            <div><a href="#" class="h6">@_["This cart is Empty"]</a> @Model.BusinessName @_["don't have products nor services in it's cart."] <a asp-area="Store" asp-controller="Home" asp-action="Index" class="notification-link">@_["Go to the store"]</a></div>
+                        </div>
+                        <div class="more">
+                            <i class="fas fa-delete"></i>
+                        </div>
+                    </li>
+                }
+                else
+                {
+                    @foreach (ItemCartRecord PCR in Model.BusinessCart.ItemCartRecords)
+                    {
+
+                        var image = "/images/placeholders/product_placeholder.png";
+                        var ProductImagePlaceholder = "/images/placeholders/product_placeholder.png";
+                        if (PCR.Item?.ItemImages != null && PCR.Item?.ItemImages.Count != 0)
+                        {
+                            image = PCR.Item.ItemImages?.First()?.FileUploadURL ?? ProductImagePlaceholder;
+                        }
+                        else
+                        {
+                            image = ProductImagePlaceholder;
+                        }
+
+                        <li>
+                            <div class="author-thumb">
+                                <img src="@image" style="max-height:40px;" alt="author">
+                            </div>
+                            <div class="notification-event">
+                                <div><a asp-area="Store" asp-controller="Products" asp-action="Details" asp-route-id="@PCR.Item.ID" class="h6 notification-friend">@PCR.Item.Title.ToString()</a> <a href="#" class="notification-link">@_["Add to new order"]</a>.</div>
+                                <span class="notification-date" data-livestamp="@PCR.Timestamp.ToString("yyyy-MM-ddTHH:mm:ssZ")"></span>
+                            </div>
+                            <span class="notification-icon">
+                                <i class="fa fa-check"></i>
+                            </span>
+                            <div class="more">
+                                <i class="fa fa-delete"></i>
+                            </div>
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
+        <a asp-area="Store" asp-controller="Carts" asp-action="TenantCart" class="view-all bg-primary">@_["View Business cart"]</a>
+    </div>
+</div>

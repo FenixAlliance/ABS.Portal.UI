@@ -1,0 +1,140 @@
+{
+	"gc:CodeList": {
+		"-xmlns:gc": "http://docs.oasis-open.org/codelist/ns/genericode/1.0/",
+		"Identification": {
+			"ShortName": "EventoDocumento",
+			"LongName": {
+				"-xml:lang": "es",
+				"#text": "Eventos de un Documento Electrónico"
+			},
+			"Version": "1",
+			"CanonicalUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:EventoDocumento",
+			"CanonicalVersionUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:EventoDocumento-2.1",
+			"LocationUri": "http://dian.gov.co/ubl/os-ubl-2.0/cl/gc/default/EventoDocumento-2.1.gc",
+			"Agency": {
+				"LongName": {
+					"-xml:lang": "es",
+					"#text": "DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+				},
+				"Identifier": "195"
+			}
+		},
+		"ColumnSet": {
+			"Column": [
+				{
+					"-Id": "code",
+					"-Use": "required",
+					"ShortName": "Code",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Codigo Comun"
+					},
+					"Data": { "-Type": "normalizedString" }
+				},
+				{
+					"-Id": "name",
+					"-Use": "required",
+					"ShortName": "Name",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Nombre"
+					},
+					"Data": { "-Type": "string" }
+				}
+			],
+			"Key": {
+				"-Id": "codeKey",
+				"ShortName": "CodeKey",
+				"ColumnRef": { "-Ref": "code" }
+			}
+		},
+		"SimpleCodeList": {
+			"Row": [
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "02"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Uso Autorizado por la DIAN"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "030"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Solicitación de Corrección en Documento"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "031"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rechazo de Documento"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "032"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Recibimiento de los Bienes"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "033"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Aceptación de Documento"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "040"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Factura Ofrecida para Negociación como Título Valor"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "041"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Factura Negociada como Título Valor"
+						}
+					]
+				}
+			]
+		}
+	}
+}

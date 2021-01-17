@@ -1,0 +1,333 @@
+﻿@model FenixAlliance.ABM.Models.Holders.AllianceIDHolder
+
+@using System.Security.Principal
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABM.Models.Global.Carts.CartRecords
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+
+@{
+
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <!-- Responsive Header-BP -->
+    <header class="header header-responsive" id="site-header-responsive">
+        <div class="header-content-wrapper">
+            <ul class="nav nav-tabs mobile-app-tabs" role="tablist" style="color:white;">
+                @if (Model.SelectedBusiness != null)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#Business" role="tab">
+                            <div class="control-icon has-items">
+                                <i class="fas fa-business-time fa-2x" style="color:white;"></i>
+                                <div class="label-avatar bg-blue">@Model.SelectedBusiness.BusinessSocialProfile.Notifications.Count</div>
+                            </div>
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" asp-area="Business" asp-action="Home" role="tab">
+                            <div class="control-icon has-items">
+                                <i class="fas fa-business-time fa-2x" style="color:white;"></i>
+                            </div>
+                        </a>
+                    </li>
+                }
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#notifications" role="tab">
+                        <div class="control-icon has-items">
+                            <i class="fas fa-bell fa-2x" style="color:white;"></i>
+                            <div class="label-avatar bg-purple">@Model.SocialProfile.Notifications.Count</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#cart" role="tab">
+                        <div class="control-icon has-items">
+                            <i class="fas fa-shopping-cart fa-2x" style="color:white;"></i>
+                            <div class="label-avatar bg-primary">@Model.AllianceIDHolderCart.ItemCartRecords.Count</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#search" role="tab">
+                        <i class="fas fa-search fa-2x olymp-magnifying-glass-icon" style="color:white;"></i>
+                        <i class="fas fa-close fa-2x olymp-close-icon" style="color:white;"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Tab panes -->
+        <div class="tab-content tab-content-responsive">
+
+            <div class="tab-pane " id="Business" role="tabpanel">
+                @if (Model.SelectedBusiness != null)
+                {
+                    <div class="mCustomScrollbar" data-mcs-theme="dark">
+                        <div class="ui-block-title ui-block-title-small">
+                            <h6 class="title">@_["BUSINESS NOTIFICATIONS"]</h6>
+                            <a href="#">@_["Find colleagues"]</a>
+                            <a href="#">@_["Settings"]</a>
+                        </div>
+                        <ul class="notification-list friend-requests">
+                            @if (@Model.SelectedBusiness.BusinessSocialProfile.Notifications.Count() == 0)
+                            {
+                                <li>
+                                    <div class="author-thumb">
+                                        <img src="~/dashboard/img/badge9.png" style="max-height:30px;" alt="Notification">
+                                    </div>
+                                    <div class="notification-event">
+                                        <a href="#" class="h6 notification-friend">@_["This looks empty."]</a>
+                                        <span class="chat-message-item">@_["Good job!"] <b> @Model.SelectedBusiness.BusinessName</b> @_["is up to date."]</span>
+                                    </div>
+                                </li>
+                            }
+                            else
+                            {
+                                @foreach (var Notification in Model.SelectedBusiness.BusinessSocialProfile.Notifications.OrderByDescending(c => c.IssuedTimestamp))
+                                {
+                                    if (Notification.Readed == false)
+                                    {
+                                        <li>
+                                            <div class="author-thumb">
+                                                <img src="~/dashboard/img/badge9.png" alt="author">
+                                            </div>
+                                            <div class="notification-event">
+                                                <a asp-area="ID" asp-controller="MyNotifications" asp-action="MarkAsReaded" asp-route-id="@Notification.ID" class="h6 notification-friend">Unreaded</a>
+                                                <span class="chat-message-item">@Html.Raw(Notification.Message)</span>
+                                                <span class="notification-date" data-livestamp="@Notification.IssuedTimestamp.ToString("yyyy-MM-ddTHH:mm:ssZ")"></span>
+                                            </div>
+                                            <span class="notification-icon">
+                                                <i class="fas fa-delete"></i>
+                                            </span>
+
+                                            <div class="more">
+                                                <i class="fas fa-bars"></i>
+                                            </div>
+                                        </li>
+                                    }
+                                }
+                            }
+
+                        </ul>
+                        <a asp-area="Business" asp-controller="MyBusinessNotifications" asp-action="Index" class="view-all bg-blue">@_["Business Notifications"]</a>
+                    </div>
+                }
+            </div>
+
+            <div class="tab-pane " id="notifications" role="tabpanel">
+
+                <div class="mCustomScrollbar" data-mcs-theme="dark">
+                    <div class="ui-block-title ui-block-title-small">
+                        <h6 class="title">User Notifications</h6>
+                        <a href="#">Mark all as read</a>
+                        <a href="#">Settings</a>
+                    </div>
+
+                    <ul class="notification-list chat-message">
+                        @if (@Model.SocialProfile.Notifications.Count == 0)
+                        {
+                            <li>
+                                <div class="author-thumb">
+                                    <img src="~/dashboard/img/badge9.png" style="max-height:30px;" alt="Notification">
+                                </div>
+                                <div class="notification-event">
+                                    <a href="#" class="h6 notification-friend">@_["This looks empty."]</a>
+                                    <span class="chat-message-item">@_["Good job! You are up to date."]</span>
+                                </div>
+                            </li>
+                        }
+                        else
+                        {
+                            @foreach (var Notification in Model.SocialProfile.Notifications.OrderByDescending(c => c.IssuedTimestamp))
+                            {
+                                if (Notification.Readed == false)
+                                {
+                                    <li>
+                                        <div class="author-thumb">
+                                            <img src="~/dashboard/img/badge9.png" alt="author">
+                                        </div>
+                                        <div class="notification-event">
+                                            <a asp-area="ID" asp-controller="MyNotifications" asp-action="MarkAsReaded" asp-route-id="@Notification.ID" class="h6 notification-friend">Unreaded</a>
+                                            <span class="chat-message-item">@Html.Raw(Notification.Message)</span>
+                                            <span class="notification-date" data-livestamp="@Notification.IssuedTimestamp.ToString("yyyy-MM-ddTHH:mm:ssZ")">
+                                            </span>
+                                        </div>
+                                        <span class="notification-icon">
+                                            <svg class="olymp-chat---messages-icon"><use xlink:href="~/dashboard/svg-icons/sprites/icons.svg#olymp-chat---messages-icon"></use></svg>
+                                        </span>
+
+                                        <div class="more">
+                                            <svg class="olymp-three-dots-icon"><use xlink:href="~/dashboard/svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use></svg>
+                                        </div>
+                                    </li>
+                                }
+                            }
+                            if (Model.SocialProfile.Notifications.Count == 0)
+                            {
+                                <li>
+                                    <div class="author-thumb">
+                                        <img src="~/dashboard/img/badge9.png" alt="author">
+                                    </div>
+                                    <div class="notification-event">
+                                        <a href="#" class="h6 notification-friend">@_["This looks empty."]</a>
+                                        <span class="chat-message-item">@_["Great, you are up to date!"]</span>
+                                        <span class="notification-date"><time class="entry-date updated" datetime="2004-07-24T18:18">4 hours ago</time></span>
+                                    </div>
+                                    <span class="notification-icon">
+                                        <svg class="olymp-chat---messages-icon"><use xlink:href="~/dashboard/svg-icons/sprites/icons.svg#olymp-chat---messages-icon"></use></svg>
+                                    </span>
+
+                                    <div class="more">
+                                        <svg class="olymp-three-dots-icon"><use xlink:href="~/dashboard/svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use></svg>
+                                    </div>
+                                </li>
+                            }
+                        }
+                    </ul>
+
+                    <a asp-area="ID" asp-controller="MyNotifications" asp-action="Index" class="view-all bg-purple">View All your Notifications</a>
+                </div>
+
+            </div>
+
+            <div class="tab-pane " id="cart" role="tabpanel">
+
+                <div class="mCustomScrollbar" data-mcs-theme="dark">
+                    <div class="ui-block-title ui-block-title-small">
+                        <h6 class="title">@_["Tenant Cart"]</h6>
+                        <a href="#">@_["Copy to order"]</a>
+                        <a href="#">@_["Settings"]</a>
+                    </div>
+
+                    <ul class="notification-list">
+
+                        @if (@Model.AllianceIDHolderCart.ItemCartRecords.Count() == 0)
+                        {
+                            <li>
+                                <div class="notification-event">
+                                    <div><a href="#" class="h6">@_["Your cart is Empty."]</a> @_["You don't have products nor services in your cart."] <a asp-area="Store" asp-controller="Home" asp-action="Index" class="notification-link">@_["Go to the store"]</a></div>
+                                </div>
+                                <div class="more">
+                                    <i class="fas fa-delete"></i>
+                                </div>
+                            </li>
+                        }
+                        else
+                        {
+                            @foreach (ItemCartRecord PCR in Model.AllianceIDHolderCart.ItemCartRecords)
+                            {
+
+                                var image = "/images/placeholders/product_placeholder.png";
+                                var ProductImagePlaceholder = "/images/placeholders/product_placeholder.png";
+                                if (PCR.Item?.ItemImages != null && PCR.Item?.ItemImages.Count != 0)
+                                {
+                                    image = PCR.Item.ItemImages?.First()?.FileUploadURL ?? ProductImagePlaceholder;
+                                }
+                                else
+                                {
+                                    image = ProductImagePlaceholder;
+                                }
+
+                                <li>
+                                    <div class="author-thumb">
+                                        <img src="@image" style="max-height:40px;" alt="author">
+                                    </div>
+                                    <div class="notification-event">
+                                        <div><a asp-area="Store" asp-controller="Products" asp-action="Details" asp-route-id="@PCR.Item.ID" class="h6 notification-friend">@PCR.Item.Title.ToString()</a> <a href="#" class="notification-link">@_["Add to new order"]</a>.</div>
+                                        @*<span class="notification-date"><time class="entry-date updated" datetime="2004-07-24T18:18">4 hours ago</time></span>*@
+                                    </div>
+                                    <span class="notification-icon">
+                                        <i class="fa fa-check"></i>
+                                    </span>
+                                    <div class="more">
+                                        <i class="fa fa-delete"></i>
+                                    </div>
+                                </li>
+                            }
+                        }
+                    </ul>
+
+                    <a asp-area="Store" asp-controller="Carts" asp-action="AllianceIDHolderCart" class="view-all bg-primary">@_["Visit Your Cart"]</a>
+                </div>
+
+            </div>
+
+            <div class="tab-pane " id="search" role="tabpanel">
+                <form class="search-bar w-search notification-list">
+                    <div class="form-group with-button">
+                        <input class="form-control js-user-search" placeholder="@_["Type your search"]" type="text">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- ... end  Tab panes -->
+    </header>
+}
+else
+{
+    <!-- Responsive Header-BP -->
+    <header class="header header-responsive" id="site-header-responsive">
+        <div class="header-content-wrapper">
+            <ul class="nav nav-tabs mobile-app-tabs" role="tablist" style="color:white;">
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" asp-area="Store" asp-controller="Home" asp-action="Index" role="tab">
+                        <div class="control-icon has-items">
+                            <i class="fas fa-infinity fa-2x" style="color:white;"></i>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" asp-area="Technologies" asp-controller="Home" asp-action="Index" role="tab">
+                        <div class="control-icon has-items">
+                            <i class="fas fa-code fa-2x" style="color:white;"></i>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" asp-area="Cloud" asp-controller="Home" asp-action="Index" role="tab">
+                        <div class="control-icon has-items">
+                            <i class="fas fa-cloud fa-2x" style="color:white;"></i>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#search" role="tab">
+                        <i class="fas fa-search fa-2x olymp-magnifying-glass-icon" style="color:white;"></i>
+                        <i class="fas fa-close fa-2x olymp-close-icon" style="color:white;"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Tab panes -->
+        <div class="tab-content tab-content-responsive">
+            <div class="tab-pane " id="search" role="tabpanel">
+                <form asp-area="Store" asp-controller="Products" asp-action="ProductSearch" class="search-bar w-search notification-list">
+                    <div class="form-group with-button">
+                        <input class="form-control js-user-search" name="Query" required placeholder="@_["Type your search"]" type="text">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- ... end  Tab panes -->
+    </header>
+}
+
+<div class="fixed-sidebar right fixed-sidebar-responsive">
+    <div class="fixed-sidebar-right sidebar--small" id="sidebar-right-responsive">
+        <a asp-area="ID" asp-controller="Account" asp-action="Index" class="olympus-chat inline-item">
+            <i class="fas fa-user fa-2x" style="color:white"></i>
+        </a>
+    </div>
+</div>

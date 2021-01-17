@@ -1,0 +1,116 @@
+{
+	"gc:CodeList": {
+		"-xmlns:gc": "http://docs.oasis-open.org/codelist/ns/genericode/1.0/",
+		"Identification": {
+			"ShortName": "ConceptoNotaCredito",
+			"LongName": {
+				"-xml:lang": "es",
+				"#text": "Concepto de Correción para Notas crédito"
+			},
+			"Version": "1",
+			"CanonicalUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:ConceptoNotaCredito",
+			"CanonicalVersionUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:ConceptoNotaCredito-2.1",
+			"LocationUri": "http://dian.gov.co/ubl/os-ubl-2.0/cl/gc/default/ConceptoNotaCredito-2.1.gc",
+			"Agency": {
+				"LongName": {
+					"-xml:lang": "es",
+					"#text": "DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+				},
+				"Identifier": "195"
+			}
+		},
+		"ColumnSet": {
+			"Column": [
+				{
+					"-Id": "code",
+					"-Use": "required",
+					"ShortName": "Code",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Codigo Comun"
+					},
+					"Data": { "-Type": "normalizedString" }
+				},
+				{
+					"-Id": "name",
+					"-Use": "required",
+					"ShortName": "Name",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Nombre"
+					},
+					"Data": { "-Type": "string" }
+				}
+			],
+			"Key": {
+				"-Id": "codeKey",
+				"ShortName": "CodeKey",
+				"ColumnRef": { "-Ref": "code" }
+			}
+		},
+		"SimpleCodeList": {
+			"Row": [
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "1"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Devolución parcial de los bienes y/o no aceptación parcial del servicio"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "2"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Anulación de factura electrónica"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "3"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Rebaja  o descuento parcial o total"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "4"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Ajuste de precio"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "5"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Otros"
+						}
+					]
+				}
+			]
+		}
+	}
+}

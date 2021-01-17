@@ -1,0 +1,48 @@
+﻿@using Microsoft.AspNetCore.Http.Features
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> SharedLocalizer
+@{
+    var consentFeature = Context.Features.Get<ITrackingConsentFeature>();
+    var showBanner = !consentFeature?.CanTrack ?? false;
+    var cookieString = consentFeature?.CreateConsentCookie();
+}
+
+@if (showBanner)
+{
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#002050"
+                    },
+                    "button": {
+                        "background": "transparent",
+                        "text": "#fff",
+                        "border": "#fff"
+                    }
+                },
+                "content": {
+                    "message": "@SharedLocalizer["We - and our partners - use cookies to deliver our services, to ensure you get the best experience on our website and to show you relevant content based on your interests."]",
+                    "href": "https://fenixalliance.com.co/Legal/Policies/CookiePolicy"
+                },
+                "position": "bottom",
+                onPopupClose: function () {
+                    HideCookieConsent()
+                },
+            });
+        });
+    </script>
+    <script>
+        function HideCookieConsent () {
+                document.cookie = "@cookieString";
+        };
+    </script>
+}

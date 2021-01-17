@@ -1,0 +1,56 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+
+<!-- Scripts - Complements -->
+<script asp-append-version="true" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/min/js/globals.min.js"></script>
+<link asp-append-version="true" rel="stylesheet" type="text/css" href="~/FenixAlliance.ABS.Portal.UI.Core.V1/min/css/globals.min.css">
+
+<script>
+        // TogetherJS configuration would go here, but we'll talk about that
+        // later
+        var TogetherJSConfig_siteName = "@_["Fenix Alliance Group"]";
+        var TogetherJSConfig_toolName = "@_["Live browser"]";
+        var TogetherJSConfig_youtube = true;
+        var TogetherJSConfig_cloneClicks = true;
+        var TogetherJSConfig_ignoreForms = true;
+        var TogetherJSConfig_disableWebRTC = true;
+        var TogetherJSConfig_dontShowClicks = false;
+        var TogetherJSConfig_suppressJoinConfirmation = true;
+</script>
+
+<script src="https://togetherjs.com/togetherjs-min.js"></script>
+<link id="togetherjs-stylesheet" rel="stylesheet" href="https://togetherjs.com/togetherjs/togetherjs.css">
+
+<!-- Others -->
+@*<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5376407.js"></script>*@
+
+<script id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/7538a95265e0c2634d0206a44/ecc514b93ef2e1cd344b8ca03.js");</script>
+
+<script>
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-bottom-left",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "2000",
+        "hideDuration": "2000",
+        "timeOut": "7000",
+        "extendedTimeOut": "3000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+</script>
+
+<script src="https://unpkg.com/@@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+

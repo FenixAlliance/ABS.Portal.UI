@@ -1,0 +1,956 @@
+{
+	"gc:CodeList": {
+		"-xmlns:gc": "http://docs.oasis-open.org/codelist/ns/genericode/1.0/",
+		"Identification": {
+			"ShortName": "MediosPago",
+			"LongName": {
+				"-xml:lang": "es",
+				"#text": "Medios de Pago"
+			},
+			"Version": "1",
+			"CanonicalUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:MediosPago",
+			"CanonicalVersionUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:MediosPago-2.1",
+			"LocationUri": "http://dian.gov.co/ubl/os-ubl-2.0/cl/gc/default/MediosPago-2.1.gc",
+			"Agency": {
+				"LongName": {
+					"-xml:lang": "es",
+					"#text": "DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+				},
+				"Identifier": "195"
+			}
+		},
+		"ColumnSet": {
+			"Column": [
+				{
+					"-Id": "code",
+					"-Use": "required",
+					"ShortName": "Code",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Codigo Comun"
+					},
+					"Data": { "-Type": "normalizedString" }
+				},
+				{
+					"-Id": "name",
+					"-Use": "required",
+					"ShortName": "Name",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Nombre"
+					},
+					"Data": { "-Type": "string" }
+				}
+			],
+			"Key": {
+				"-Id": "codeKey",
+				"ShortName": "CodeKey",
+				"ColumnRef": { "-Ref": "code" }
+			}
+		},
+		"SimpleCodeList": {
+			"Row": [
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "1"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Instrumento no definido"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "2"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Crédito ACH"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "3"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Débito ACH"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "4"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Reversión débito de demanda ACH"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "5"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Reversión crédito de demanda ACH "
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "6"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Crédito de demanda ACH"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "7"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Débito de demanda ACH"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "8"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Mantener"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "9"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Clearing Nacional o Regional"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "10"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Efectivo"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "11"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Reversión Crédito Ahorro"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "12"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Reversión Débito Ahorro"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "13"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Crédito Ahorro"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "14"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Débito Ahorro"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "15"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bookentry Crédito"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "16"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Bookentry Débito"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "17"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Concentración de la demanda en efectivo /Desembolso Crédito (CCD)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "18"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Concentración de la demanda en efectivo / Desembolso (CCD) débito"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "19"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Crédito Pago negocio corporativo (CTP)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "20"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cheque"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "21"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Poyecto bancario"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "22"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Proyecto bancario certificado"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "23"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cheque bancario"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "24"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nota cambiaria esperando aceptación"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "25"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cheque certificado"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "26"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cheque Local"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "27"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Débito Pago Neogcio Corporativo (CTP)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "28"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Crédito Negocio Intercambio Corporativo (CTX)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "29"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Débito Negocio Intercambio Corporativo (CTX)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "30"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Transferecia Crédito"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "31"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Transferencia Débito"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "32"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Concentración Efectivo / Desembolso Crédito plus (CCD+)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "33"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Concentración Efectivo / Desembolso Débito plus (CCD+)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "34"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Pago y depósito pre acordado (PPD)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "35"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Concentración efectivo ahorros / Desembolso Crédito (CCD)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "36"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Concentración efectivo ahorros / Desembolso Drédito (CCD)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "37"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Pago Negocio Corporativo Ahorros Crédito (CTP)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "38"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Pago Neogcio Corporativo Ahorros Débito (CTP)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "39"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Crédito Negocio Intercambio Corporativo (CTX)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "40"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Débito Negocio Intercambio Corporativo (CTX)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "41"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Concentración efectivo/Desembolso Crédito plus (CCD+) "
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "42"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Consiganción bancaria"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "43"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Concentración efectivo / Desembolso Débito plus (CCD+)"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "44"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nota cambiaria"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "45"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Transferencia Crédito Bancario"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "46"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Transferencia Débito Interbancario"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "47"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Transferencia Débito Bancaria"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "48"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tarjeta Crédito"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "49"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Tarjeta Débito"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "50"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Postgiro"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "51"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Telex estándar bancario francés"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "52"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Pago comercial urgente"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "53"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Pago Tesorería Urgente"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "60"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nota promisoria"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "61"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nota promisoria firmada por el acreedor"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "62"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nota promisoria firmada por el acreedor, avalada por el banco"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "63"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nota promisoria firmada por el acreedor, avalada por un tercero"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "64"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nota promisoria firmada pro el banco"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "65"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nota promisoria firmada por un banco avalada por otro banco"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "66"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nota promisoria firmada "
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "67"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nota promisoria firmada por un tercero avalada por un banco"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "70"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Retiro de nota por el por el acreedor"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "74"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Retiro de nota por el por el acreedor sobre un banco"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "75"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Retiro de nota por el acreedor, avalada por otro banco"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "76"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Retiro de nota por el acreedor, sobre un banco avalada por un tercero"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "77"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Retiro de una nota por el acreedor sobre un tercero"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "78"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Retiro de una nota por el acreedor sobre un tercero avalada por un banco"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "91"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Nota bancaria tranferible"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "92"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Cheque local traferible"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "93"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Giro referenciado"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "94"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Giro urgente"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "95"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Giro formato abierto"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "96"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Método de pago solicitado no usuado"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "97"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Clearing entre partners"
+						}
+					]
+				},
+				{
+					"Value": [
+						{
+							"-ColumnRef": "code",
+							"SimpleValue": "ZZZ"
+						},
+						{
+							"-ColumnRef": "name",
+							"SimpleValue": "Acuerdo mutuo"
+						}
+					]
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,115 @@
+﻿@model FenixAlliance.ABM.Models.Tenants.Business
+@using Microsoft.AspNetCore.Authentication
+@using Microsoft.Extensions.Options
+@using System.Security.Principal
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+
+@{
+    var DisplayCount = 0;
+}
+
+@if (Model.BusinessSocialProfile != null)
+{
+    <div class="control-icon more has-items">
+        <i class="fas fa-business-time fa-2x"></i>
+        <div class="label-avatar bg-blue">@Model.BusinessSocialProfile.Notifications.Count()</div>
+
+        <div class="more-dropdown more-with-triangle triangle-top-center">
+            <div class="ui-block-title ui-block-title-small">
+                <h6 class="title">@_["BUSINESS NOTIFICATIONS"]</h6>
+                <a href="#">@_["Business Profile"]</a>
+                <a href="#">@_["Business Settings"]</a>
+            </div>
+
+            <div class="mCustomScrollbar" data-mcs-theme="dark">
+                <ul class="notification-list friend-requests">
+                    @if (@Model.BusinessSocialProfile.Notifications.Count() == 0)
+                    {
+                        <li>
+                            <div class="author-thumb">
+                                <img src="~/dashboard/img/badge9.png" style="max-height:30px;" alt="Notification">
+                            </div>
+                            <div class="notification-event">
+                                <a href="#" class="h6 notification-friend">@Model.BusinessName @_["don't have any notifications!"]</a>
+                                <span class="chat-message-item">Good job! <b> @Model.BusinessName</b> @_["is up to date."]</span>
+                            </div>
+                        </li>
+                    }
+                    else
+                    {
+                        @foreach (var Notification in Model.BusinessSocialProfile.Notifications.OrderByDescending(c => c.IssuedTimestamp))
+                        {
+                            if (Notification.Readed == false)
+                            {
+                                <li>
+                                    <div class="author-thumb">
+                                        <img src="~/dashboard/img/badge9.png" alt="author">
+                                    </div>
+                                    <div class="notification-event">
+                                        <a asp-area="ID" asp-controller="MyNotifications" asp-action="MarkAsReaded" asp-route-id="@Notification.ID" class="h6 notification-friend">@_["Unreaded"]</a>
+                                        <span class="chat-message-item">@Html.Raw(Notification.Message)</span>
+                                        <span class="notification-date" data-livestamp="@Notification.IssuedTimestamp.ToString("yyyy-MM-ddTHH:mm:ssZ")"></span>
+                                    </div>
+                                    <span class="notification-icon">
+                                        <svg class="olymp-chat---messages-icon"><use xlink:href="~/dashboard/svg-icons/sprites/icons.svg#olymp-chat---messages-icon"></use></svg>
+                                    </span>
+
+                                    <div class="more">
+                                        <svg class="olymp-three-dots-icon"><use xlink:href="~/dashboard/svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use></svg>
+                                    </div>
+                                </li>
+                            }
+                        }
+                        if (DisplayCount == 0)
+                        {
+                            <li>
+                                <div class="author-thumb">
+                                    <img src="~/dashboard/img/avatar60-sm.jpg" alt="author">
+                                </div>
+                                <div class="notification-event">
+                                    <a href="#" class="h6 notification-friend">@_["You dont have notifications"]</a>
+                                    <span class="chat-message-item">@_["Please check back later."]</span>
+                                </div>
+                                <span class="notification-icon">
+                                    <svg class="olymp-chat---messages-icon"><use xlink:href="~/dashboard/svg-icons/sprites/icons.svg#olymp-chat---messages-icon"></use></svg>
+                                </span>
+
+                                <div class="more">
+                                    <svg class="olymp-three-dots-icon"><use xlink:href="~/dashboard/svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use></svg>
+                                </div>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+
+            <a asp-area="Business" asp-controller="Notifications" asp-action="Index" asp-route-BusinessID="@Model.ID" class="view-all bg-blue">@_["Business Notifications"]</a>
+        </div>
+    </div>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

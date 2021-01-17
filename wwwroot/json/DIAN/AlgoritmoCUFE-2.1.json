@@ -1,0 +1,66 @@
+{
+	"gc:CodeList": {
+		"-xmlns:gc": "http://docs.oasis-open.org/codelist/ns/genericode/1.0/",
+		"Identification": {
+			"ShortName": "AlgoritmoCUFE",
+			"LongName": {
+				"-xml:lang": "es",
+				"#text": "Algoritmo de encriptado del CUFE"
+			},
+			"Version": "1",
+			"CanonicalUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:AlgoritmoCUFE",
+			"CanonicalVersionUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:AlgoritmoCUFE-2.1",
+			"LocationUri": "http://dian.gov.co/ubl/os-ubl-2.0/cl/gc/default/AlgoritmoCUFE-2.1.gc",
+			"Agency": {
+				"LongName": {
+					"-xml:lang": "es",
+					"#text": "DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+				},
+				"Identifier": "195"
+			}
+		},
+		"ColumnSet": {
+			"Column": [
+				{
+					"-Id": "code",
+					"-Use": "required",
+					"ShortName": "Code",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Codigo Comun"
+					},
+					"Data": { "-Type": "normalizedString" }
+				},
+				{
+					"-Id": "name",
+					"-Use": "required",
+					"ShortName": "Name",
+					"LongName": {
+						"-xml:lang": "es",
+						"#text": "Nombre"
+					},
+					"Data": { "-Type": "string" }
+				}
+			],
+			"Key": {
+				"-Id": "codeKey",
+				"ShortName": "CodeKey",
+				"ColumnRef": { "-Ref": "code" }
+			}
+		},
+		"SimpleCodeList": {
+			"Row": {
+				"Value": [
+					{
+						"-ColumnRef": "code",
+						"SimpleValue": "CUFE-SHA384"
+					},
+					{
+						"-ColumnRef": "name",
+						"SimpleValue": "Algoritmo SHA-384"
+					}
+				]
+			}
+		}
+	}
+}

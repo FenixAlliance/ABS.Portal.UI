@@ -1,0 +1,88 @@
+﻿@using Microsoft.AspNetCore.Authentication
+@using Microsoft.Extensions.Options
+@using System.Security.Principal
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABM.Models.Holders
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> SharedLocalizer
+@{
+    var Tenant = (AllianceIDHolder)ViewBag.Tenant;
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <script>
+        var today = new Date();
+        var hourNow = today.getHours();
+        var greeting;
+
+        if (hourNow > 18) {
+            greeting = '👋🏻 @SharedLocalizer["Good evening"], @User.Identity.Name.';
+        } else if (hourNow > 12) {
+            greeting = '👋🏻 @SharedLocalizer["Good afternoon"], @User.Identity.Name.';
+        } else if (hourNow > 0) {
+            greeting = '👋🏻 @SharedLocalizer["Good morning"], @User.Identity.Name.';
+        } else {
+            greeting = '👋🏻 @SharedLocalizer["Welcome"], @User.Identity.Name.';
+        }
+    </script>
+
+    <li class="nav-item dropdown">
+        <a class="nav-link" id="navServices" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons"><img style="max-height:25px; margin-top:-12px" alt="Avatar" src="@Tenant.AvatarURL" class="rounded-circle img-fluid"></i> @User.Identity.Name
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-right dropdown-with-icons" aria-labelledby="navServices">
+            <h6 class="dropdown-header">
+                <script>
+                    document.write(greeting)
+                </script>
+            </h6>
+            <div class="dropdown-divider"></div>
+
+            <a asp-area="ID" asp-controller="Account" asp-action="Index" onclick="NProgress.start()" class="dropdown-item">
+                <i class="fas fa-id-badge"></i>
+                &nbsp;&nbsp;
+                @SharedLocalizer["Your profile"]
+            </a>
+
+            <a asp-area="Billing" asp-controller="Wallet" asp-action="Index" onclick="NProgress.start()" class="dropdown-item">
+                <i class="fas fa-wallet"></i>
+                &nbsp;&nbsp;
+                @SharedLocalizer["Your wallet"]
+            </a>
+
+            <a href="Suite/Me/Settings" onclick="NProgress.start()" class="dropdown-item">
+                <i class="fas fa-users-cog"></i>
+                &nbsp;&nbsp;
+                @SharedLocalizer["Settings"]
+            </a>
+            <a asp-area="Support" asp-controller="Home" asp-action="Index" onclick="NProgress.start()" class="dropdown-item">
+                <i class="fas fa-life-ring"></i>
+                &nbsp;&nbsp;
+                @SharedLocalizer["Support"]
+            </a>
+
+            <div class="dropdown-divider"></div>
+
+            <a asp-area="" asp-controller="Account" asp-action="SignOut" onclick="NProgress.start()" class="dropdown-item">
+                <i class="fas fa-sign-out-alt"></i>
+                &nbsp;&nbsp;
+                <span>@SharedLocalizer["Logout"]</span>
+            </a>
+
+        </div>
+    </li>
+}
+else
+{
+    <li class="button-container nav-item iframe-extern">
+        <a asp-area="" asp-controller="Account" asp-action="SignIn" class="btn btn-info btn-round btn-block">
+            @SharedLocalizer["Login / Sign up"]
+        </a>
+    </li>
+}

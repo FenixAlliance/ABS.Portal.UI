@@ -1,0 +1,64 @@
+﻿@using Microsoft.Extensions.Options
+@using reCAPTCHA.AspNetCore
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABM.Models.Holders
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+@{
+    var Holder = (AllianceIDHolder)ViewBag.Holder;
+    var FollowID = (string)ViewBag.FollowID;
+    var FollowerID = (string)ViewBag.FollowerID;
+    var FollowedID = (string)ViewBag.FollowedID;
+    var SocialProfileID = (string)ViewBag.SocialProfileID;
+    var AlreadyFollowed = string.IsNullOrEmpty(FollowID);
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    if (SocialProfileID == FollowerID || SocialProfileID == FollowedID)
+    {
+        <a asp-area="ID" asp-controller="Account" asp-action="Index" class="btn btn-block text-white bg-blue">@_["Manage your profile"]<div class="ripple-container"></div></a>
+
+    }
+    else
+    {
+        // B2B
+        @if (AlreadyFollowed)
+        {
+            if (!String.IsNullOrEmpty(FollowerID))
+            {
+                <a id="@FollowerID" onclick="Follow('@SocialProfileID','@FollowerID')" class="btn btn-block text-white bg-blue">@_["Follow"]  <div class="ripple-container"></div></a>
+            }
+
+            if (!String.IsNullOrEmpty(FollowedID))
+            {
+                <a id="@FollowedID" onclick="Follow('@SocialProfileID','@FollowedID')" class="btn btn-block text-white bg-blue">@_["Follow"]  <div class="ripple-container"></div></a>
+            }
+        }
+        else
+        {
+            if (!String.IsNullOrEmpty(FollowerID))
+            {
+                <a id="@FollowID" onclick="Unfollow('@FollowID','@SocialProfileID','@FollowerID')" class="btn btn-block text-white bg-danger">@_["Unfollow"]  <div class="ripple-container"></div></a>
+            }
+
+            if (!String.IsNullOrEmpty(FollowedID))
+            {
+                <a id="@FollowID" onclick="Unfollow('@FollowID','@SocialProfileID','@FollowedID')" class="btn btn-block text-white bg-danger">@_["Unfollow"]  <div class="ripple-container"></div></a>
+            }
+        }
+    }
+
+}
+else
+{
+    <a asp-area="" asp-controller="Account" asp-action="SignIn" class="btn btn-block text-white bg-blue">@_["Log in"]<div class="ripple-container"></div></a>
+}
+
+
+

@@ -1,0 +1,19 @@
+{
+	"name": "jquery-emojiRatings",
+	"version": "1.0.0",
+	"homepage": "http://jqueryemojiratings.com",
+	"authors": [
+		"Geoff Ellerby <gellerby@gmail.com>"
+	],
+	"description": "Adds a simple rating input made of emojis.",
+	"main": "src/jquery.emojiRatings.js",
+	"keywords": [
+		"jquery",
+		"plugin",
+		"ratings",
+		"emoji",
+		"jquery-plugin",
+		"jquery-emojiRatings"
+	],
+	"license": "MIT"
+}

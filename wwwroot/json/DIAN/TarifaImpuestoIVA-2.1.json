@@ -1,0 +1,130 @@
+{
+  "gc:CodeList": {
+    "-xmlns:gc": "http://docs.oasis-open.org/codelist/ns/genericode/1.0/",
+    "Identification": {
+      "ShortName": "TarifaImpuestoIVA",
+      "LongName": {
+        "-xml:lang": "es",
+        "#text": "Tarifas por Impuesto IVA"
+      },
+      "Version": "1",
+      "CanonicalUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:TarifaImpuestoIVA",
+      "CanonicalVersionUri": "urn:dian:names:especificacion:ubl:listacodigos:gc:TarifaImpuestoIVA-2.1",
+      "LocationUri": "http://dian.gov.co/ubl/os-ubl-2.0/cl/gc/default/TarifaImpuestoIVA-2.1.gc",
+      "Agency": {
+        "LongName": {
+          "-xml:lang": "es",
+          "#text": "DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+        },
+        "Identifier": "195"
+      }
+    },
+    "ColumnSet": {
+      "Column": [
+        {
+          "-Id": "code",
+          "-Use": "required",
+          "ShortName": "Code",
+          "LongName": {
+            "-xml:lang": "es",
+            "#text": "Codigo Comun"
+          },
+          "Data": { "-Type": "normalizedString" }
+        },
+        {
+          "-Id": "name",
+          "-Use": "required",
+          "ShortName": "Name",
+          "LongName": {
+            "-xml:lang": "es",
+            "#text": "Nombre"
+          },
+          "Data": { "-Type": "string" }
+        },
+        {
+          "-Id": "description",
+          "-Use": "required",
+          "ShortName": "Description",
+          "LongName": {
+            "-xml:lang": "es",
+            "#text": "Descripcion"
+          },
+          "Data": { "-Type": "string" }
+        }
+      ],
+      "Key": {
+        "-Id": "codeKey",
+        "ShortName": "CodeKey",
+        "ColumnRef": { "-Ref": "code" }
+      }
+    },
+    "SimpleCodeList": {
+      "Row": [
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "0.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "IVA"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Exento"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "5.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "IVA"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Bienes / Servicios al 5"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "16.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "IVA"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Contratos firmados con el estado antes de ley 1819"
+            }
+          ]
+        },
+        {
+          "Value": [
+            {
+              "-ColumnRef": "code",
+              "SimpleValue": "19.00"
+            },
+            {
+              "-ColumnRef": "name",
+              "SimpleValue": "IVA"
+            },
+            {
+              "-ColumnRef": "description",
+              "SimpleValue": "Tarifa general"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

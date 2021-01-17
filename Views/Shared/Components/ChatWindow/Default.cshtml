@@ -1,0 +1,138 @@
+﻿@model FenixAlliance.ABM.Models.Holders.AllianceIDHolder
+
+@using System.Security.Principal
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+
+@{
+    var time = DateTime.Now.Hour;
+    var NameIdentifier = (string)ViewData["NameIdentifier"];
+}
+
+
+<div class="ui-block popup-chat popup-chat-responsive " tabindex="-1" role="dialog" aria-labelledby="update-header-photo" aria-hidden="true">
+
+    <div class="modal-content">
+        <div class="modal-header" style="background-color:#002050">
+            <span class="icon-status online"></span>
+            <h6 class="title" id="ChatTitle">@_["Chat"]</h6>
+            <div class="more">
+                <a onclick="CloseChat()"><i class="fas fa-window-close js-chat-close"></i></a>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="dashboard-customScrollbar ps ps--theme_default ps--active-y">
+                <ul class="notification-list chat-message chat-message-field" id="messagesList"></ul>
+                <div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                    <div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;">
+                    </div>
+                </div>
+                <div class="ps__scrollbar-y-rail" style="top: 0px; height: 150px; right: 0px;">
+                    <div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 46px;">
+                    </div>
+                </div>
+            </div>
+
+            <form class="need-validation">
+
+                <div class="form-group label-floating is-empty">
+                    <label class="control-label">@_["Press enter to send"]</label>
+
+
+                    <textarea id="messageInput" class="form-control" placeholder=""></textarea>
+
+                    <div class="add-options-message">
+                        <a id="sendButton" class="options-message">
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                        <div class="options-message smile-block">
+                            <i class="fas fa-smile"></i>
+                            <ul class="more-dropdown more-with-triangle triangle-bottom-right">
+                                <li>
+                                    <a href="#">
+                                        <img src="~/img/icon-chat1.png" alt="icon">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="material-input"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+// Set Variables
+    //"use strict";
+
+    var connection = new signalR.HubConnectionBuilder().withUrl("/ChatHub").build();
+    var SenderNameGUID = "@Model.GUID";
+    var SenderNameIdentifier = "@NameIdentifier";
+    var SenderAvatarImageURL = "@Model.AvatarURL";
+
+    var ReceptorGUID = "";
+    var ReceptorNameIdentifier = "";
+    var ReceptorAvatarImageURL = "";
+
+
+    $(".js-chat-open").on('click', function () {
+        $('.popup-chat-responsive').toggleClass('open-chat');
+        return false;
+    });
+
+    function CloseChat(ReceptorTenantGUID, ReceptorTenantNameIdentifier, ReceptorTenantAvatarURL) {
+        $('.popup-chat-responsive').removeClass('open-chat');
+        // Get And Replace Conversation
+    }
+
+    function OpenChat(ReceptorTenantGUID, ReceptorTenantNameIdentifier, ReceptorTenantAvatarURL) {
+        ReceptorGUID = ReceptorTenantGUID;
+        ReceptorNameIdentifier = ReceptorTenantNameIdentifier;
+        ReceptorAvatarImageURL = ReceptorTenantAvatarURL;
+        console.log(ReceptorGUID);
+        console.log(ReceptorNameIdentifier);
+        console.log(ReceptorAvatarImageURL);
+        // Get And Replace Conversation
+    }
+
+    $(".js-chat-close").on('click', function () {
+        $('.popup-chat-responsive').removeClass('open-chat');
+        return false;
+    });
+
+    connection.on("ReceiveMessage", function (message) {
+        var msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        var li = document.createElement("li");
+        li.textContent = msg;
+        document.getElementById("messagesList").appendChild(li);
+    });
+
+    //Disable send button until connection is established
+    document.getElementById("sendButton").disabled = true;
+
+    connection.start().then(function () {
+        // On Connection Start
+        //Disable send button until connection is established
+        document.getElementById("sendButton").disabled = false;
+        console.log("/---------- Conection Started ------------------/\n\n")
+    }).catch(function (err) {
+        return console.error(err.toString());
+    });
+
+    document.getElementById("sendButton").addEventListener("click", function (event) {
+        var user = ReceptorGUID;
+        var message = document.getElementById("messageInput").value;
+        connection.invoke("SendPrivateMessageNoDB", user, message).catch(function (err) {
+            return console.error(err.toString());
+        });
+        event.preventDefault();
+    });
+
+</script>

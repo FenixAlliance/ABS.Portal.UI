@@ -1,0 +1,36 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> SharedLocalizer
+
+@{
+    var Currency = (string)ViewData["CurrencyCode"];
+    var PrintUnformatted = (bool)ViewData["PrintUnformatted"];
+    var Ammount = (double)ViewData["Ammount"];
+}
+
+@if (ViewBag.PrintUnformatted)
+{
+    @if (ViewBag.DisplayDiscountPrice)
+    {
+        <text>
+            fx.convert(@Ammount, { from: '@Currency', to: CartCurrencyCode })
+        </text>
+    }
+    else
+    {
+        <text>
+            fx.convert(@Ammount, { from: '@Currency', to: CartCurrencyCode })
+        </text>
+    }
+}
+else
+{
+    <script>
+        document.write(CurrencyFormatter.format(fx.convert(@Ammount.ToString().Replace(',','.'), { from: '@Currency', to: CartCurrencyCode })));
+    </script>
+}

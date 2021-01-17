@@ -1,0 +1,77 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+<!-- JS Scripts -->
+<script asp-append-version="true" type="text/javascript" src="~/FenixAlliance.UI.Portal.V1/min/js/dashboard.all.min.js"></script>
+
+@if (ViewBag.EnableDataTables == true)
+{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/dataTables.jqueryui.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css" />
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+
+    <script>
+    $(document).ready(function () {
+        $('#Items-table').DataTable({
+            responsive: true,
+            "paging": false,
+            "iDisplayLength": 12
+        });
+    });
+    </script>
+}
+
+<script>
+    Offline.check()
+    //B2B
+    function Follow(FollowerID,FollowedID) {
+        var Following = {
+            "FollowerID": FollowerID,
+            "FollowedID": FollowedID
+        }
+        var Selector = '#' + FollowedID;
+        $(Selector).attr("disabled", true);
+        $(Selector).css('cursor', 'wait');
+        $.ajax({
+            url: '/api/v2/Social/Follows',
+            type: 'POST',
+            contentType: 'application/json; charset=utf-8',
+            headers: {
+                RequestVerificationToken:
+                    $('input:hidden[name="__RequestVerificationToken"]').val()
+            },
+            data: JSON.stringify(Following)
+        }).done(function (result) {
+            $(Selector).css('cursor', 'pointer');
+            console.log(result);
+            console.log(result.ID);
+            $(Selector).replaceWith('<a  id="' + result.ID + '" class="btn btn-block text-white bg-danger" onclick="Unfollow(\'' + result.ID + "','" + FollowerID + "','" + FollowedID + '\')" >@_["Unfollow"]</a>');
+        });
+    }
+    // Unfollow
+    function Unfollow(FollowRecordID, FollowerID, FollowedID) {
+        var Selector = '#' + FollowRecordID;
+        $(Selector).attr("disabled", true);
+        $(Selector).css('cursor', 'wait');
+        $.ajax({
+            url: '/api/v2/Social/Follows/' + FollowRecordID,
+            type: 'DELETE',
+            contentType: 'application/json; charset=utf-8',
+            headers: {
+                RequestVerificationToken:
+                    $('input:hidden[name="__RequestVerificationToken"]').val()
+            },
+        }).done(function (result) {
+            $(Selector).css('cursor', 'pointer');
+            toastr.info('@_["You have stopped following this account."]');
+            console.log(result);
+            $(Selector).replaceWith('<a  id="' + FollowedID + '" class="btn btn-block text-white bg-blue" onclick="Follow(\''
+                + FollowerID + "','" + FollowedID + '\')" >@_["Follow"]<div class="ripple-container"></div></a>');
+        });
+    }
+</script>

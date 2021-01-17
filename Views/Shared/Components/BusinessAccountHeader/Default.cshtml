@@ -1,0 +1,155 @@
+﻿@model FenixAlliance.ABM.Models.Tenants.Business
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+@{
+
+    var GroupsCount = Model.BusinessSocialProfile.GroupMembershipRecords.Count;
+    var FollowersCount = Model.BusinessSocialProfile.Followers.Count;
+    var FollowsCount = Model.BusinessSocialProfile.Follows.Count;
+    var EmployeesCount = Model.BusinessProfileRecords.Count;
+    var ProductsCount = Model.Items.Count;
+    var CareersCount = Model.JobOffers.Count;
+}
+
+@if (ViewBag.DisplaySocialHeader != true)
+{
+    <div class="container">
+        <div class="row">
+            <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="ui-block">
+                    <div class="top-header">
+                        <div class="top-header-thumb">
+                            @if (!String.IsNullOrEmpty(Model.BusinessProfileCoverURL) && !String.IsNullOrWhiteSpace(Model.BusinessProfileCoverURL))
+                            {
+                                <img src="@Model.BusinessProfileCoverURL" style="max-height:400px; min-width:100%;  object-fit: cover;  display: block;" alt="Profile Cover">
+                            }
+                            else
+                            {
+                                <img src="/images/Background/bg%20(2).jpeg" style="max-height:400px; min-width:100%;  object-fit: cover;  display: block;" alt="Profile Cover">
+                            }
+                        </div>
+                        <div class="profile-section">
+                            <div class="row">
+                                <div class="col col-lg-5 col-md-5 col-sm-12 col-12">
+                                    <ul class="profile-menu">
+                                        <li>
+                                            <a asp-area="Business" asp-controller="MyBusiness" asp-action="Index">Profile</a>
+                                        </li>
+                                        <li>
+                                            <a asp-area="Business" asp-controller="MyBusiness" asp-action="Following" asp-route-BusinessID="@Model.ID">@_["Following"] (@FollowsCount)</a>
+                                        </li>
+                                        <li>
+                                            <a asp-area="Business" asp-controller="MyBusiness" asp-action="Followers" asp-route-BusinessID="@Model.ID">@_["Followers"] (@FollowersCount)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col col-lg-5 ml-auto col-md-5 col-sm-12 col-12">
+                                    <ul class="profile-menu">
+                                        <li>
+                                            <a asp-area="Business" asp-controller="MyBusinessPersonnel" asp-action="Index">@_["Employees"] (@EmployeesCount)</a>
+                                        </li>
+                                        <li>
+                                            <a asp-area="Store" asp-controller="Products" asp-action="Admin">@_["Products"] (@ProductsCount) </a>
+                                        </li>
+                                        <li>
+                                            <div class="more">
+                                                <i class="fas fa-bars"></i>
+                                                <ul class="more-dropdown more-with-triangle">
+                                                    <li>
+                                                        <a asp-area="Careers" asp-controller="JobOffers" asp-action="Index">@_["Careers"] (@CareersCount)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a asp-area="Partner" asp-controller="BusinessPartnerProfiles" asp-action="Edit">@_["Business Partner Profile"]</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-header-author">
+                            <a href="#" class="author-thumb">
+                                <img src="@Model.BusinessAvatarURL" style="background-position:center; max-height:100%;" alt="author">
+                            </a>
+                            <div class="author-content">
+                                <a href="#" class="h4 author-name">@Model.BusinessName</a>
+                                <div class="country">@_["Business"], @Model.Country.ISOAlpha2 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="container">
+        <div class="row">
+            <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="ui-block">
+                    <div class="top-header">
+                        <div class="top-header-thumb">
+                            <img src="@Model.BusinessProfileCoverURL" style="max-height:400px; min-width:100%; object-fit: cover; display: block;" alt="Profile Cover">
+                        </div>
+                        <div class="profile-section">
+                            <div class="row">
+                                <div class="col col-lg-5 col-md-5 col-sm-12 col-12">
+                                    <ul class="profile-menu">
+                                        <li>
+                                            <a asp-area="Social" asp-controller="Businesses" asp-action="Details" asp-route-BusinessID="@Model.ID">@_["Profile"]</a>
+                                        </li>
+                                        <li>
+                                            <a asp-area="Social" asp-controller="Businesses" asp-action="Following" asp-route-BusinessID="@Model.ID">@_["Following"] (@FollowsCount)</a>
+                                        </li>
+                                        <li>
+                                            <a asp-area="Social" asp-controller="Businesses" asp-action="Followers" asp-route-BusinessID="@Model.ID">@_["Followers"] (@FollowersCount)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col col-lg-5 ml-auto col-md-5 col-sm-12 col-12">
+                                    <ul class="profile-menu">
+                                        <li>
+                                            <a asp-area="Social" asp-controller="Businesses" asp-action="Employees" asp-route-BusinessID="@Model.ID">@_["Employees"] (@EmployeesCount)</a>
+                                        </li>
+                                        <li>
+                                            <a asp-area="Social" asp-controller="Businesses" asp-action="Products" asp-route-BusinessID="@Model.ID">@_["Products"] (@ProductsCount)</a>
+                                        </li>
+                                        <li>
+                                            <div class="more">
+                                                <i class="fas fa-bars"></i>
+                                                <ul class="more-dropdown more-with-triangle">
+                                                    <li>
+                                                        <a asp-area="Social" asp-controller="Businesses" asp-action="JobOffers" asp-route-BusinessID="@Model.ID">@_["Job Offers"] (@CareersCount)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a asp-area="Social" asp-controller="Businesses" asp-action="Groups" asp-route-BusinessID="@Model.ID">@_["Social Groups"] (@GroupsCount)</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-header-author">
+                            <a class="author-thumb">
+                                <img src="@Model.BusinessAvatarURL" style="background-position:center; max-height:100%;" alt="author">
+                            </a>
+                            <div class="author-content">
+                                <a class="h4 author-name">@Model.BusinessName</a>
+                                <div class="country">@_["Business"], @Model.Country.ISOAlpha2 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

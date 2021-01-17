@@ -1,0 +1,256 @@
+﻿@model FenixAlliance.ABM.Models.Holders.AllianceIDHolder
+@using Microsoft.Extensions.Configuration
+@using System.Security.Principal
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABM.Models.Content.Menus
+@using FenixAlliance.ABS.Core.Navigation
+@using FenixAlliance.ABS.Portal.Core
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using FenixAlliance.ACL.Configuration.Types
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject SuiteOptions SuiteOptions
+@inject IConfiguration Configuration
+@inject IHtmlLocalizer<SharedResources> _
+@inject INavigationManager INavigationManager
+@inject IViewLocalizer Localizer
+
+@{ 
+    MenuContext LeftMenuItems = await INavigationManager.GetDashboardLeftMenuAsync();
+
+}
+
+<style>
+    @@media (max-width: 960px) {
+        .left-menu {
+            padding: 0px;
+        }
+    }
+</style>
+
+<!-- Fixed Sidebar Left -->
+<div class="fixed-sidebar">
+
+    <div class="fixed-sidebar-left sidebar--small" id="sidebar-left">
+        <a href="#" class="logo" style="background-color:@@SuiteOptions.Portal.Options.Branding.Dashboard.Color !important">
+            <div class="img-wrap" style="background-color:@@SuiteOptions.Portal.Options.Branding.Dashboard.Color !important">
+                <img src="@SuiteOptions.ABS.Portal.Options.Branding.Dashboard.Icon" style="max-height:45px;" alt="@SuiteOptions.ABS.Portal.Options.Branding.Dashboard.Title">
+            </div>
+        </a>
+        <div class="mCustomScrollbar" data-mcs-theme="dark">
+            <ul class="left-menu">
+                <!-- Expand -->
+                <li>
+                    <a href="#" class="js-sidebar-open">
+                        <i class="fas fa-bars fa-2x olymp-close-icon "></i>
+                    </a>
+                </li>
+
+                @foreach (var Item in LeftMenuItems.MenuContextItems.OrderBy(c => c.Order))
+                {
+                    <li class="nav-item ">
+                        <a class="nav-link" href="@Item.Url" target="@Item.MenuItemTabTarget.ToString()">
+                            <i class="@Item.Icon fa-2x" data-toggle="tooltip" data-placement="right" title="" data-original-title="@Item.Name"></i>&nbsp;
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+
+    <div class="fixed-sidebar-left sidebar--large" id="sidebar-left-1">
+        <a href="#" class="logo" style="background-color:@SuiteOptions.ABS.Portal.Options.Branding.Dashboard.Color !important">
+            <div class="img-wrap" style="background-color:@SuiteOptions.ABS.Portal.Options.Branding.Dashboard.Color !important">
+                <img src="@SuiteOptions.ABS.Portal.Options.Branding.Dashboard.Icon" style="max-height:40px;" alt="@SuiteOptions.ABS.Portal.Options.Branding.Dashboard.Title">
+            </div>
+            <div class="title-block">
+                <h6 class="logo-title">@SuiteOptions.ABS.Portal.Options.Branding.Dashboard.Title</h6>
+            </div>
+        </a>
+        <div class="mCustomScrollbar" data-mcs-theme="dark">
+            <ul class="left-menu">
+                <!-- Collapse -->
+                <li>
+                    <a href="#" class="js-sidebar-open">
+                        <i class="olymp-close-icon fas fa-bars fa-2x"></i>
+                        <span class="left-menu-title">&nbsp; @_["Collapse Menu"]</span>
+                    </a>
+                </li>
+
+                @foreach (var Item in LeftMenuItems.MenuContextItems.OrderBy(c => c.Order))
+                {
+                    <!-- Home -->
+                    <li class="nav-item ">
+                        <a class="nav-link" href="@Item.Url">
+                            <i class="@Item.Icon fa-2x"></i>&nbsp;
+                            <span class="left-menu-title" style="font-size:12px">&nbsp; @Item.Name</span>
+                        </a>
+                    </li>
+                }
+            </ul>
+            @if (User.Identity.IsAuthenticated)
+            {
+                @await Component.InvokeAsync("AccountProgress", Model)
+            }
+            else
+            {
+                <div class="profile-completion">
+                    <div class="skills-item">
+                        <div class="skills-item-info">
+                            <span class="skills-item-title">Profile Completion</span>
+                            <span class="skills-item-count"><span class="count-animate" data-speed="1000" data-refresh-interval="0" data-to="0" data-from="0"></span><span class="units">0%</span></span>
+                        </div>
+                        <div class="skills-item-meter">
+                            <span class="skills-item-meter-active bg-primary skills-animate" style="width: 0px; opacity: 1;"></span>
+                        </div>
+                    </div>
+                    <span><a href="/Account/SignIn">@_["Log In or create your account"]</a> @_["to access your Profile"]</span>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- Responsive Fixed Sidebar Left   -->
+<div class="fixed-sidebar fixed-sidebar-responsive">
+    <div class="fixed-sidebar-left sidebar--small" id="sidebar-left-responsive" style="background-color:@SuiteOptions.ABS.Portal.Options.Branding.Dashboard.Color">
+        <a href="#" class="logo js-sidebar-open" style="background-color:@SuiteOptions.ABS.Portal.Options.Branding.Dashboard.Color">
+            <img src="@SuiteOptions.ABS.Portal.Options.Branding.Dashboard.Icon" style="max-height:50px" alt="@SuiteOptions.ABS.Portal.Options.Branding.Dashboard.Title">
+        </a>
+    </div>
+    <div class="fixed-sidebar-left sidebar--large" id="sidebar-left-1-responsive">
+        <a href="#" class="logo" style="background-color:@SuiteOptions.ABS.Portal.Options.Branding.Dashboard.Color">
+            <div class="img-wrap" style="background-color:@SuiteOptions.ABS.Portal.Options.Branding.Dashboard.Color">
+                <img src="@SuiteOptions.ABS.Portal.Options.Branding.Dashboard.Icon" style="max-height:40px" alt="@SuiteOptions.ABS.Portal.Options.Branding.Dashboard.Title">
+            </div>
+            <div class="title-block">
+                <h6 class="logo-title">@SuiteOptions.ABS.Portal.Options.Branding.Dashboard.Title</h6>
+            </div>
+        </a>
+        <div class="mCustomScrollbar" data-mcs-theme="dark">
+            <div class="control-block">
+                <div class="author-page author vcard inline-items">
+
+                    <div class="author-thumb">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <img alt="@_["Profile Photo"]" src="@Model.AvatarURL" style="max-height:40px;" class="avatar">
+                        }
+                        else
+                        {
+                            <img alt="@_["Guest Avatar"]" src="https://fenixalliance.com.co/images/avatars/anonymous.png" style="max-height:40px;" class="avatar">
+                        }
+                        <span class="icon-status online"></span>
+                    </div>
+
+                    <a class="author-name">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <div class="author-title" style="color: #515365!important">
+                                @Model.PublicName
+                            </div>
+                            <span class="author-subtitle" style="color: #515365!important">@_["REGISTERED USER"]</span>
+                        }
+                        else
+                        {
+                            <div class="author-title" style="color: #515365!important">
+                                @_["Welcome, Guest!"]
+                            </div>
+                            <span class="author-subtitle" style="color: #515365!important">@_["GUEST USER"]</span>
+                        }
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="ui-block-title ui-block-title-small">
+                <h6 class="title">@_["MAIN SECTIONS"]</h6>
+            </div>
+
+            <ul class="left-menu">
+                <li>
+                    <a href="#" class="js-sidebar-open">
+                        <i class="fas fa-bars fa-2x"></i>&nbsp;
+                        <span class="left-menu-title">&nbsp; @_["Collapse Menu"]</span>
+                    </a>
+                </li>
+                @foreach (var Item in LeftMenuItems.MenuContextItems.OrderBy(c => c.Order))
+                {
+                    if (Item.ChildMenuItems == null)
+                    {
+
+                        <li class="nav-item ">
+                            <a class="nav-link" href="@Item.Url" target="@Item.MenuItemTabTarget.ToString()" id="@Item.ID">
+                                <i class="@Item.Icon fa-2x"></i>&nbsp;
+                                <span class="left-menu-title" style="font-size:12px">&nbsp; @_[@Item.Name ?? ""]</span>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="collapse" href="#@Item.ID">
+                                <i class="@Item.Icon fa-2x"></i>&nbsp;
+                                <span class="left-menu-title" style="font-size:12px">&nbsp; @_[Item.Name ?? ""]</span>
+                            </a>
+                            <div class="collapse" id="@Item.ID">
+                                <ul class="nav">
+                                    @foreach(var SubItem in Item.ChildMenuItems)
+                                    {
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="@SubItem.Url">
+                                            <i class="@SubItem.Icon"></i>&nbsp;
+                                            <span class="sidebar-normal" style="font-size:12px">&nbsp; @_[SubItem.Name ?? ""]</span>
+                                        </a>
+                                    </li>
+
+                                    }
+                                </ul>
+                            </div>
+                        </li>
+                    }
+                }
+            </ul>
+
+            <div class="ui-block-title ui-block-title-small">
+                <h6 class="title">@_["YOUR ACCOUNT"]</h6>
+            </div>
+
+            <div class="ui-block-title ui-block-title-small">
+                <h6 class="title">@_["About Fenix Alliance"]</h6>
+            </div>
+
+            <ul class="dashboard-about">
+
+                <li>
+                    <a asp-area="Legal" asp-controller="Policies" asp-action="TermsAndConditions">
+                        <span>@_["Terms and Conditions"]</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://docs.fenixalliance.com.co">
+                        <span>@_["FAQs"]</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a asp-area="Careers" asp-controller="Home" asp-action="Index">
+                        <span>@_["Careers"]</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a asp-area="Support" asp-controller="Contact" asp-action="Index">
+                        <span>@_["Contact"]</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+

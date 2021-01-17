@@ -1,0 +1,75 @@
+﻿@using Microsoft.Extensions.Options
+@using reCAPTCHA.AspNetCore
+@using reCAPTCHA.AspNetCore.Versions
+@inject IOptions<RecaptchaSettings> RecaptchaSettings
+@model FenixAlliance.ABM.Models.Helpdesk.InquiryRequests.InquiryRequest
+@using Microsoft.AspNetCore.Mvc.Localization
+@using FenixAlliance
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> _
+@{
+    ViewData["Title"] = "Default";
+}
+
+<div class="card card-contact">
+    <form id="contact-form" asp-area="Support" asp-controller="Contact" asp-action="Create">
+        <div class="card-header card-header-raised card-header-primary text-center">
+            <h4 class="card-title">Contact Us</h4>
+        </div>
+        <div class="card-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label bmd-label-floating"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Phone" class="control-label bmd-label-floating"></label>
+                        <input asp-for="Phone" class="form-control" />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label bmd-label-floating"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="LastName" class="control-label bmd-label-floating"></label>
+                        <input asp-for="LastName" class="form-control" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="CountryID" class="control-label"></label>
+                <select asp-for="CountryID" class="form-control" asp-items="ViewBag.CountryID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Message" class="control-label bmd-label-floating"></label>
+                <span class="bmd-form-group">
+                    <textarea asp-for="Message" class="form-control" placeholder="Escribe algo..." rows="4"></textarea>
+                </span>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+            <div class="col-md-6"> @(Html.Recaptcha<reCAPTCHA.AspNetCore.Templates.RecaptchaV3HiddenInput>(RecaptchaSettings.Value))</div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="submit" value="@_["Send"]" class="btn btn-default btn-block" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

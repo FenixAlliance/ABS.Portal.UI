@@ -1,0 +1,179 @@
+﻿@using FenixAlliance.ABM.Models.Content.Menus
+@using FenixAlliance.ABS.Core.Navigation
+@using FenixAlliance.ABS.Portal.UI.i18n.Resources
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Configuration
+@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+
+@inject IViewLocalizer __
+@inject IConfiguration Configuration
+@inject INavigationManager NavigationManager
+@inject IHtmlLocalizer<SharedResources> _
+
+@{
+    List<MenuContextItem> MainMenu = (await NavigationManager.GetMainMenuAsync())?.MenuContextItems;
+}
+
+@*
+    <style>
+            .dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus, .dropdown-menu a:hover, .dropdown-menu a:focus, .dropdown-menu a:active {
+                box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(0,32,80,.4);
+                background-color: #002050;
+                color: #fff;
+            }
+
+            .nav-open .navbar-collapse {
+                -webkit-transform: translate3d(0,0,0);
+                transform: translate3d(0,0,0);
+                width: unset !important;
+                max-width: 80% !important;
+            }
+    </style>
+*@
+
+<header class="navbar navbar-expand-lg" style="margin-bottom:0px" color-on-scroll="100" id="sectionsnav">
+    <div class="container">
+        <div class="navbar-translate">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
+                <img src="@Configuration["ABS:Portal:Branding:Logos:Header"]" style="">
+            </a>
+            <!-- Mobile toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="@_["Toggle navigation"]" data-target="#MainNavigation">
+                <span class="sr-only">@_["Toggle navigation"]</span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse c-facebook" id="MainNavigation">
+            <ul class="navbar-nav ml-auto">
+                @foreach (var TopLevelItem in MainMenu)
+                {
+                    if (TopLevelItem.ChildMenuItems != null)
+                    {
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link  dropdown-toggle" id="nav_@TopLevelItem.Name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                @_[TopLevelItem.Name]
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="nav_@TopLevelItem.Name">
+                                <h6 class="dropdown-header">
+                                    <b> @_[TopLevelItem.Category]</b>
+                                </h6>
+                                <div class="dropdown-divider"></div>
+                                @foreach (var _1stLevelChildItem in TopLevelItem.ChildMenuItems)
+                                {
+                                    if (_1stLevelChildItem.ChildMenuItems != null)
+                                    {
+                                        <a href="#" class="dropdown-item dropdown-toggle">
+                                            <i class="@_1stLevelChildItem.Icon"></i>
+                                            &nbsp;&nbsp;
+                                            @_[_1stLevelChildItem.Name]
+                                        </a>
+
+                                        <div class="dropdown-menu">
+
+                                            <h6 class="dropdown-header">
+                                                <b>
+                                                    @_[@_1stLevelChildItem.Category]
+                                                </b>
+                                            </h6>
+                                            @foreach (var _2ndLevelChildItem in @_1stLevelChildItem.ChildMenuItems)
+                                            {
+                                                if (_2ndLevelChildItem.ChildMenuItems != null)
+                                                {
+                                                    <a href="#" class="dropdown-item   dropdown-toggle">
+                                                        <i class="@_2ndLevelChildItem.Icon"></i>
+                                                        &nbsp;&nbsp;
+                                                        @_[_2ndLevelChildItem.Name]
+                                                    </a>
+
+                                                    <div class="dropdown-menu">
+
+                                                        <h6 class="dropdown-header">
+                                                            <b>
+                                                                @_[@_2ndLevelChildItem.Category]
+                                                            </b>
+                                                        </h6>
+                                                        @foreach (var _3rdLevelChildItem in _2ndLevelChildItem.ChildMenuItems)
+                                                        {
+                                                            if (_3rdLevelChildItem.ChildMenuItems != null)
+                                                            {
+                                                                <a href="#" class="dropdown-item   dropdown-toggle">
+                                                                    <i class="@_3rdLevelChildItem.Icon"></i>
+                                                                    &nbsp;&nbsp;
+                                                                    @_[_3rdLevelChildItem.Name]
+                                                                </a>
+
+                                                                <div class="dropdown-menu">
+
+                                                                    <h6 class="dropdown-header">
+                                                                        <b>
+                                                                            @_[@_3rdLevelChildItem.Category]
+                                                                        </b>
+                                                                    </h6>
+                                                                    @foreach (var _4thLevelChildItem in _3rdLevelChildItem.ChildMenuItems)
+                                                                    {
+
+                                                                        <a href="@_4thLevelChildItem.Url" class="dropdown-item">
+                                                                            <i class="@_4thLevelChildItem.Icon"></i>
+                                                                            &nbsp;&nbsp;
+                                                                            @_[_4thLevelChildItem.Name]
+                                                                        </a>
+                                                                    }
+
+                                                                </div>
+                                                            }
+                                                            else
+                                                            {
+                                                                <a href="@_3rdLevelChildItem.Url" class="dropdown-item">
+                                                                    <i class="@_3rdLevelChildItem.Icon"></i>
+                                                                    &nbsp;&nbsp;
+                                                                    @_[_3rdLevelChildItem.Name]
+                                                                </a>
+                                                            }
+                                                        }
+
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <a href="@_2ndLevelChildItem.Url" class="dropdown-item">
+                                                        <i class="@_2ndLevelChildItem.Icon"></i>
+                                                        &nbsp;&nbsp;
+                                                        @_[_2ndLevelChildItem.Name]
+                                                    </a>
+                                                }
+                                            }
+
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <a href="@_1stLevelChildItem.Url" class="dropdown-item">
+                                            <i class="@_1stLevelChildItem.Icon"></i>
+                                            &nbsp;&nbsp;
+                                            @_[_1stLevelChildItem.Name]
+                                        </a>
+                                    }
+                                }
+                            </div>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a href="@TopLevelItem.Url" class="nav-link" id="navSolutions">
+                                @_[TopLevelItem.Name]
+                            </a>
+                        </li>
+                    }
+                }
+                <!-- Language -->
+                @await Html.PartialAsync("_SelectLanguagePartial")
+                <!-- Login / Register -->
+                @await Component.InvokeAsync("Login", new { User = User })
+
+            </ul>
+        </div>
+    </div>
+</header>
