@@ -1,4 +1,4 @@
-﻿@model FenixAlliance.ABM.Models.Holders.AllianceIDHolder
+﻿@model FenixAlliance.ABM.Models.Holders.AccountHolder
 
 @using System.Security.Principal
 @using Microsoft.AspNetCore.Mvc.Localization
@@ -11,7 +11,7 @@
 @inject IHtmlLocalizer<SharedResources> _
 
 @{
-    var ActiveTenants = (List<AllianceIDHolder>)ViewData["TenantsActiveInBusiness"];
+    var ActiveTenants = (List<AccountHolder>)ViewData["TenantsActiveInBusiness"];
 }
 
 <!-- Fixed Sidebar Right-Responsive -->
@@ -31,7 +31,7 @@
                 <ul class="chat-users">
                     @foreach (var item in ActiveTenants)
                     {
-                        <li class="inline-items js-chat-open" onclick="OpenChat('@item.GUID','@item.GUID','@item.AvatarURL');">
+                        <li class="inline-items js-chat-open" onclick="OpenChat('@item.ID','@item.ID','@item.AvatarURL');">
                             <div class="author-thumb">
                                 <img alt="author" src="@item.AvatarURL" style="max-height:40px" class="avatar">
                                 <span class="icon-status online"></span>

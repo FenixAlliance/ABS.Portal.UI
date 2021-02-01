@@ -25,7 +25,7 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
             if (User.Identity.IsAuthenticated)
             {
                 var GUID = tools.GetActiveDirectoryGUID(User);
-                var Tenant = await _context.AllianceIDHolder.FirstOrDefaultAsync(c => c.GUID == GUID);
+                var Tenant = await _context.AccountHolder.FirstOrDefaultAsync(c => c.ID == GUID);
                 ViewData["Tenant"] = Tenant;
             }
 

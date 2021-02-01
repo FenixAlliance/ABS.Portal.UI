@@ -3,10 +3,10 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using FenixAlliance.ABM.Data;
+using FenixAlliance.ABM.Data.Seeding.Clients.OpenCurrencyExchange;
 using FenixAlliance.ABM.Models.Global.Carts;
 using FenixAlliance.ABM.Models.Global.Carts.CartRecords;
 using FenixAlliance.ABM.Models.Global.Carts.CartScopes;
-using FenixAlliance.ABP.API.REST.Core.Controllers.Global.Currencies.Client;
 using FenixAlliance.APS.Core.DataHelpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -74,7 +74,7 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
                         {
                             var newItemCartRecord = new ItemCartRecord
                             {
-                                CartID = Tenant.AllianceIDHolderCart.ID,
+                                CartID = Tenant.AccountHolderCart.ID,
                                 Quantity = ItemCartRecord.Quantity,
                                 ItemID = ItemCartRecord.ItemID
                             };
@@ -84,7 +84,7 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
                         });
 
                     await _context.SaveChangesAsync();
-                    TempCart = Tenant.AllianceIDHolderCart;
+                    TempCart = Tenant.AccountHolderCart;
                 }
             }
             else

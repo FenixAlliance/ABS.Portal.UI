@@ -1,4 +1,4 @@
-﻿@model FenixAlliance.ABM.Models.Holders.AllianceIDHolder
+﻿@model FenixAlliance.ABM.Models.Holders.AccountHolder
 @using FenixAlliance.ABS.Portal.Core
 @using Microsoft.AspNetCore.Authentication
 @using Microsoft.Extensions.Configuration
@@ -171,9 +171,9 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a asp-area="ID" asp-controller="MyWishlists" asp-action="Index">
+                                        <a asp-area="ID" asp-controller="MyWishLists" asp-action="Index">
                                             <i class="fas fa-star"></i>&nbsp;
-                                            <span>@_["Create Wishlist"]</span>
+                                            <span>@_["Create WishList"]</span>
                                         </a>
                                     </li>
                                     <li>
@@ -280,8 +280,8 @@
                     }
                 }
                 <!-- Business Cart and notifications -->
-                @await Component.InvokeAsync("AllianceIDHolderNotifications", new { Tenant = Model })
-                @await Component.InvokeAsync("AllianceIDHolderCart", new { Tenant = Model })
+                @await Component.InvokeAsync("AccountHolderNotifications", new { Tenant = Model })
+                @await Component.InvokeAsync("AccountHolderCart", new { Tenant = Model })
                 @await Component.InvokeAsync("AccountDropdown", new { Tenant = Model })
             }
             else

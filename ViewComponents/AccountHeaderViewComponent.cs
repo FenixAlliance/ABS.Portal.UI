@@ -16,11 +16,11 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
             //Add Method Context 
             AccountTools = new AccountUsersHelpers(context);
         }
-        public async Task<IViewComponentResult> InvokeAsync(AllianceIDHolder Holder, bool DisplaySocialHeader)
+        public async Task<IViewComponentResult> InvokeAsync(AccountHolder Holder, bool DisplaySocialHeader)
         {
             // Get Alliance ID Social Profile from DB
             ViewData["DisplaySocialHeader"] = DisplaySocialHeader;
-            return View(await AccountTools.GetTenantSocialProfileAsync(Holder.GUID));
+            return View(await AccountTools.GetTenantSocialProfileAsync(Holder.ID));
         }
     }
 }

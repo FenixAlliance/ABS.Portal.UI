@@ -10,7 +10,7 @@
 @inject IViewLocalizer Localizer
 @inject IHtmlLocalizer<SharedResources> SharedLocalizer
 @{
-    var Tenant = (AllianceIDHolder)ViewBag.Tenant;
+    var Tenant = (AccountHolder)ViewBag.Tenant;
 }
 
 @if (User.Identity.IsAuthenticated)

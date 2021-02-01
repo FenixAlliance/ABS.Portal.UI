@@ -21,7 +21,7 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
             AccountTools = new AccountUsersHelpers(context);
             BusinessTools = new BusinessHelpers(context);
         }
-        public async Task<IViewComponentResult> InvokeAsync(AllianceIDHolder Holder, ClaimsPrincipal user, string FollowerID, string FollowedID)
+        public async Task<IViewComponentResult> InvokeAsync(AccountHolder Holder, ClaimsPrincipal user, string FollowerID, string FollowedID)
         {
             if (user.Identity.IsAuthenticated)
             {

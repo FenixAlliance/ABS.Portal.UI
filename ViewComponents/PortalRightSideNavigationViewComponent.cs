@@ -18,9 +18,9 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
             //Add Method Context 
             tools = new AccountUsersHelpers(context);
         }
-        public async Task<IViewComponentResult> InvokeAsync(AllianceIDHolder Tenant)
+        public async Task<IViewComponentResult> InvokeAsync(AccountHolder Tenant)
         {
-            ViewData["TenantsActiveInBusiness"] = await _context.AllianceIDHolder.Include(c => c.SocialProfile).Where(c => c.SelectedBusinessID == Tenant.SelectedBusinessID).ToListAsync();
+            ViewData["TenantsActiveInBusiness"] = await _context.AccountHolder.Include(c => c.SocialProfile).Where(c => c.SelectedBusinessID == Tenant.SelectedBusinessID).ToListAsync();
             return View(Tenant);
         }
     }

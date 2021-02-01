@@ -1,4 +1,4 @@
-﻿@model FenixAlliance.ABM.Models.Holders.AllianceIDHolder
+﻿@model FenixAlliance.ABM.Models.Holders.AccountHolder
 
 @using System.Security.Principal
 @using Microsoft.AspNetCore.Mvc.Localization
@@ -75,7 +75,7 @@
                     <a href="#" class="items-round-little bg-primary">@Model.SocialProfile.Notifications.Count</a>
                 </div>
                 <div class="ui-block-title">
-                    <a asp-area="ID" asp-controller="MyWishlists" asp-action="Index" class="h6 title">@_["My Wishlists"]</a>
+                    <a asp-area="ID" asp-controller="MyWishLists" asp-action="Index" class="h6 title">@_["My WishLists"]</a>
                 </div>
                 <div class="ui-block-title">
                     <a class="h6 title">@_["Chat / Messages"]</a>

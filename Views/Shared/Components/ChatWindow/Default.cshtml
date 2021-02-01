@@ -1,4 +1,4 @@
-﻿@model FenixAlliance.ABM.Models.Holders.AllianceIDHolder
+﻿@model FenixAlliance.ABM.Models.Holders.AccountHolder
 
 @using System.Security.Principal
 @using Microsoft.AspNetCore.Mvc.Localization
@@ -73,7 +73,7 @@
     //"use strict";
 
     var connection = new signalR.HubConnectionBuilder().withUrl("/ChatHub").build();
-    var SenderNameGUID = "@Model.GUID";
+    var SenderNameGUID = "@Model.ID";
     var SenderNameIdentifier = "@NameIdentifier";
     var SenderAvatarImageURL = "@Model.AvatarURL";
 

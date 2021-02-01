@@ -1,4 +1,4 @@
-﻿@model FenixAlliance.ABM.Models.Holders.AllianceIDHolder
+﻿@model FenixAlliance.ABM.Models.Holders.AccountHolder
 
 @using System.Security.Principal
 @using Microsoft.AspNetCore.Mvc.Localization
@@ -54,7 +54,7 @@
                     <a class="nav-link" data-toggle="tab" href="#cart" role="tab">
                         <div class="control-icon has-items">
                             <i class="fas fa-shopping-cart fa-2x" style="color:white;"></i>
-                            <div class="label-avatar bg-primary">@Model.AllianceIDHolderCart.ItemCartRecords.Count</div>
+                            <div class="label-avatar bg-primary">@Model.AccountHolderCart.ItemCartRecords.Count</div>
                         </div>
                     </a>
                 </li>
@@ -211,7 +211,7 @@
 
                     <ul class="notification-list">
 
-                        @if (@Model.AllianceIDHolderCart.ItemCartRecords.Count() == 0)
+                        @if (@Model.AccountHolderCart.ItemCartRecords.Count() == 0)
                         {
                             <li>
                                 <div class="notification-event">
@@ -224,7 +224,7 @@
                         }
                         else
                         {
-                            @foreach (ItemCartRecord PCR in Model.AllianceIDHolderCart.ItemCartRecords)
+                            @foreach (ItemCartRecord PCR in Model.AccountHolderCart.ItemCartRecords)
                             {
 
                                 var image = "/images/placeholders/product_placeholder.png";
@@ -257,7 +257,7 @@
                         }
                     </ul>
 
-                    <a asp-area="Store" asp-controller="Carts" asp-action="AllianceIDHolderCart" class="view-all bg-primary">@_["Visit Your Cart"]</a>
+                    <a asp-area="Store" asp-controller="Carts" asp-action="AccountHolderCart" class="view-all bg-primary">@_["Visit Your Cart"]</a>
                 </div>
 
             </div>

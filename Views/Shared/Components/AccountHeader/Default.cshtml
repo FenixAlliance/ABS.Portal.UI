@@ -1,4 +1,4 @@
-﻿@model FenixAlliance.ABM.Models.Holders.AllianceIDHolder
+﻿@model FenixAlliance.ABM.Models.Holders.AccountHolder
 
 @using System.Security.Principal
 @using Microsoft.AspNetCore.Mvc.Localization
@@ -35,10 +35,10 @@
                                             <a asp-area="ID" asp-controller="Account" asp-action="Index">@_["Account"]</a>
                                         </li>
                                         <li>
-                                            <a asp-area="Social" asp-controller="Holders" asp-action="Following" asp-route-id="@Model.GUID">@_["Following"] (@FollowsCount)</a>
+                                            <a asp-area="Social" asp-controller="Holders" asp-action="Following" asp-route-id="@Model.ID">@_["Following"] (@FollowsCount)</a>
                                         </li>
                                         <li>
-                                            <a asp-area="Social" asp-controller="Holders" asp-action="Followers" asp-route-id="@Model.GUID">@_["Followers"] (@FollowersCount)</a>
+                                            <a asp-area="Social" asp-controller="Holders" asp-action="Followers" asp-route-id="@Model.ID">@_["Followers"] (@FollowersCount)</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -145,23 +145,23 @@ else
                                 <div class="col col-lg-5 col-md-5 col-sm-12 col-12">
                                     <ul class="profile-menu">
                                         <li>
-                                            <a asp-area="Social" asp-controller="Holders" asp-action="Details" asp-route-id="@Model.GUID">@_["Profile"]</a>
+                                            <a asp-area="Social" asp-controller="Holders" asp-action="Details" asp-route-id="@Model.ID">@_["Profile"]</a>
                                         </li>
                                         <li>
-                                            <a asp-area="Social" asp-controller="Holders" asp-action="Following" asp-route-id="@Model.GUID">@_["Following"] (@FollowsCount)</a>
+                                            <a asp-area="Social" asp-controller="Holders" asp-action="Following" asp-route-id="@Model.ID">@_["Following"] (@FollowsCount)</a>
                                         </li>
                                         <li>
-                                            <a asp-area="Social" asp-controller="Holders" asp-action="Followers" asp-route-id="@Model.GUID">@_["Followers"] (@FollowersCount)</a>
+                                            <a asp-area="Social" asp-controller="Holders" asp-action="Followers" asp-route-id="@Model.ID">@_["Followers"] (@FollowersCount)</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="col col-lg-5 ml-auto col-md-5 col-sm-12 col-12">
                                     <ul class="profile-menu">
                                         <li>
-                                            <a asp-area="Social" asp-controller="Holders" asp-action="Businesses" asp-route-id="@Model.GUID">@_["Businesses"] (@BusinessCount)</a>
+                                            <a asp-area="Social" asp-controller="Holders" asp-action="Businesses" asp-route-id="@Model.ID">@_["Businesses"] (@BusinessCount)</a>
                                         </li>
                                         <li>
-                                            <a asp-area="Social" asp-controller="Holders" asp-action="Groups" asp-route-id="@Model.GUID">@_["Groups"]  (@GroupsCount) </a>
+                                            <a asp-area="Social" asp-controller="Holders" asp-action="Groups" asp-route-id="@Model.ID">@_["Groups"]  (@GroupsCount) </a>
                                         </li>
                                         <li>
                                             <div class="more">
