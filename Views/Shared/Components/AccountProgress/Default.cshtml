@@ -1,13 +1,5 @@
 ﻿@model FenixAlliance.ABM.Models.Holders.AccountHolder
 
-@using System.Security.Principal
-@using Microsoft.AspNetCore.Mvc.Localization
-@using FenixAlliance
-@using FenixAlliance.ACL.i18n.Resources
-@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
-
-@inject IViewLocalizer Localizer
-@inject IHtmlLocalizer<SharedResources> _
 
 @{
     var time = DateTime.Now.Hour;

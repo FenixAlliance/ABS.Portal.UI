@@ -1,14 +1,6 @@
 ﻿@model FenixAlliance.ABM.Models.Global.Carts.Cart
-@using Newtonsoft.Json
-@using FenixAlliance
 @using FenixAlliance.ABM.Data.Seeding.Clients.OpenCurrencyExchange
 @using FenixAlliance.ABM.Models.Global.Globe
-@using FenixAlliance.ACL.i18n.Resources
-@using Microsoft.AspNetCore.Mvc.Localization
-@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
-
-@inject IViewLocalizer Localizer
-@inject IHtmlLocalizer<SharedResources> SharedLocalizer
 
 @{
     var CartCurrency = ViewBag.Currency as Currency;

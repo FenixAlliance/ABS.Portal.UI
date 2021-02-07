@@ -1,23 +1,7 @@
 ﻿@model FenixAlliance.ABM.Models.Holders.AccountHolder
-@using Microsoft.Extensions.Configuration
-@using System.Security.Principal
-@using Microsoft.AspNetCore.Mvc.Localization
-@using FenixAlliance
-@using FenixAlliance.ABM.Models.Content.Menus
-@using FenixAlliance.ABS.Core.Navigation
-@using FenixAlliance.ABS.Portal.Core
-@using FenixAlliance.ACL.i18n.Resources
-@using FenixAlliance.ACL.Configuration.Types
-@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
-
-@inject SuiteOptions SuiteOptions
-@inject IConfiguration Configuration
-@inject IHtmlLocalizer<SharedResources> _
-@inject INavigationManager INavigationManager
-@inject IViewLocalizer Localizer
 
 @{ 
-    MenuContext LeftMenuItems = await INavigationManager.GetDashboardLeftMenuAsync();
+    MenuContext LeftMenuItems = await NavigationManager.GetDashboardLeftMenuAsync();
 
 }
 

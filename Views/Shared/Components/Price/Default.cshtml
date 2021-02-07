@@ -1,12 +1,4 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
-@using Microsoft.AspNetCore.Mvc.Localization
-@using FenixAlliance
-@using FenixAlliance.ACL.i18n.Resources
-@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
-
-@inject IViewLocalizer Localizer
-@inject IHtmlLocalizer<SharedResources> SharedLocalizer
-
+﻿
 @{
     var Currency = (string)ViewData["CurrencyCode"];
     var PrintUnformatted = (bool)ViewData["PrintUnformatted"];

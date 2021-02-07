@@ -1,11 +1,4 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
-@using FenixAlliance
-@using FenixAlliance.ACL.i18n.Resources
-@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
-
-@inject IViewLocalizer Localizer
-@inject IHtmlLocalizer<SharedResources> SharedLocalizer
-
+﻿
 <section>
     <div class="container information-blocks">
         <div class="row">
@@ -16,7 +9,7 @@
             </div>
             <div class="col-12 text-center information-entry">
                 <h4 class="description">This part of our application is currently under development.</h4>
-                <h3><i class="fal fa-map">&nbsp;</i><a asp-area="Corporate" asp-controller="About" asp-action="RoadMap" style="text-decoration:underline">@SharedLocalizer["Check our Roadmap for more information."]</a></h3>
+                <h3><i class="fal fa-map">&nbsp;</i><a asp-area="Corporate" asp-controller="About" asp-action="RoadMap" style="text-decoration:underline">@_["Check our Roadmap for more information."]</a></h3>
             </div>
         </div>
     </div>

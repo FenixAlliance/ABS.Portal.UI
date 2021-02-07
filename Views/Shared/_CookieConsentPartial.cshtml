@@ -1,11 +1,4 @@
-﻿@using Microsoft.AspNetCore.Http.Features
-@using Microsoft.AspNetCore.Mvc.Localization
-@using FenixAlliance
-@using FenixAlliance.ACL.i18n.Resources
-@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
-
-@inject IViewLocalizer Localizer
-@inject IHtmlLocalizer<SharedResources> SharedLocalizer
+﻿
 @{
     var consentFeature = Context.Features.Get<ITrackingConsentFeature>();
     var showBanner = !consentFeature?.CanTrack ?? false;
@@ -30,7 +23,7 @@
                     }
                 },
                 "content": {
-                    "message": "@SharedLocalizer["We - and our partners - use cookies to deliver our services, to ensure you get the best experience on our website and to show you relevant content based on your interests."]",
+                    "message": "@_["We - and our partners - use cookies to deliver our services, to ensure you get the best experience on our website and to show you relevant content based on your interests."]",
                     "href": "https://fenixalliance.com.co/Legal/Policies/CookiePolicy"
                 },
                 "position": "bottom",

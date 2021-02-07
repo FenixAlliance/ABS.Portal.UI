@@ -1,15 +1,12 @@
 ﻿@using Microsoft.Extensions.Options
+
+@model FenixAlliance.ABM.Models.Helpdesk.InquiryRequests.InquiryRequest
+
 @using reCAPTCHA.AspNetCore
 @using reCAPTCHA.AspNetCore.Versions
 @inject IOptions<RecaptchaSettings> RecaptchaSettings
-@model FenixAlliance.ABM.Models.Helpdesk.InquiryRequests.InquiryRequest
-@using Microsoft.AspNetCore.Mvc.Localization
-@using FenixAlliance
-@using FenixAlliance.ACL.i18n.Resources
-@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
 
-@inject IViewLocalizer Localizer
-@inject IHtmlLocalizer<SharedResources> _
+
 @{
     ViewData["Title"] = "Default";
 }

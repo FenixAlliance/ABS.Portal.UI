@@ -1,14 +1,5 @@
-﻿@using Microsoft.AspNetCore.Authentication
-@using Microsoft.Extensions.Options
-@using System.Security.Principal
-@using Microsoft.AspNetCore.Mvc.Localization
-@using FenixAlliance
-@using FenixAlliance.ABM.Models.Holders
-@using FenixAlliance.ACL.i18n.Resources
-@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+﻿@using FenixAlliance.ABM.Models.Holders
 
-@inject IViewLocalizer Localizer
-@inject IHtmlLocalizer<SharedResources> SharedLocalizer
 @{
     var Tenant = (AccountHolder)ViewBag.Tenant;
 }
@@ -21,13 +12,13 @@
         var greeting;
 
         if (hourNow > 18) {
-            greeting = '👋🏻 @SharedLocalizer["Good evening"], @User.Identity.Name.';
+            greeting = '👋🏻 @_["Good evening"], @User.Identity.Name.';
         } else if (hourNow > 12) {
-            greeting = '👋🏻 @SharedLocalizer["Good afternoon"], @User.Identity.Name.';
+            greeting = '👋🏻 @_["Good afternoon"], @User.Identity.Name.';
         } else if (hourNow > 0) {
-            greeting = '👋🏻 @SharedLocalizer["Good morning"], @User.Identity.Name.';
+            greeting = '👋🏻 @_["Good morning"], @User.Identity.Name.';
         } else {
-            greeting = '👋🏻 @SharedLocalizer["Welcome"], @User.Identity.Name.';
+            greeting = '👋🏻 @_["Welcome"], @User.Identity.Name.';
         }
     </script>
 
@@ -47,24 +38,25 @@
             <a asp-area="ID" asp-controller="Account" asp-action="Index" onclick="NProgress.start()" class="dropdown-item">
                 <i class="fas fa-id-badge"></i>
                 &nbsp;&nbsp;
-                @SharedLocalizer["Your profile"]
+                @_["Your profile"]
             </a>
 
             <a asp-area="Billing" asp-controller="Wallet" asp-action="Index" onclick="NProgress.start()" class="dropdown-item">
                 <i class="fas fa-wallet"></i>
                 &nbsp;&nbsp;
-                @SharedLocalizer["Your wallet"]
+                @_["Your wallet"]
             </a>
 
             <a href="Suite/Me/Settings" onclick="NProgress.start()" class="dropdown-item">
                 <i class="fas fa-users-cog"></i>
                 &nbsp;&nbsp;
-                @SharedLocalizer["Settings"]
+                @_["Settings"]
             </a>
+
             <a asp-area="Support" asp-controller="Home" asp-action="Index" onclick="NProgress.start()" class="dropdown-item">
                 <i class="fas fa-life-ring"></i>
                 &nbsp;&nbsp;
-                @SharedLocalizer["Support"]
+                @_["Support"]
             </a>
 
             <div class="dropdown-divider"></div>
@@ -72,7 +64,7 @@
             <a asp-area="" asp-controller="Account" asp-action="SignOut" onclick="NProgress.start()" class="dropdown-item">
                 <i class="fas fa-sign-out-alt"></i>
                 &nbsp;&nbsp;
-                <span>@SharedLocalizer["Logout"]</span>
+                <span>@_["Logout"]</span>
             </a>
 
         </div>
@@ -82,7 +74,7 @@ else
 {
     <li class="button-container nav-item iframe-extern">
         <a asp-area="" asp-controller="Account" asp-action="SignIn" class="btn btn-info btn-round btn-block">
-            @SharedLocalizer["Login / Sign up"]
+            @_["Login / Sign up"]
         </a>
     </li>
 }

@@ -1,13 +1,5 @@
-﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
-@using Microsoft.AspNetCore.Mvc.Localization
-@using Microsoft.Extensions.Configuration
-@using FenixAlliance
-@using FenixAlliance.ACL.i18n.Resources
-@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
+﻿
 
-@inject IViewLocalizer Localizer
-@inject IConfiguration Configuration
-@inject IHtmlLocalizer<SharedResources> SharedLocalizer
 @{
     //Meta Tags - Declarations
     var Date = System.DateTime.Now;
@@ -42,7 +34,7 @@
     var RevisitAfter = "7 Days";
     var IP = Context.Connection.RemoteIpAddress.ToString();
     var Image = (!string.IsNullOrEmpty(ViewBag.Image) ? (ViewBag.Image) : Configuration["ABS:Portal:SEO:SocialImage"]);
-    var Language = (!String.IsNullOrEmpty(Localizer["lang"].ToString()) ? "en" : Localizer["lang"].ToString());
+    var Language = (!String.IsNullOrEmpty(_["lang"].ToString()) ? "en" : _["lang"].ToString());
 }
 
 <!-- title -->
@@ -328,51 +320,6 @@
 
 <!-- Cookie Consent -->
 @await Html.PartialAsync("_CookieConsentPartial")
-
-@if (ViewBag.EnableAzureAppInsights == true)
-{
-    <!-- App Insights -->
-    @Html.Raw(JavaScriptSnippet.FullScript)
-}
-
-@if (ViewBag.EnableSliderRevolution == true)
-{
-    <!-- Slider Revolution CSS Files -->
-    <link rel="stylesheet" type="text/css" href="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/css/settings.css">
-    <link rel="stylesheet" type="text/css" href="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/css/layers.css">
-    <link rel="stylesheet" type="text/css" href="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/css/navigation.css">
-
-    <!-- Slider Revolution core JavaScript files -->
-    <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
-
-    @if (ViewBag.EnableSliderRevolutionDev == true)
-    {
-        <!-- Slider Revolution extension scripts. ONLY NEEDED FOR LOCAL TESTING -->
-        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-        <script type="text/javascript" src="~/FenixAlliance.ABS.Portal.UI.Core.V1/lib/slider-revolution/revolution/js/extensions/revolution.extension.video.min.js"></script>
-    }
-}
-
-
-
-@if (ViewBag.EnableSyncfusion == true)
-{
-
-    @* Syncfusion Essential JS 2 Styles *@
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
-
-    @* Syncfusion Essential JS 2 Scripts *@
-    <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
-
-}
 
 
 <style>

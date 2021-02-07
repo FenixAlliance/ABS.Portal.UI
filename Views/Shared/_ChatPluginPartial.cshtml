@@ -1,11 +1,4 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
-@using FenixAlliance
-@using FenixAlliance.ACL.i18n.Resources
-@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
-
-@inject IViewLocalizer Localizer
-@inject IHtmlLocalizer<SharedResources> SharedLocalizer
-
+﻿
 <!-- Load Facebook SDK for JavaScript -->
 @*<div id="fb-root"></div>
     <script>
@@ -48,7 +41,7 @@
 
     function HideZohoSalesIQChat() {
         $('.zsiq_floatmain').attr("style", "display: none !important");
-        $("#ZohoSalesIQChatActionBtn").html('@SharedLocalizer["Contact a live support agent"]');
+        $("#ZohoSalesIQChatActionBtn").html('@_["Contact a live support agent"]');
         $('#ZohoSalesIQChatActionBtn').attr("style", "display: none !important");
     }
 

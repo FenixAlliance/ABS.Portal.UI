@@ -1,15 +1,4 @@
-﻿@using FenixAlliance.ABM.Models.Content.Menus
-@using FenixAlliance.ABS.Core.Navigation
-@using FenixAlliance.ACL.i18n.Resources
-@using Microsoft.AspNetCore.Mvc.Localization
-@using Microsoft.Extensions.Configuration
-@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
-
-@inject IViewLocalizer __
-@inject IConfiguration Configuration
-@inject INavigationManager NavigationManager
-@inject IHtmlLocalizer<SharedResources> _
-
+﻿
 @{
     List<MenuContextItem> MainMenu = (await NavigationManager.GetMainMenuAsync())?.MenuContextItems;
 }

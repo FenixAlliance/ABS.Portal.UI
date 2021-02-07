@@ -1,14 +1,4 @@
 ﻿@model FenixAlliance.ABM.Models.Tenants.Business
-@using Microsoft.AspNetCore.Authentication
-@using Microsoft.Extensions.Options
-@using System.Security.Principal
-@using Microsoft.AspNetCore.Mvc.Localization
-@using FenixAlliance
-@using FenixAlliance.ACL.i18n.Resources
-@using SharedResources = FenixAlliance.ABS.Portal.UI.Resources.SharedResources
-
-@inject IViewLocalizer Localizer
-@inject IHtmlLocalizer<SharedResources> _
 
 @{
     var DisplayCount = 0;
@@ -90,6 +80,7 @@
             </div>
 
             <a asp-area="Business" asp-controller="Notifications" asp-action="Index" asp-route-BusinessID="@Model.ID" class="view-all bg-blue">@_["Business Notifications"]</a>
+        
         </div>
     </div>
 }
