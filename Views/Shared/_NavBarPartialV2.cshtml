@@ -1,7 +1,7 @@
 ﻿
 
 @{
-    List<MenuContextItem> MainMenu = (await NavigationManager.GetMainMenuAsync())?.MenuContextItems;
+    var MainMenu = await NavigationManager.GetMainMenuAsync();
 }
 
 <style>
@@ -19,11 +19,21 @@
     }
 
     @@media screen and (min-width: 800px) {
-        .wsmenucontainer {
+        .material-menucontainer {
             margin-bottom: 90px
         }
     }
-
+    .logo-image {
+        height: 100px; 
+        max-height: 35px;
+        margin-left: 5%;
+        margin-top: 8%;
+    }
+    .small-logo-image {
+        height: 100px; 
+        max-height: 30px; 
+        margin-top: 3px
+    }
 
 </style>
 
@@ -31,184 +41,198 @@
 
 
 
-<div class="wsmenucontainer clearfix">
+<div class="material-menucontainer clearfix">
 
     <div class="overlapblackbg"></div>
 
-    <div class="wsmobileheader clearfix">
-        <a id="wsnavtoggle" class="animated-arrow"><span></span></a>
-        <a class="smallogo"><img src="@Configuration["ABS:Portal:Branding:Logos:Header"]" style="max-height:30px;margin-top:3px" alt="" /></a>
-        <a class="callusicon" href="tel:+12065886716"><span class="fa fa-phone"></span></a>
+    <div class="material-mobileheader clearfix">
+        <a id="material-navtoggle" class="animated-arrow">
+            <span></span>
+        </a>
+        <a class="smallogo">
+            <img src="@(SuiteOptions?.ABS.Portal?.Options?.Branding?.HeaderLogo?.DefaltLogoURL ?? "/Portal/images/logo.svg")" 
+                 class="small-logo-image"
+                 alt="Logo"/>
+        </a>
+        <a class="callusicon" href="tel:+12065886716">
+            <span class="fa fa-phone"></span>
+        </a>
     </div>
 
     <div class="header">
         <div class="wrapper clearfix bigmegamenu">
 
             <div class="logo clearfix" style="display: inline-flex;">
-                <a href="/" title="Logo"><img src="@Configuration["ABS:Portal:Branding:Logos:Header"]" style="max-height:35px; margin-left:5%;margin-top:8%;" alt="" /></a>
+                <a href="/" title="Logo">
+                    <img src="@(SuiteOptions?.ABS.Portal?.Options?.Branding?.HeaderLogo?.DefaltLogoURL ?? "/Portal/images/logo.svg")" 
+                         class="logo-image" 
+                         alt="Logo"/>
+                </a>
             </div>
+            @if (MainMenu != null)
+            {
+                <!--Main Menu HTML Code-->
+                <nav class="material-menu clearfix">
+                    <ul class="mobile-sub material-menu-list">
 
-            <!--Main Menu HTML Code-->
-            <nav class="wsmenu clearfix">
-                <ul class="mobile-sub wsmenu-list">
-
-                    @foreach (var TopLevelItem in MainMenu)
-                    {
-                        if (TopLevelItem.ChildMenuItems != null)
+                        @foreach (var TopLevelItem in MainMenu.MenuContextItems)
                         {
-                            <li>
-                                <a href="#" id="nav_@TopLevelItem.Name">
-                                    <i class="@TopLevelItem.Icon"></i>
-                                    @_[TopLevelItem.Name]
-                                    <span class="arrow"></span>
-                                </a>
-                                <ul class="wsmenu-submenu">
-                                    <li>
-                                        <a href="#">
-                                            <b> @_[TopLevelItem.Category]</b>
-                                        </a>
-                                    </li>
+                            if (TopLevelItem.ChildMenuItems != null)
+                            {
+                                <li>
+                                    <a href="#" id="nav_@TopLevelItem.Name">
+                                        <i class="@TopLevelItem.Icon"></i>
+                                        @_[TopLevelItem.Name]
+                                        <span class="arrow"></span>
+                                    </a>
+                                    <ul class="material-menu-submenu">
+                                        <li>
+                                            <a href="#">
+                                                <b> @_[TopLevelItem.Category]</b>
+                                            </a>
+                                        </li>
 
-                                    @foreach (var _1stLevelChildItem in TopLevelItem.ChildMenuItems)
-                                    {
-                                        if (_1stLevelChildItem.ChildMenuItems != null)
+                                        @foreach (var _1stLevelChildItem in TopLevelItem.ChildMenuItems)
                                         {
-                                            <li class="">
-                                                <a href="#">
-                                                    <i class="@_1stLevelChildItem.Icon"></i>
-                                                    &nbsp;&nbsp;
-                                                    @_[_1stLevelChildItem.Name]
-                                                </a>
+                                            if (_1stLevelChildItem.ChildMenuItems != null)
+                                            {
+                                                <li class="">
+                                                    <a href="#">
+                                                        <i class="@_1stLevelChildItem.Icon"></i>
+                                                        &nbsp;&nbsp;
+                                                        @_[_1stLevelChildItem.Name]
+                                                    </a>
 
-                                                <ul class="wsmenu-submenu-sub">
+                                                    <ul class="material-menu-submenu-sub">
 
-                                                    <li>
-                                                        <h6 class="dropdown-header">
-                                                            <b>
-                                                                @_[@_1stLevelChildItem.Category]
-                                                            </b>
-                                                        </h6>
-                                                    </li>
+                                                        <li>
+                                                            <h6 class="dropdown-header">
+                                                                <b>
+                                                                    @_[@_1stLevelChildItem.Category]
+                                                                </b>
+                                                            </h6>
+                                                        </li>
 
-                                                    @foreach (var _2ndLevelChildItem in @_1stLevelChildItem.ChildMenuItems)
-                                                    {
-                                                        if (_2ndLevelChildItem.ChildMenuItems != null)
+                                                        @foreach (var _2ndLevelChildItem in @_1stLevelChildItem.ChildMenuItems)
                                                         {
-                                                            <li>
-                                                                <a href="#" >
-                                                                    <i class="@_2ndLevelChildItem.Icon"></i>
-                                                                    &nbsp;&nbsp;
-                                                                    @_[_2ndLevelChildItem.Name]
-                                                                </a>
+                                                            if (_2ndLevelChildItem.ChildMenuItems != null)
+                                                            {
+                                                                <li>
+                                                                    <a href="#" >
+                                                                        <i class="@_2ndLevelChildItem.Icon"></i>
+                                                                        &nbsp;&nbsp;
+                                                                        @_[_2ndLevelChildItem.Name]
+                                                                    </a>
 
-                                                                <ul class="wsmenu-submenu-sub-sub">
+                                                                    <ul class="material-menu-submenu-sub-sub">
 
-                                                                    <li>
-                                                                        <h6 class="dropdown-header">
-                                                                            <b>
-                                                                                @_[@_2ndLevelChildItem.Category]
-                                                                            </b>
-                                                                        </h6>
-                                                                    </li>
-                                                                    @foreach (var _3rdLevelChildItem in _2ndLevelChildItem.ChildMenuItems)
-                                                                    {
-                                                                        if (_3rdLevelChildItem.ChildMenuItems != null)
+                                                                        <li>
+                                                                            <h6 class="dropdown-header">
+                                                                                <b>
+                                                                                    @_[@_2ndLevelChildItem.Category]
+                                                                                </b>
+                                                                            </h6>
+                                                                        </li>
+                                                                        @foreach (var _3rdLevelChildItem in _2ndLevelChildItem.ChildMenuItems)
                                                                         {
-                                                                            <li>
-                                                                                <a href="#" >
-                                                                                    <i class="@_3rdLevelChildItem.Icon"></i>
-                                                                                    &nbsp;&nbsp;
-                                                                                    @_[_3rdLevelChildItem.Name]
-                                                                                </a>
+                                                                            if (_3rdLevelChildItem.ChildMenuItems != null)
+                                                                            {
+                                                                                <li>
+                                                                                    <a href="#" >
+                                                                                        <i class="@_3rdLevelChildItem.Icon"></i>
+                                                                                        &nbsp;&nbsp;
+                                                                                        @_[_3rdLevelChildItem.Name]
+                                                                                    </a>
 
-                                                                                <ul class="wsmenu-submenu-sub-sub">
-                                                                                    <li>
-                                                                                        <h6 class="dropdown-header">
-                                                                                            <b>
-                                                                                                @_[@_3rdLevelChildItem.Category]
-                                                                                            </b>
-                                                                                        </h6>
-                                                                                    </li>
-                                                                                    @foreach (var _4thLevelChildItem in _3rdLevelChildItem.ChildMenuItems)
-                                                                                    {
+                                                                                    <ul class="material-menu-submenu-sub-sub">
                                                                                         <li>
-                                                                                            <a href="@_4thLevelChildItem.Url">
-                                                                                                <i class="@_4thLevelChildItem.Icon"></i>
-                                                                                                &nbsp;&nbsp;
-                                                                                                @_[_4thLevelChildItem.Name]
-                                                                                            </a>
+                                                                                            <h6 class="dropdown-header">
+                                                                                                <b>
+                                                                                                    @_[@_3rdLevelChildItem.Category]
+                                                                                                </b>
+                                                                                            </h6>
                                                                                         </li>
-                                                                                    }
+                                                                                        @foreach (var _4thLevelChildItem in _3rdLevelChildItem.ChildMenuItems)
+                                                                                        {
+                                                                                            <li>
+                                                                                                <a href="@_4thLevelChildItem.Url">
+                                                                                                    <i class="@_4thLevelChildItem.Icon"></i>
+                                                                                                    &nbsp;&nbsp;
+                                                                                                    @_[_4thLevelChildItem.Name]
+                                                                                                </a>
+                                                                                            </li>
+                                                                                        }
 
-                                                                                </ul>
-                                                                            </li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <li>
+                                                                                    <a href="@_3rdLevelChildItem.Url" >
+                                                                                        <i class="@_3rdLevelChildItem.Icon"></i>
+                                                                                        &nbsp;&nbsp;
+                                                                                        @_[_3rdLevelChildItem.Name]
+                                                                                    </a>
+                                                                                </li>
+                                                                            }
                                                                         }
-                                                                        else
-                                                                        {
-                                                                            <li>
-                                                                                <a href="@_3rdLevelChildItem.Url" >
-                                                                                    <i class="@_3rdLevelChildItem.Icon"></i>
-                                                                                    &nbsp;&nbsp;
-                                                                                    @_[_3rdLevelChildItem.Name]
-                                                                                </a>
-                                                                            </li>
-                                                                        }
-                                                                    }
 
-                                                                </ul>
-                                                            </li>
+                                                                    </ul>
+                                                                </li>
+                                                            }
+                                                            else
+                                                            {
+                                                                <li>
+
+                                                                    <a href="@_2ndLevelChildItem.Url" class="dropdown-item">
+                                                                        <i class="@_2ndLevelChildItem.Icon"></i>
+                                                                        &nbsp;&nbsp;
+                                                                        @_[_2ndLevelChildItem.Name]
+                                                                    </a>
+                                                                </li>
+                                                            }
                                                         }
-                                                        else
-                                                        {
-                                                            <li>
 
-                                                                <a href="@_2ndLevelChildItem.Url" class="dropdown-item">
-                                                                    <i class="@_2ndLevelChildItem.Icon"></i>
-                                                                    &nbsp;&nbsp;
-                                                                    @_[_2ndLevelChildItem.Name]
-                                                                </a>
-                                                            </li>
-                                                        }
-                                                    }
-
-                                                </ul>
-                                            </li>
+                                                    </ul>
+                                                </li>
+                                            }
+                                            else
+                                            {
+                                                <li>
+                                                    <a href="@_1stLevelChildItem.Url" class="dropdown-item">
+                                                        <i class="@_1stLevelChildItem.Icon"></i>
+                                                        &nbsp;&nbsp;
+                                                        @_[_1stLevelChildItem.Name]
+                                                    </a>
+                                                </li>
+                                            }
                                         }
-                                        else
-                                        {
-                                            <li>
-                                                <a href="@_1stLevelChildItem.Url" class="dropdown-item">
-                                                    <i class="@_1stLevelChildItem.Icon"></i>
-                                                    &nbsp;&nbsp;
-                                                    @_[_1stLevelChildItem.Name]
-                                                </a>
-                                            </li>
-                                        }
-                                    }
 
-                                </ul>
-                            </li>
+                                    </ul>
+                                </li>
+                            }
+                            else
+                            {
+                                <li>
+                                    <a href="@TopLevelItem.Url" class="nav-link" id="navSolutions">
+                                        <i class="@TopLevelItem.Icon"></i>
+                                        @_[TopLevelItem.Name]
+                                    </a>
+                                </li>
+                            }
                         }
-                        else
-                        {
-                            <li>
-                                <a href="@TopLevelItem.Url" class="nav-link" id="navSolutions">
-                                    <i class="@TopLevelItem.Icon"></i>
-                                    @_[TopLevelItem.Name]
-                                </a>
-                            </li>
-                        }
-                    }
 
-                    <!-- Language -->
-                    @await Html.PartialAsync("_SelectLanguagePartial")
-                    <!-- Login / Register -->
-                    @await Component.InvokeAsync("Login", new { User = User })
+                        <!-- Language -->
+                        @await Html.PartialAsync("_SelectLanguagePartial")
+                        <!-- Login / Register -->
+                        @await Component.InvokeAsync("Login", new { User = User })
 
 
-                </ul>
-            </nav>
-            <!--Menu HTML Code-->
+                    </ul>
+                </nav>
+                <!--Menu HTML Code-->
+            }
 
         </div>
 

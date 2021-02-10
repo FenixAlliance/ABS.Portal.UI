@@ -196,7 +196,7 @@
 
         <div class="copyright pull-center">
             <br />@_["Copyright"] &copy; @DateTime.Now.Year &nbsp;
-            <a asp-area="" asp-controller="Home" asp-action="Index">@_[SuiteOptions?.ABS?.Portal.Options.Seo.Organization.LegalName ?? "Fenix Alliance Inc."]</a>
+            <a asp-area="" asp-controller="Home" asp-action="Index">@_[SuiteOptions?.ABS?.Portal?.Options?.Seo?.Organization?.LegalName ?? "Fenix Alliance Inc."]</a>
         </div>
     </div>
 </footer>

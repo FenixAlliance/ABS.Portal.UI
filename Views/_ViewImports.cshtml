@@ -5,6 +5,7 @@
 @using FenixAlliance.ACL.Configuration.Interfaces
 @using FenixAlliance.ACL.i18n.Resources
 @using FenixAlliance.ABM.Models.Content.Menus
+@using FenixAlliance.ABS.Core.Navigation
 @using Microsoft.Extensions.DependencyInjection
 @using NavigationManager = FenixAlliance.ABS.Core.Navigation.NavigationManager
 @using SharedResources = FenixAlliance.ACL.i18n.Resources.SharedResources
@@ -17,6 +18,6 @@
 @inject ISuiteOptions SuiteOptions
 @inject IConfiguration Configuration
 @inject IServiceCollection services
-@inject NavigationManager NavigationManager
+@inject INavigationManager NavigationManager
 @inject IHtmlLocalizer<SharedResources> _
 @inject IViewLocalizer Localizer

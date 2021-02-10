@@ -23,6 +23,7 @@
     <PackageIconUrl>https://fenixalliance.com.co/images/FenixAlliance/AppIcon/apple-icon-120x120.png</PackageIconUrl>
     <Description>Application Component for the Alliance Business Suite.</Description>
     <RepositoryUrl>https://github.com/FenixAlliance/ABS.Portal.UI</RepositoryUrl>
+    <StaticWebAssetBasePath Condition="$(StaticWebAssetBasePath) == ''">/ui</StaticWebAssetBasePath>
     <PackageReleaseNotes>Standarize at v1.1.1</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>

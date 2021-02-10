@@ -22699,7 +22699,7 @@ select.selectpicker {
         opacity: 1 !important;
         display: none;
         position: relative !important;
-        top: 0px;
+        top: 0;
         background-color: #fff;
         border: solid 1px #ccc;
         padding: 0px;
