@@ -2,7 +2,7 @@
 @{
     var Currency = (string)ViewData["CurrencyCode"];
     var PrintUnformatted = (bool)ViewData["PrintUnformatted"];
-    var Ammount = (double)ViewData["Ammount"];
+    var Amount = (double)ViewData["Amount"];
 }
 
 @if (ViewBag.PrintUnformatted)
@@ -10,19 +10,19 @@
     @if (ViewBag.DisplayDiscountPrice)
     {
         <text>
-            fx.convert(@Ammount, { from: '@Currency', to: CartCurrencyCode })
+            fx.convert(@Amount, { from: '@Currency', to: CartCurrencyCode })
         </text>
     }
     else
     {
         <text>
-            fx.convert(@Ammount, { from: '@Currency', to: CartCurrencyCode })
+            fx.convert(@Amount, { from: '@Currency', to: CartCurrencyCode })
         </text>
     }
 }
 else
 {
     <script>
-        document.write(CurrencyFormatter.format(fx.convert(@Ammount.ToString().Replace(',','.'), { from: '@Currency', to: CartCurrencyCode })));
+        document.write(CurrencyFormatter.format(fx.convert(@Amount.ToString().Replace(',','.'), { from: '@Currency', to: CartCurrencyCode })));
     </script>
 }

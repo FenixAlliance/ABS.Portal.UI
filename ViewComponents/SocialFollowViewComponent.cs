@@ -2,8 +2,9 @@
 using System.Security.Claims;
 using System.Threading.Tasks;
 using FenixAlliance.ABM.Data;
+using FenixAlliance.ABM.Data.Access.Helpers;
 using FenixAlliance.ABM.Models.Holders;
-using FenixAlliance.APS.Core.DataHelpers;
+using FenixAlliance.APS.Core.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,13 +14,13 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
     {
         private readonly ABMContext _context;
         private AccountUsersHelpers AccountTools;
-        private BusinessHelpers BusinessTools;
+        private TenantHelpers BusinessTools;
         public SocialFollowViewComponent(ABMContext context)
         {
             _context = context;
             //Add Method Context 
             AccountTools = new AccountUsersHelpers(context);
-            BusinessTools = new BusinessHelpers(context);
+            BusinessTools = new TenantHelpers(context);
         }
         public async Task<IViewComponentResult> InvokeAsync(AccountHolder Holder, ClaimsPrincipal user, string FollowerID, string FollowedID)
         {

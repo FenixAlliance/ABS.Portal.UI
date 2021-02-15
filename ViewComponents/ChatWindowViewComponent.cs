@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using FenixAlliance.ABM.Data;
 using FenixAlliance.ABM.Models.Holders;
-using FenixAlliance.APS.Core.DataHelpers;
+using FenixAlliance.APS.Core.Helpers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FenixAlliance.ABS.Portal.UI.ViewComponents

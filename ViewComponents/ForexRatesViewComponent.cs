@@ -7,7 +7,7 @@ using FenixAlliance.ABM.Data.Seeding.Clients.OpenCurrencyExchange;
 using FenixAlliance.ABM.Models.Global.Carts;
 using FenixAlliance.ABM.Models.Global.Carts.CartRecords;
 using FenixAlliance.ABM.Models.Global.Carts.CartScopes;
-using FenixAlliance.APS.Core.DataHelpers;
+using FenixAlliance.APS.Core.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;

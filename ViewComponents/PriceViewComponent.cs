@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using FenixAlliance.ABM.Data;
-using FenixAlliance.APS.Core.DataHelpers;
+using FenixAlliance.APS.Core.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,7 +17,7 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
             //Add Method Context 
             tools = new AccountUsersHelpers(context);
         }
-        public async Task<IViewComponentResult> InvokeAsync(double Ammount, string Currency, bool PrintUnformatted)
+        public async Task<IViewComponentResult> InvokeAsync(double Amount, string Currency, bool PrintUnformatted)
         {
             if (Currency.Length != 3)
             {
@@ -30,7 +30,7 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
             }
 
             ViewData["PrintUnformatted"] = PrintUnformatted;
-            ViewData["Ammount"] = Ammount;
+            ViewData["Amount"] = Amount;
 
             return View();
         }
