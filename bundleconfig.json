@@ -7,7 +7,7 @@
       "wwwroot/lib/Offline/themes/offline-theme-default.css",
       "wwwroot/lib/Offline/themes/offline-language-english.css",
       "wwwroot/lib/tour/build/css/bootstrap-tour.min.css",
-      "wwwroot/lib/fontawesome/css/fontawesome.css",
+      "wwwroot/fonts/fontawesome/fontawesome.css",
       "wwwroot/lib/toastr/build/toastr.min.css",
       "wwwroot/lib/tingle/dist/tingle.css",
       "wwwroot/lib/nprogress/nprogress.css",
@@ -21,7 +21,7 @@
     "outputFileName": "wwwroot/min/js/globals.min.js",
     "inputFiles": [
       "wwwroot/lib/jquery/dist/jquery-2.1.3.min.js",
-      "wwwroot/lib/moment/moment.js",
+      "wwwroot/lib/moment/min/moment.min.js",
       "wwwroot/lib/Offline/offline.min.js",
       "wwwroot/lib/tingle/dist/tingle.js",
       "wwwroot/lib/nprogress/nprogress.js",
@@ -35,7 +35,7 @@
     }
   },
   {
-    "outputFileName": "wwwroot/min/css/dashboard.all.min.css",
+    "outputFileName": "wwwroot/min/css/dashboard.min.css",
     "inputFiles": [
       "wwwroot/css/bootstrap/bootstrap-reboot.css",
       "wwwroot/css/bootstrap/bootstrap.css",
@@ -48,7 +48,7 @@
     }
   },
   {
-    "outputFileName": "wwwroot/min/js/dashboard.all.min.js",
+    "outputFileName": "wwwroot/min/js/dashboard.min.js",
     "inputFiles": [
       "wwwroot/js/jquery.appear.js",
       "wwwroot/js/jquery.mousewheel.js",
