@@ -4,7 +4,8 @@
 
 }
 <!-- Dashboard CSS -->
-<link rel="stylesheet" href="~/FenixAlliance.UI.Portal.V1/min/css/dashboard.all.min.css" />
+<link rel="stylesheet" href="~/ui/min/css/dashboard.min.css" />
+<link rel="stylesheet" href="~/ui/fonts/fontawesome/fontawesome.css" />
 
 @if (ViewBag.EnablePrettyfy == true)
 {
@@ -28,14 +29,14 @@
 @if (ViewBag.EnableSelectize == true)
 {
     <!-- #region Selectize.JS files -->
-    <script type="text/javascript" src="~/lib/selectize/dist/js/standalone/selectize.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="~/lib/selectize/dist/css/selectize.default.css" />
+    <script type="text/javascript" src="~/ui/lib/selectize/dist/js/standalone/selectize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/ui/lib/selectize/dist/css/selectize.default.css" />
 }
 
 @if (ViewBag.EnableTinyMce == true)
 {
     <!-- #region Tinymce files -->
-    <script type="text/javascript" src="~/FenixAlliance.UI.Core.V1/lib/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript" src="~/ui/lib/tinymce/tinymce.min.js"></script>
     <!-- #Init scripts -->
     <script>
     tinymce.init({
@@ -114,7 +115,7 @@
     <script src="https://www.youtube.com/iframe_api"></script>
 }
 
-<script src="~/FenixAlliance.UI.Core.V1/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+<script src="~/ui/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
 
 <style>
     label {

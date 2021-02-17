@@ -1,4 +1,5 @@
-﻿
+﻿@using FenixAlliance.ABM.Data.Seeding.Clients.OpenCurrencyExchange
+
 
 @{
     var IP = Context.Connection.RemoteIpAddress.ToString();
@@ -34,7 +35,14 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    @await Component.InvokeAsync("ForexRates", new { CurrentUser = User, CurrentUserIP = IP })
+    @if (services.Any(s => s.ServiceType == typeof(OpenExchangeRatesClient)))
+    {
+            @* Forex Rates *@
+        @if (ViewBag.DisableForex != true)
+        {
+            @await Component.InvokeAsync("ForexRates", new { CurrentUser = User, CurrentUserIP = IP })
+        }
+    }
 
     @await Component.InvokeAsync("InitPortalLayout", User)
 
