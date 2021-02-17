@@ -19,7 +19,7 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
         }
         public async Task<IViewComponentResult> InvokeAsync(ClaimsPrincipal user)
         {
-            string GUID = tools.GetActiveDirectoryGUID(user);
+            string GUID = await tools.GetActiveDirectoryGUIDAsync(user);
             var EndUser = await _context.AccountHolder
                 .Include(c => c.SocialProfile).ThenInclude(c => c.Notifications)
                 .Include(c => c.AccountHolderCart).ThenInclude(c => c.ItemCartRecords).ThenInclude(c => c.Item).ThenInclude(c => c.ItemImages)
