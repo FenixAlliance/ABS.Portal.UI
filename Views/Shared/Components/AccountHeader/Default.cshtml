@@ -16,7 +16,7 @@
                 <div class="ui-block">
                     <div class="top-header">
                         <div class="top-header-thumb">
-                            <img src="~/images/Background/bg (1).jpg" style="max-height:350px;" alt="@_["Profile Cover"]">
+                            <img src="~/ui/images/HeaderBackground.jpg" style="max-height:350px;" alt="@_["Profile Cover"]">
                         </div>
                         <div class="profile-section">
                             <div class="row">
@@ -111,7 +111,7 @@
                                 <img src="@Html.DisplayFor(model => model.AvatarURL)" style=" max-height:100%; background-size: cover;" alt="@_["Avatar"]">
                             </a>
                             <div class="author-content">
-                                <a href="#" class="h6 author-name">@Html.DisplayFor(model => model.PublicName)</a>
+                                <a href="#" class="h6 author-name">@(Model.PublicName ?? "Username")</a>
                                 <div class="country">@Html.DisplayFor(model => model.JobTitle)</div>
                             </div>
                         </div>
