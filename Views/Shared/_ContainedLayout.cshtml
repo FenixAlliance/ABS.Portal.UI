@@ -1,0 +1,128 @@
+﻿@using FenixAlliance.ABM.Data.Seeding.Clients.OpenCurrencyExchange
+
+@{
+    var IP = Context.Connection.RemoteIpAddress.ToString();
+}
+
+<!DOCTYPE html>
+<html view-source="no" viewsource="no" xmlns="//www.w3.org/1999/xhtml" xmlns:b="//www.google.com/2005/gml/b" xmlns:data="//www.google.com/2005/gml/data" xmlns:expr="//www.google.com/2005/gml/expr" prefix="og: http://ogp.me/ns">
+<head>
+    @RenderSection("HeadInitial", required: false)
+
+    @await Html.PartialAsync("_MetaTagsPartial")
+
+    <!-- Style - CSS - CDN -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700" />
+
+    <!-- Material Kit CSS -->
+    <link asp-append-version="true" rel="stylesheet" href="~/ui/min/css/material.min.css">
+
+    <style>
+        body {
+            background-color: white;
+        }
+
+        PrimaryBG {
+            background-color: #002050 !important;
+        }
+
+        @@media (min-width: 768px) {
+            .pull-sm-left {
+                float: left !important;
+            }
+
+            .pull-sm-right {
+                float: right !important;
+            }
+        }
+
+        .section-dark {
+            background-color: #343434;
+            background-size: 200% 240%;
+            background: #232323;
+            background: radial-gradient(ellipse at center,#002050 0%,#002050 100%);
+            background-size: 550% 450%;
+        }
+    </style>
+    @RenderSection("HeadFinal", required: false)
+</head>
+<body class="sidebar-collapse">
+    @RenderSection("BodyInitial", required: false)
+
+    @* Google Tag Manager (noscript)  *@
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMFRWG7"
+                height="0"
+                width="0"
+                style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+
+    @if (services.Any(s => s.ServiceType == typeof(OpenExchangeRatesClient)))
+    {
+        @* Forex Rates *@
+        @if (ViewBag.DisableForex != true)
+        {
+            @await Component.InvokeAsync("ForexRates", new { CurrentUser = User, CurrentUserIP = IP })
+        }
+    }
+
+    @* Display Nav Bar Partial? *@
+    @if (ViewBag.HideNavBar != true)
+    {
+        @await Html.PartialAsync("_NavBarPartialV2")
+    }
+
+    @* Displar SubNav Bar Partial? *@
+    @if (ViewBag.DisplaySubNavBar == true)
+    {
+        @await Html.PartialAsync("_SubNavBarPartial")
+        ;
+    }
+
+    @* Displar Hero Slider? *@
+    @if (ViewBag.DisplayGlobalSlider == true)
+    {
+        @await Html.PartialAsync("_HeaderPartial")
+        ;
+    }
+
+    <!-- Pre-Content -->
+    @RenderSection("PreContent", required: false)
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Content -->
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post-Content -->
+    @RenderSection("PostContent", required: false)
+
+    <!-- Pre-Footer -->
+    @RenderSection("PreFooter", required: false)
+
+    <!-- Footer -->
+    @if (ViewBag.HideFooter != true)
+    {
+        @await Html.PartialAsync("_FooterPartial")
+    }
+    <!-- Post-Footer -->
+    @RenderSection("PostFooter", required: false)
+
+    <!-- Scripts - Complements -->
+    @await Component.InvokeAsync("WebCommons")
+
+    @await Html.PartialAsync("_ScriptsMainPartial")
+
+    @RenderSection("scripts", required: false)
+
+
+    @RenderSection("BodyFinal", required: false)
+</body>
+</html>
