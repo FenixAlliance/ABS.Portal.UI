@@ -21,7 +21,7 @@
     });
     fx.base = "USD";
     fx.rates = {
-       @foreach (var item in ExchangeRates.Rates)
+       @foreach (var item in ExchangeRates?.Rates ?? new Dictionary<string,double>())
         {
             var pair = $"\"{@item.Key}\":{@item.Value.ToString().Replace(',', '.')},";
             @Html.Raw(pair);

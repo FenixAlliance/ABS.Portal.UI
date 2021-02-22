@@ -36,7 +36,7 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
             GuestCart IPBasedCart = null;
 
             var CurrentTenantGUID = "";
-            var Settings = await _context.Settings.FirstOrDefaultAsync(m => m.SettingsPK == "General");
+            var Settings = await _context.Settings.FirstOrDefaultAsync(m => m.ID == "General");
 
             if (!GuestCartExist(CurrentUserIP))
             {
