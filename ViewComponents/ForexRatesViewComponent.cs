@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using FenixAlliance.ABM.Data;
+﻿using FenixAlliance.ABM.Data;
 using FenixAlliance.ABM.Data.Seeding.Clients.OpenCurrencyExchange;
 using FenixAlliance.ABM.Models.Global.Carts;
 using FenixAlliance.ABM.Models.Global.Carts.CartRecords;
@@ -11,6 +7,10 @@ using FenixAlliance.APS.Core.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
+using System;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace FenixAlliance.ABS.Portal.UI.ViewComponents
 {
