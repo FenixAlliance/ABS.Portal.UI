@@ -4,6 +4,7 @@
 @{
     var IP = Context.Connection.RemoteIpAddress.ToString();
 }
+
 <!DOCTYPE html>
 <html view-source="no" viewsource="no" xmlns="//www.w3.org/1999/xhtml" xmlns:b="//www.google.com/2005/gml/b" xmlns:data="//www.google.com/2005/gml/data" xmlns:expr="//www.google.com/2005/gml/expr" prefix="og: http://ogp.me/ns">
 <head>
@@ -11,6 +12,7 @@
 
     @await Html.PartialAsync("_MetaTagsPartial")
     @await Html.PartialAsync("_PortalHeadPartial")
+    <script src="https://kit.fontawesome.com/e9164c5e00.js" crossorigin="anonymous"></script>
 
     <style>
         .form-group.with-icon i, .form-group.with-icon svg {
@@ -37,7 +39,7 @@
 
     @if (services.Any(s => s.ServiceType == typeof(OpenExchangeRatesClient)))
     {
-            @* Forex Rates *@
+       @* Forex Rates *@
         @if (ViewBag.DisableForex != true)
         {
             @await Component.InvokeAsync("ForexRates", new { CurrentUser = User, CurrentUserIP = IP })
