@@ -1,4 +1,11 @@
-﻿
+﻿@{
+    var menu = await NavigationManager.GetFooterMenuAsync();
+
+    if(menu == null)
+    {
+        
+    }
+}
 
 <style>
     .footer-black {
@@ -15,9 +22,9 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <a asp-area="" asp-controller="Home" asp-action="Index">
-                        <center><img src="@(SuiteOptions?.ABS?.Portal?.Options?.Branding?.HeaderLogo?.DefaltLogoURL ?? "/images/logo.svg")" width="@(SuiteOptions?.ABS?.Portal?.Options?.Branding?.HeaderLogo?.Width ?? 90)" height="@(SuiteOptions?.ABS?.Portal?.Options?.Branding?.HeaderLogo?.Height ?? 32)"></center>
+                        <center><img src="@(SuiteOptions?.ABS?.Portal?.Options?.Branding?.FooterLogo?.DefaltLogoURL ?? "/images/logo.svg")" width="@(SuiteOptions?.ABS?.Portal?.Options?.Branding?.FooterLogo?.Width ?? 90)" height="@(SuiteOptions?.ABS?.Portal?.Options?.Branding?.FooterLogo?.Height ?? 32)"></center>
                     </a>
-                    <p class="text-center">@_[@Configuration["ABS:Portal:Branding:Organization:Slogan"] ?? "Reach Beyond Expectations."]</p>
+                    <p class="text-center">@_[@SuiteOptions?.ABS?.Portal?.Options?.Branding?.FooterLogo?.DefaltLogoURL ?? "Reach Beyond Expectations."]</p>
                     <center>
                         <strong>
                             @_["Fenix ​​Alliance Group is a Colombian IT company that specializes in helping businesses and organizations to increase productivity while reducing technology costs by enabling them to collaborate and optimize efficiencies in a cognitive, secure and reliable way."]
@@ -26,6 +33,8 @@
                     <br />
                     <br />
                 </div>
+
+
                 <div class="col-md-2 col-sm-6 col-xs-6 text-center">
                     <h5> @_["About"]</h5>
                     <ul class="links-vertical">
@@ -68,6 +77,7 @@
                         </li>
                     </ul>
                 </div>
+
                 <div class="col-md-2 col-sm-6 col-xs-6 text-center">
                     <h5>@_["Quick links"]</h5>
                     <ul class="links-vertical">
@@ -105,6 +115,7 @@
                         </li>
                     </ul>
                 </div>
+
                 <div class="col-md-2 col-sm-6 col-xs-6 text-center">
                     <h5>@_["Legal"] </h5>
                     <ul class="links-vertical">
@@ -131,6 +142,7 @@
                         </li>
                     </ul>
                 </div>
+
                 <div class="col-md-3 col-sm-12 col-xs-12 text-center">
 
                     <div class="col-md-12">
@@ -149,6 +161,7 @@
                     </div>
                     <br />
                 </div>
+
             </div>
         </div>
 
@@ -157,46 +170,54 @@
         <b>@_["LET'S GET SOCIAL!"]</b>
 
         <ul class="social-buttons">
+
             <li>
                 <a href="https://twitter.com/fenixalliance" target="_blank" class="btn btn-just-icon btn-link btn-twitter">
                     <i class="fab fa-twitter"></i>
                 </a>
             </li>
+
             <li>
                 <a href="https://www.facebook.com/FenixAlliance" target="_blank" class="btn btn-just-icon btn-link btn-facebook">
                     <i class="fab fa-facebook-square"></i>
                 </a>
             </li>
+
             <li>
                 <a href="https://www.linkedin.com/company/FenixAlliance/" target="_blank" class="btn btn-just-icon btn-link" style="color:#0077B5;">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </li>
+
             <li>
                 <a href="https://www.instagram.com/fenixalliancegroup/" target="_blank" class="btn btn-just-icon btn-link" style="color:#fd1d1d;">
                     <i class="fab fa-instagram"></i>
                 </a>
             </li>
+
             <li>
                 <a href="https://github.com/FenixAlliance" target="_blank" class="btn btn-just-icon btn-link" style="color:black;">
                     <i class="fab fa-github"></i>
                 </a>
             </li>
+
             <li>
                 <a href="https://www.microsoft.com/es-co/solution-providers/partnerdetails/fenix-alliance-sas_a203651e-1ec8-418c-9da1-2283299be269/06088e84-c7fc-4a80-ac01-5a714bcb120f" target="_blank" class="btn btn-just-icon btn-link" style="color:black;">
                     <i class="fab fa-microsoft"></i>
                 </a>
             </li>
+
             <li>
                 <a href="https://www.youtube.com/channel/UCMzdCFA6KU4dBlHMDtX-xuA/" target="_blank" class="btn btn-just-icon btn-link" style="color:#ff0000;">
                     <i class="fab fa-youtube"></i>
                 </a>
             </li>
+
         </ul>
 
         <div class="copyright pull-center">
-            <br />@_["Copyright"] &copy; @DateTime.Now.Year &nbsp;
-            <a asp-area="" asp-controller="Home" asp-action="Index">@_[SuiteOptions?.ABS?.Portal?.Options?.Seo?.Organization?.LegalName ?? "Fenix Alliance Inc."]</a>
+            <br />@_["Copyright"] &copy; @DateTime.Now.Year &nbsp;<a asp-area="" asp-controller="Home" asp-action="Index">@_[SuiteOptions?.ABS?.Portal?.Options?.Seo?.Organization?.LegalName ?? "Fenix Alliance Inc."]</a> Powered by <a href="https://absuite.net">Alliance Business Suite</a>.
         </div>
+
     </div>
 </footer>
