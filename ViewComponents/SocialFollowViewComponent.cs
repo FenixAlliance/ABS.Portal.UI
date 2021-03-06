@@ -12,15 +12,16 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
 {
     public class SocialFollowViewComponent : ViewComponent
     {
-        private readonly ABMContext _context;
-        private AccountUsersHelpers AccountTools;
-        private TenantHelpers BusinessTools;
-        public SocialFollowViewComponent(ABMContext context)
+        private AccountUsersHelpers AccountUsersHelpers { get; set; }
+        private ABMContext DataContext { get; set; }
+        private TenantHelpers TenantHelpers { get; set; }
+
+        public SocialFollowViewComponent(ABMContext context, TenantHelpers TenantHelpers, AccountUsersHelpers AccountUsersHelpers)
         {
-            _context = context;
             //Add Method Context 
-            AccountTools = new AccountUsersHelpers(context);
-            BusinessTools = new TenantHelpers(context);
+            this.DataContext = context;
+            this.AccountUsersHelpers = AccountUsersHelpers;
+            this.TenantHelpers = TenantHelpers;
         }
         public async Task<IViewComponentResult> InvokeAsync(AccountHolder Holder, ClaimsPrincipal user, string FollowerID, string FollowedID)
         {
@@ -29,7 +30,7 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
                 string FollowID = null;
                 if (Holder == null)
                 {
-                    Holder = await BusinessTools.GetTenantWithSelectedBusinessAsync(user);
+                    Holder = await TenantHelpers.GetTenantWithSelectedBusinessAsync(user);
                 }
                 // If acting as Holder
                 if (Holder.SelectedBusiness == null)
@@ -37,12 +38,12 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
                     // If looking at a Follower
                     if (!string.IsNullOrEmpty(FollowerID))
                     {
-                        FollowID = (await _context.FollowRecord.Where(c => c.FollowedSocialProfileID == Holder.SocialProfile.ID && c.FollowerSocialProfileID == FollowerID).FirstOrDefaultAsync())?.ID;
+                        FollowID = (await DataContext.FollowRecord.Where(c => c.FollowedSocialProfileID == Holder.SocialProfile.ID && c.FollowerSocialProfileID == FollowerID).FirstOrDefaultAsync())?.ID;
                     }
                     // If looking at a Follow
                     if (!string.IsNullOrEmpty(FollowedID))
                     {
-                        FollowID = (await _context.FollowRecord.Where(c => c.FollowerSocialProfileID == Holder.SocialProfile.ID && c.FollowedSocialProfileID == FollowedID).FirstOrDefaultAsync())?.ID;
+                        FollowID = (await DataContext.FollowRecord.Where(c => c.FollowerSocialProfileID == Holder.SocialProfile.ID && c.FollowedSocialProfileID == FollowedID).FirstOrDefaultAsync())?.ID;
                     }
                 }
                 // If Acting As Business
@@ -50,12 +51,12 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
                 {
                     if (!string.IsNullOrEmpty(FollowerID))
                     {
-                        FollowID = (await _context.FollowRecord.Where(c => c.FollowedSocialProfileID == Holder.SelectedBusiness.BusinessSocialProfile.ID && c.FollowerSocialProfileID == FollowerID).FirstOrDefaultAsync())?.ID;
+                        FollowID = (await DataContext.FollowRecord.Where(c => c.FollowedSocialProfileID == Holder.SelectedBusiness.BusinessSocialProfile.ID && c.FollowerSocialProfileID == FollowerID).FirstOrDefaultAsync())?.ID;
                     }
 
                     if (!string.IsNullOrEmpty(FollowedID))
                     {
-                        FollowID = (await _context.FollowRecord.Where(c => c.FollowerSocialProfileID == Holder.SelectedBusiness.BusinessSocialProfile.ID && c.FollowedSocialProfileID == FollowedID).FirstOrDefaultAsync())?.ID;
+                        FollowID = (await DataContext.FollowRecord.Where(c => c.FollowerSocialProfileID == Holder.SelectedBusiness.BusinessSocialProfile.ID && c.FollowedSocialProfileID == FollowedID).FirstOrDefaultAsync())?.ID;
                     }
                 }
 

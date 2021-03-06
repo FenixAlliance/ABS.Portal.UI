@@ -9,19 +9,19 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
 {
     public class ChatWindowViewComponent : ViewComponent
     {
-        private readonly ABMContext _context;
-        private AccountUsersHelpers tools;
-        public ChatWindowViewComponent(ABMContext context)
+        private readonly ABMContext DataContext;
+        private AccountUsersHelpers AccountUsersHelpers;
+        public ChatWindowViewComponent(ABMContext DataContext, AccountUsersHelpers AccountUsersHelpers)
         {
-            _context = context;
+            this.DataContext = DataContext;
             //Add Method Context 
-            tools = new AccountUsersHelpers(context);
+            this.AccountUsersHelpers = AccountUsersHelpers;
         }
 #pragma warning disable CS1998 // This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
         public async Task<IViewComponentResult> InvokeAsync(AccountHolder Tenant, ClaimsPrincipal user)
 #pragma warning restore CS1998 // This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
         {
-            ViewData["NameIdentifier"] = tools.GetActiveDirectoryNameIdentifier(user);
+            ViewData["NameIdentifier"] = AccountUsersHelpers.GetActiveDirectoryNameIdentifier(user);
             return View(Tenant);
         }
     }

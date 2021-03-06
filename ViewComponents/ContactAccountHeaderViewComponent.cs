@@ -8,11 +8,11 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
 {
     public class ContactAccountHeaderViewComponent : ViewComponent
     {
-        private readonly ABMContext _context;
+        private readonly ABMContext DataContext;
         private AccountUsersHelpers AccountTools;
         public ContactAccountHeaderViewComponent(ABMContext context)
         {
-            _context = context;
+            DataContext = context;
             //Add Method Context 
             AccountTools = new AccountUsersHelpers(context);
         }

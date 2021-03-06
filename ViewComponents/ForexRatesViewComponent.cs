@@ -1,5 +1,5 @@
 ﻿using FenixAlliance.ABM.Data;
-using FenixAlliance.ABM.Data.Seeding.Clients.OpenCurrencyExchange;
+using FenixAlliance.ABM.Data.Clients.OpenCurrencyExchange;
 using FenixAlliance.ABM.Models.Global.Carts;
 using FenixAlliance.ABM.Models.Global.Carts.CartRecords;
 using FenixAlliance.ABM.Models.Global.Carts.CartScopes;
@@ -16,17 +16,17 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
 {
     public class ForexRatesViewComponent : ViewComponent
     {
-        private readonly IHostEnvironment hostingEnv;
-        private readonly AccountUsersHelpers _accountTools;
-        private readonly ABMContext _context;
-        private readonly OpenExchangeRatesClient OpenExchangeRatesClient;
+        private  ABMContext DataContext { get; set; }
+        private  IHostEnvironment Environment { get; set; }
+        private  AccountUsersHelpers AccountUsersHelpers { get; set; }
+        private  OpenExchangeRatesClient OpenExchangeRatesClient { get; set; }
 
-        public ForexRatesViewComponent(ABMContext context, IHostEnvironment _hostingEnv, OpenExchangeRatesClient openExchangeRatesClient)
+        public ForexRatesViewComponent(ABMContext context, IHostEnvironment _hostingEnv, OpenExchangeRatesClient openExchangeRatesClient, AccountUsersHelpers AccountUsersHelpers)
         {
-            _context = context;
-            hostingEnv = _hostingEnv;
-            OpenExchangeRatesClient = openExchangeRatesClient;
-            _accountTools = new AccountUsersHelpers(context);
+            this.DataContext = context;
+            this.Environment = _hostingEnv;
+            this.OpenExchangeRatesClient = openExchangeRatesClient;
+            this.AccountUsersHelpers = AccountUsersHelpers;
         }
 
         public async Task<IViewComponentResult> InvokeAsync(ClaimsPrincipal CurrentUser, string CurrentUserIP)
@@ -36,7 +36,7 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
             GuestCart IPBasedCart = null;
 
             var CurrentTenantGUID = "";
-            var Settings = await _context.Settings.FirstOrDefaultAsync(m => m.ID == "General");
+            var Settings = await DataContext.Settings.FirstOrDefaultAsync(m => m.ID == "General");
 
             if (!GuestCartExist(CurrentUserIP))
             {
@@ -45,21 +45,21 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
                     IP = CurrentUserIP,
                     CurrencyID = "USD.USA"
                 };
-                _context.Add(IPBasedCart);
-                await _context.SaveChangesAsync();
+                DataContext.Add(IPBasedCart);
+                await DataContext.SaveChangesAsync();
             }
             else
             {
-                IPBasedCart = await _context.GuestCart.FirstOrDefaultAsync(c => c.IP == CurrentUserIP);
+                IPBasedCart = await DataContext.GuestCart.FirstOrDefaultAsync(c => c.IP == CurrentUserIP);
             }
 
             if (CurrentUser.Identity.IsAuthenticated)
             {
-                var Tenant = await _accountTools.GetCurrentHolder(CurrentUser);
+                var Tenant = await AccountUsersHelpers.GetCurrentHolder(CurrentUser);
 
                 if (Tenant.SelectedBusiness != null || !string.IsNullOrEmpty(Tenant.SelectedBusinessID))
                 {
-                    var BusinessCart = await _context.BusinessCart
+                    var BusinessCart = await DataContext.BusinessCart
                         .Include(c => c.Currency).ThenInclude(c => c.Country)
                         .FirstOrDefaultAsync(c => c.BusinessID == Tenant.SelectedBusinessID);
 
@@ -68,22 +68,22 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
                 else
                 {
                     // Iterate over every ItemCartRecord and delete from IP cart after copy to Holder cart
-                    (await _context.ItemCartRecord.AsNoTracking()
+                    (await DataContext.ItemCartRecord.AsNoTracking()
                         .Where(c => c.CartID == IPBasedCart.ID)?.ToListAsync())
                         .ForEach(ItemCartRecord =>
                         {
-                            var newItemCartRecord = new ItemCartRecord
+                            var newItemCartRecord = new FenixAlliance.ABM.Models.Global.Carts.CartRecords.ItemRecords.ItemCartRecord()
                             {
                                 CartID = Tenant.AccountHolderCart.ID,
                                 Quantity = ItemCartRecord.Quantity,
                                 ItemID = ItemCartRecord.ItemID
                             };
 
-                            _context.Add(newItemCartRecord);
-                            _context.ItemCartRecord.Remove(ItemCartRecord);
+                            DataContext.Add(newItemCartRecord);
+                            DataContext.ItemCartRecord.Remove(ItemCartRecord);
                         });
 
-                    await _context.SaveChangesAsync();
+                    await DataContext.SaveChangesAsync();
                     TempCart = Tenant.AccountHolderCart;
                 }
             }
@@ -92,7 +92,7 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
                 TempCart = IPBasedCart;
             }
 
-            if (hostingEnv.IsProduction() || Settings.OpenCurrencyExchangeRates == null)
+            if (Environment.IsProduction() || Settings.OpenCurrencyExchangeRates == null)
             {
                 if (DateTime.Compare(DateTime.Now, Settings.ExchangeRatesUpdatedTimestamp.AddHours(1)) > 0)
                 {
@@ -100,8 +100,8 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
                     Settings.ExchangeRatesUpdatedTimestamp = DateTime.Now;
                     try
                     {
-                        _context.Update(Settings);
-                        await _context.SaveChangesAsync();
+                        DataContext.Update(Settings);
+                        await DataContext.SaveChangesAsync();
                     }
                     catch (DbUpdateConcurrencyException)
                     {
@@ -115,14 +115,14 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
             ViewData["CurrentUserIP"] = CurrentUserIP;
             ViewData["CurrentHolderGUID"] = CurrentTenantGUID;
             ViewData["ExchangeRates"] = Settings.OpenCurrencyExchangeRates;
-            ViewData["Currency"] = await _context.Currency.AsNoTracking().FirstOrDefaultAsync(c => c.ID == TempCart.CurrencyID);
+            ViewData["Currency"] = await DataContext.Currency.AsNoTracking().FirstOrDefaultAsync(c => c.ID == TempCart.CurrencyID);
 
             return View(TempCart);
         }
 
         private bool GuestCartExist(string IP)
         {
-            return _context.GuestCart.Any(c => c.IP == IP);
+            return DataContext.GuestCart.Any(c => c.IP == IP);
         }
     }
 }

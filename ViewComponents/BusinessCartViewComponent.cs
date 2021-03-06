@@ -8,13 +8,13 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
 {
     public class BusinessNotificationsViewComponent : ViewComponent
     {
-        private readonly ABMContext _context;
-        private AccountUsersHelpers tools;
-        public BusinessNotificationsViewComponent(ABMContext context)
+        private ABMContext DataContext { get; set; }
+        private AccountUsersHelpers AccountUsersHelpers { get; set; }
+        public BusinessNotificationsViewComponent(ABMContext DataContext, AccountUsersHelpers AccountUsersHelpers)
         {
-            _context = context;
+            this.DataContext = DataContext;
             //Add Method Context 
-            tools = new AccountUsersHelpers(context);
+            this.AccountUsersHelpers = AccountUsersHelpers;
         }
 #pragma warning disable CS1998 // This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
         public async Task<IViewComponentResult> InvokeAsync(AccountHolder Tenant)

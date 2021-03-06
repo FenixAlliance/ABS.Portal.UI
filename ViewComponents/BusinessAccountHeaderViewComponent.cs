@@ -9,20 +9,20 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
 {
     public class BusinessAccountHeaderViewComponent : ViewComponent
     {
-        private AccountUsersHelpers tools;
-        private readonly ABMContext _context;
-        private TenantHelpers BusinessTools;
+        private AccountUsersHelpers AccountUsersHelpers { get; set; }
+        private  ABMContext DataContext { get; set; }
+        private TenantHelpers TenantHelpers { get; set; }
 
-        public BusinessAccountHeaderViewComponent(ABMContext context)
+        public BusinessAccountHeaderViewComponent(ABMContext context, TenantHelpers TenantHelpers, AccountUsersHelpers AccountUsersHelpers)
         {
-            _context = context;
             //Add Method Context 
-            tools = new AccountUsersHelpers(context);
-            BusinessTools = new TenantHelpers(context);
+            this.DataContext = context;
+            this.AccountUsersHelpers = AccountUsersHelpers;
+            this.TenantHelpers = TenantHelpers;
         }
         public async Task<IViewComponentResult> InvokeAsync(Business Business, bool DisplaySocialHeader)
         {
-            Business = await BusinessTools.GetBusinessWithSocialProfileAsync(Business.ID);
+            Business = await TenantHelpers.GetBusinessWithSocialProfileAsync(Business.ID);
             ViewData["DisplaySocialHeader"] = DisplaySocialHeader;
             return View(Business);
         }

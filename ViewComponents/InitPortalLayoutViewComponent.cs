@@ -21,13 +21,22 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
         {
             string GUID = await tools.GetActiveDirectoryGUIDAsync(user);
             var EndUser = await _context.AccountHolder
-                .Include(c => c.SocialProfile).ThenInclude(c => c.Notifications)
-                .Include(c => c.AccountHolderCart).ThenInclude(c => c.ItemCartRecords).ThenInclude(c => c.Item).ThenInclude(c => c.ItemImages)
-
-                .Include(c => c.BusinessProfileRecords).ThenInclude(c => c.Business)
-                .Include(c => c.SelectedBusiness).ThenInclude(c => c.BusinessSocialProfile).ThenInclude(c => c.Notifications)
-                .Include(c => c.SelectedBusiness).ThenInclude(c => c.BusinessCart).ThenInclude(c => c.ItemCartRecords)
-                    .ThenInclude(c => c.Item).ThenInclude(c => c.ItemImages)
+                .Include(c => c.SocialProfile)
+                    .ThenInclude(c => c.Notifications)
+                .Include(c => c.AccountHolderCart)
+                    .ThenInclude(c => c.ItemCartRecords)
+                        .ThenInclude(c => c.Item)
+                            .ThenInclude(c => c.ItemImages)
+                .Include(c => c.BusinessProfileRecords)
+                    .ThenInclude(c => c.Business)
+                .Include(c => c.SelectedBusiness)
+                    .ThenInclude(c => c.BusinessSocialProfile)
+                        .ThenInclude(c => c.Notifications)
+                .Include(c => c.SelectedBusiness)
+                    .ThenInclude(c => c.BusinessCart)
+                        .ThenInclude(c => c.ItemCartRecords)
+                            .ThenInclude(c => c.Item)
+                                .ThenInclude(c => c.ItemImages)
                 .FirstOrDefaultAsync(m => m.ID == GUID);
             return View(EndUser);
         }

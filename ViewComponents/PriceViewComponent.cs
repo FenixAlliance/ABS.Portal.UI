@@ -1,4 +1,5 @@
 ﻿using FenixAlliance.ABM.Data;
+using FenixAlliance.ABM.Data.Access.Helpers;
 using FenixAlliance.APS.Core.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,19 +10,23 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
 {
     public class PriceViewComponent : ViewComponent
     {
-        private readonly ABMContext _context;
-        private AccountUsersHelpers tools;
-        public PriceViewComponent(ABMContext context)
+        private AccountUsersHelpers AccountUsersHelpers { get; set; }
+        private ABMContext DataContext { get; set; }
+        private TenantHelpers TenantHelpers { get; set; }
+
+        public PriceViewComponent(ABMContext DataContext, TenantHelpers TenantHelpers, AccountUsersHelpers AccountUsersHelpers)
         {
-            _context = context;
             //Add Method Context 
-            tools = new AccountUsersHelpers(context);
+            this.DataContext = DataContext;
+            this.AccountUsersHelpers = AccountUsersHelpers;
+            this.TenantHelpers = TenantHelpers;
         }
+
         public async Task<IViewComponentResult> InvokeAsync(double Amount, string Currency, bool PrintUnformatted)
         {
             if (Currency.Length != 3)
             {
-                var _currency = await _context.Currency.Include(c => c.Country).Where(c => c.ISOCode == Currency).FirstOrDefaultAsync();
+                var _currency = await DataContext.Currency.Include(c => c.Country).Where(c => c.ISOCode == Currency).FirstOrDefaultAsync();
                 ViewData["CurrencyCode"] = _currency.ISOCode;
             }
             else
