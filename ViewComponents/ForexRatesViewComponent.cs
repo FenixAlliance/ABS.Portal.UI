@@ -1,9 +1,9 @@
 ﻿using FenixAlliance.ABM.Data;
 using FenixAlliance.ABM.Data.Clients.OpenCurrencyExchange;
+using FenixAlliance.ABM.Data.Interfaces.Services;
 using FenixAlliance.ABM.Models.Global.Carts;
 using FenixAlliance.ABM.Models.Global.Carts.CartRecords;
 using FenixAlliance.ABM.Models.Global.Carts.CartScopes;
-using FenixAlliance.APS.Core.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
@@ -18,10 +18,10 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
     {
         private  ABMContext DataContext { get; set; }
         private  IHostEnvironment Environment { get; set; }
-        private  AccountUsersHelpers AccountUsersHelpers { get; set; }
+        private  IHolderService AccountUsersHelpers { get; set; }
         private  OpenExchangeRatesClient OpenExchangeRatesClient { get; set; }
 
-        public ForexRatesViewComponent(ABMContext context, IHostEnvironment _hostingEnv, OpenExchangeRatesClient openExchangeRatesClient, AccountUsersHelpers AccountUsersHelpers)
+        public ForexRatesViewComponent(ABMContext context, IHostEnvironment _hostingEnv, OpenExchangeRatesClient openExchangeRatesClient, IHolderService AccountUsersHelpers)
         {
             this.DataContext = context;
             this.Environment = _hostingEnv;

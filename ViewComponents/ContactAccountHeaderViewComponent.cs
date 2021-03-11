@@ -1,6 +1,6 @@
 ﻿using FenixAlliance.ABM.Data;
+using FenixAlliance.ABM.Data.Interfaces.Services;
 using FenixAlliance.ABM.Models.Contacts;
-using FenixAlliance.APS.Core.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -9,12 +9,12 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
     public class ContactAccountHeaderViewComponent : ViewComponent
     {
         private readonly ABMContext DataContext;
-        private AccountUsersHelpers AccountTools;
-        public ContactAccountHeaderViewComponent(ABMContext context)
+        private IHolderService AccountTools;
+        public ContactAccountHeaderViewComponent(ABMContext context, IHolderService HolderService)
         {
             DataContext = context;
             //Add Method Context 
-            AccountTools = new AccountUsersHelpers(context);
+            AccountTools = HolderService;
         }
         public async Task<IViewComponentResult> InvokeAsync(Contact Contact)
         {

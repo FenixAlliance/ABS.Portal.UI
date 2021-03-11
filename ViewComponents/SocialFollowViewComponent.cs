@@ -1,7 +1,7 @@
 ﻿using FenixAlliance.ABM.Data;
 using FenixAlliance.ABM.Data.Access.Helpers;
+using FenixAlliance.ABM.Data.Interfaces.Services;
 using FenixAlliance.ABM.Models.Holders;
-using FenixAlliance.APS.Core.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
@@ -12,16 +12,16 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
 {
     public class SocialFollowViewComponent : ViewComponent
     {
-        private AccountUsersHelpers AccountUsersHelpers { get; set; }
+        private IHolderService AccountUsersHelpers { get; set; }
         private ABMContext DataContext { get; set; }
-        private TenantHelpers TenantHelpers { get; set; }
+        private ITenantService TenantHelpers { get; set; }
 
-        public SocialFollowViewComponent(ABMContext context, TenantHelpers TenantHelpers, AccountUsersHelpers AccountUsersHelpers)
+        public SocialFollowViewComponent(ABMContext context, ITenantService TenantHelpers, IHolderService AccountUsersHelpers)
         {
             //Add Method Context 
             this.DataContext = context;
-            this.AccountUsersHelpers = AccountUsersHelpers;
             this.TenantHelpers = TenantHelpers;
+            this.AccountUsersHelpers = AccountUsersHelpers;
         }
         public async Task<IViewComponentResult> InvokeAsync(AccountHolder Holder, ClaimsPrincipal user, string FollowerID, string FollowedID)
         {

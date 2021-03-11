@@ -1,6 +1,6 @@
 ﻿using FenixAlliance.ABM.Data;
+using FenixAlliance.ABM.Data.Interfaces.Services;
 using FenixAlliance.ABM.Models.Holders;
-using FenixAlliance.APS.Core.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -9,8 +9,8 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
     public class BusinessNotificationsViewComponent : ViewComponent
     {
         private ABMContext DataContext { get; set; }
-        private AccountUsersHelpers AccountUsersHelpers { get; set; }
-        public BusinessNotificationsViewComponent(ABMContext DataContext, AccountUsersHelpers AccountUsersHelpers)
+        private IHolderService AccountUsersHelpers { get; set; }
+        public BusinessNotificationsViewComponent(ABMContext DataContext, IHolderService AccountUsersHelpers)
         {
             this.DataContext = DataContext;
             //Add Method Context 

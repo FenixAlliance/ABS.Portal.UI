@@ -1,5 +1,5 @@
 ﻿using FenixAlliance.ABM.Data;
-using FenixAlliance.APS.Core.Helpers;
+using FenixAlliance.ABM.Data.Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
@@ -9,14 +9,14 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
 {
     public class LoginViewComponent : ViewComponent
     {
-        private AccountUsersHelpers tools;
+        private IHolderService tools;
         private readonly ABMContext _context;
 
-        public LoginViewComponent(ABMContext context)
+        public LoginViewComponent(ABMContext context, IHolderService HolderService)
         {
             _context = context;
             //Add Method Context 
-            tools = new AccountUsersHelpers(context);
+            tools = HolderService;
         }
 
         public async Task<IViewComponentResult> InvokeAsync(ClaimsPrincipal User)

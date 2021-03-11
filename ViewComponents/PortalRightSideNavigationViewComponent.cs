@@ -1,6 +1,6 @@
 ﻿using FenixAlliance.ABM.Data;
+using FenixAlliance.ABM.Data.Interfaces.Services;
 using FenixAlliance.ABM.Models.Holders;
-using FenixAlliance.APS.Core.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
@@ -10,17 +10,17 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
 {
     public class PortalRightSideNavigationViewComponent : ViewComponent
     {
-        private readonly ABMContext _context;
-        private AccountUsersHelpers tools;
-        public PortalRightSideNavigationViewComponent(ABMContext context)
+        private readonly ABMContext DataContext;
+        private IHolderService HolderService;
+        public PortalRightSideNavigationViewComponent(ABMContext DataContext, IHolderService HolderService)
         {
-            _context = context;
+            this.DataContext = DataContext;
             //Add Method Context 
-            tools = new AccountUsersHelpers(context);
+            this.HolderService = HolderService;
         }
         public async Task<IViewComponentResult> InvokeAsync(AccountHolder Tenant)
         {
-            ViewData["TenantsActiveInBusiness"] = await _context.AccountHolder.Include(c => c.SocialProfile).Where(c => c.SelectedBusinessID == Tenant.SelectedBusinessID).ToListAsync();
+            ViewData["TenantsActiveInBusiness"] = await DataContext.AccountHolder.Include(c => c.SocialProfile).Where(c => c.SelectedBusinessID == Tenant.SelectedBusinessID).ToListAsync();
             return View(Tenant);
         }
     }

@@ -1,6 +1,5 @@
 ﻿using FenixAlliance.ABM.Data;
 using FenixAlliance.ABM.Data.Access.Helpers;
-using FenixAlliance.APS.Core.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;

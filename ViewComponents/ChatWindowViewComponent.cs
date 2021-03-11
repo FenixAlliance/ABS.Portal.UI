@@ -1,6 +1,6 @@
 ﻿using FenixAlliance.ABM.Data;
+using FenixAlliance.ABM.Data.Interfaces.Services;
 using FenixAlliance.ABM.Models.Holders;
-using FenixAlliance.APS.Core.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -10,8 +10,8 @@ namespace FenixAlliance.ABS.Portal.UI.ViewComponents
     public class ChatWindowViewComponent : ViewComponent
     {
         private readonly ABMContext DataContext;
-        private AccountUsersHelpers AccountUsersHelpers;
-        public ChatWindowViewComponent(ABMContext DataContext, AccountUsersHelpers AccountUsersHelpers)
+        private IHolderService AccountUsersHelpers;
+        public ChatWindowViewComponent(ABMContext DataContext, IHolderService AccountUsersHelpers)
         {
             this.DataContext = DataContext;
             //Add Method Context 
